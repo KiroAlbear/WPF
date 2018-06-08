@@ -1,0 +1,83 @@
+﻿<Page x:Class="WPF.ComponentPages.BottomPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WPF.ComponentPages"
+      mc:Ignorable="d"
+      d:DesignHeight="150"
+      d:DesignWidth="1500"
+      Title="BottomPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1">
+        
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+          
+            <Grid Grid.Column="0" Grid.ColumnSpan="3">
+
+                <DataGrid x:Name="VisitGrid">
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="نوع الزيارة"
+                                            Width="*"></DataGridTextColumn>
+                        <DataGridTextColumn Width="*"
+                                            Header="التاريخ"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+            <Grid Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="PopSaVeButton"
+                        Grid.Row="0"
+                        Style="{StaticResource InformButton}"
+                        HorizontalAlignment="Stretch"
+                        Click="PopSaVeButton_Click"
+                        Margin="0,5,0,0"
+                        Grid.Column="0"
+                        Content="حفظ">
+                </Button>
+
+                <Button x:Name="PopEditButton"
+                        Margin="0,8,0,0"
+                        Grid.Row="1"
+                        Style="{StaticResource InformButton}"
+                        HorizontalAlignment="Stretch"
+                        Grid.Column="1"
+                        Click="PopEditButton_Click"
+                        Content="تعديل">
+                </Button>
+
+                <Button x:Name="PopCancelButton"
+                        HorizontalAlignment="Stretch"
+                        Grid.Column="2"
+                        Margin="0,8,0,0"
+                        Grid.Row="2"
+                        Style="{StaticResource InformButton}"
+                        Content="الغاء"
+                        Click="PopCancelButton_Click">
+                </Button>
+            </Grid>
+
+         
+        </Grid>
+
+        <!--Notice Grid -->
+
+    </Grid>
+</Page>

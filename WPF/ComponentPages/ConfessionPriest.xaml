@@ -1,0 +1,103 @@
+﻿<Page x:Class="WPF.ComponentPages.ConfessionPriest"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF.ComponentPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Background="{StaticResource MainBackGroundBrush}"
+      Opacity="0.9"
+      Title="ConfessionPriest">
+
+    <Grid  Margin="0,0,0,2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Grid.ColumnSpan="3"
+               Content="أب الأعتراف"
+               Name="ConfessionPriestLabel"
+               FontFamily="{StaticResource newfont}"
+               TextBlock.Foreground="White"
+               FontSize="40"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top"
+               Margin="0,-5,0,0"></Label>
+
+        <ListView Name="ConfessionPriestFirstList"
+                  Grid.Column="3"
+                  Grid.Row="2"
+                  Margin="0,2,0,0"></ListView>
+        <ListView Name="ConfessionPriestSecondtList"
+                  Grid.Column="1"
+                  Grid.Row="2"
+                  Margin="0,2,0,0"></ListView>
+
+        <Button Name="BlankSpaceUpButton"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"
+                Grid.RowSpan="2"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                Opacity="0"
+                Click="BlankSpaceButtonClick"></Button>
+
+        <Button Name="BlankSpaclefteButton"
+                Grid.Row="2"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                Opacity="0"
+                Click="BlankSpaceButtonClick"></Button>
+
+        <Grid Grid.Row="2" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Name="ConfessionPriestNumberOneButton" Grid.Row="1" Content="1" FontSize="25">  </Button>
+            <Button Name="ConfessionPriestNumberTwoButton" Grid.Row="3" Content="2" FontSize="25">  </Button>
+            <Button Name="ConfessionPriestNumberThreeButton" Grid.Row="5" Content="3" FontSize="25">  </Button> 
+            <Button Name="ConfessionPriestNumberfourButton" Grid.Row="7" Content="4" FontSize="25">  </Button> 
+        </Grid>
+
+        <Button Name="BlankSpacRighteButton"
+                Grid.Row="2"
+                Grid.Column="4"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                Opacity="0"
+                Click="BlankSpaceButtonClick"></Button>
+
+        <Button Name="BlankSpacBottomeButton"
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                Opacity="0"
+                Click="BlankSpaceButtonClick"></Button>
+
+    </Grid>
+</Page>

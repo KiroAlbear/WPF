@@ -1,0 +1,62 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WPF">
+    <ControlTemplate x:Key="TabTemplat" TargetType="TabItem">
+        <Border BorderBrush="Aqua" BorderThickness="0,0,0,0" Padding="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="18*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+                <Grid  x:Name="GridMask" Grid.Row="0"
+                      Grid.RowSpan="2" Opacity="0.3"></Grid>
+            <Grid Grid.Row="0" x:Name="TabContentGrid">
+                <TextBlock Padding="0,0,0,1" Text="{TemplateBinding Header}" Opacity="0.5" TextBlock.FontSize="17" Name="TabHeaderTextBlock">
+                    
+                </TextBlock>
+                
+                <ContentPresenter HorizontalAlignment="Center"
+                                  VerticalAlignment="Stretch" />
+            </Grid>
+            
+            
+            
+            <Grid Grid.Row="1" x:Name="TabUnderlineGrid" Background="White" >
+
+                <ContentPresenter HorizontalAlignment="Stretch"
+                                 
+                                  VerticalAlignment="Stretch" />
+              
+            </Grid>
+        </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+           
+             
+
+            <EventTrigger RoutedEvent="GotFocus">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation To="#b63de2"
+                                        Duration="0:0:0:.1"
+                                        Storyboard.TargetProperty="Background.Color"
+                                        Storyboard.TargetName="TabUnderlineGrid" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+
+            <EventTrigger RoutedEvent="LostFocus">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation To="#ffffff"
+                                        Duration="0:0:0:.1"
+                                        Storyboard.TargetProperty="Background.Color"
+                                        Storyboard.TargetName="TabUnderlineGrid" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+
+        </ControlTemplate.Triggers>
+    </ControlTemplate> 
+    
+</ResourceDictionary>

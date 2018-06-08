@@ -1,0 +1,167 @@
+﻿<Page x:Class="WPF.ComponentPages.TabPages.ResPonsible_Priest_Tab"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF.ComponentPages.TabPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="500"
+      Title="ResPonsible_Priest_Tab">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid x:Name="ResponsiblePriestGrid" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+                <ColumnDefinition Width="1.7*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Name="FreeSpaceButton" Grid.ColumnSpan="2" Grid.RowSpan="10" Opacity="0"/>
+            <Label Content="الاسم"
+               Grid.Row="0"
+               Style="{StaticResource SearchLabelStyl}"
+               Foreground="Black"
+               Grid.Column="1" />
+
+            <Label Content="الكنيسة"
+               Grid.Row="1"
+               Style="{StaticResource SearchLabelStyl}"
+               Foreground="Black"
+               Grid.Column="1" />
+
+            <Label Content="العنوان"
+               Grid.Row="2"
+               Style="{StaticResource SearchLabelStyl}"
+               Foreground="Black"
+               Grid.Column="1" />
+
+            <Label Content="تليفون"
+               Grid.Row="3"
+               Style="{StaticResource SearchLabelStyl}"
+               Foreground="Black"
+               Grid.Column="1" />
+
+            <Label Content="موبايل"
+               Grid.Row="4"
+               Style="{StaticResource SearchLabelStyl}"
+               Foreground="Black"
+               Grid.Column="1" />
+
+            <Label Content="المنطقة"
+               Grid.Row="5"
+               Style="{StaticResource SearchLabelStyl}"
+               Foreground="Black"
+               Grid.Column="1" />
+
+            <Label Content="الخدمة"
+               Grid.Row="6"
+               Style="{StaticResource SearchLabelStyl}"
+               Foreground="Black"
+               Grid.Column="1" />
+
+            <Label Content="الملاحظات"
+               Grid.Row="7"
+               Style="{StaticResource SearchLabelStyl}"
+               Foreground="Black"
+               Grid.Column="1" />
+
+
+            <TextBox Name="NameTextBox" Grid.Row="0" Grid.Column="0" Style="{StaticResource NewTextBoxStyleGotFocus}" 
+                     Loaded="NameTextBox_Loaded"
+                     LostFocus="NameTextBox_LostFocus"
+                     GotFocus="NameTextBox_GotFocus"
+                     ></TextBox>
+            <TextBox Name="ChurchTextBox"
+                 Grid.Row="1"
+                      LostFocus="NameTextBox_LostFocus"
+                     GotFocus="NameTextBox_GotFocus"
+                     Loaded="NameTextBox_Loaded"
+                 Style="{StaticResource NewTextBoxStyleGotFocus}"
+                 Grid.Column="0"></TextBox>
+
+            <TextBox Name="AdressTextBox"
+                 Grid.Row="2"
+                      LostFocus="NameTextBox_LostFocus"
+                     GotFocus="NameTextBox_GotFocus"
+                     Loaded="NameTextBox_Loaded"
+                 Style="{StaticResource NewTextBoxStyleGotFocus}"
+                 Grid.Column="0"></TextBox>
+            <TextBox Name="TelephoneTextBox"
+                 Grid.Row="3"
+                      LostFocus="NameTextBox_LostFocus"
+                     GotFocus="NameTextBox_GotFocus"
+                     Loaded="NameTextBox_Loaded"
+                 Style="{StaticResource NewTextBoxStyleGotFocus}"
+                 Grid.Column="0"></TextBox>
+            <TextBox Name="MobileTextBox"
+                 Grid.Row="4"
+                      LostFocus="NameTextBox_LostFocus"
+                     GotFocus="NameTextBox_GotFocus"
+                     Loaded="NameTextBox_Loaded"
+                 Style="{StaticResource NewTextBoxStyleGotFocus}"
+                 Grid.Column="0"></TextBox>
+            <TextBox Name="RegionTextBox"
+                 Grid.Row="5"
+                      LostFocus="NameTextBox_LostFocus"
+                     GotFocus="NameTextBox_GotFocus"
+                     Loaded="NameTextBox_Loaded"
+                 Style="{StaticResource NewTextBoxStyleGotFocus}"
+                 Grid.Column="0"></TextBox>
+
+            <ComboBox Name="ServiceComboBox"
+                  Grid.Row="6"
+                  Background="{StaticResource TextBoxBrush}"
+                  IsEditable="True"
+                  BorderBrush="White"
+                  FlowDirection="RightToLeft"
+                  MouseEnter="ServiceComboBox_MouseEnter"
+                  MouseLeave="ServiceComboBox_MouseLeave">
+
+            </ComboBox>
+
+            <TextBox Name="NoticeTextBox"
+                 Grid.Row="7"
+                      LostFocus="NameTextBox_LostFocus"
+                     GotFocus="NameTextBox_GotFocus"
+                     Loaded="NameTextBox_Loaded"
+                 Style="{StaticResource NewTextBoxStyleGotFocus}"
+                 Grid.Column="0"></TextBox>
+          
+
+        </Grid>
+        <Grid VerticalAlignment="Bottom" Name="ThreeButtonGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Name="RemoveButton" Grid.Column="0" Content="حذف" Style="{StaticResource InformButton}" Click="RemoveButton_Click"></Button>
+            <Button Name="EditButton"
+                    Grid.Column="1"
+                    Content="تعديل"
+                    Style="{StaticResource InformButton}"
+                    Click="EditButton_Click"></Button>
+            <Button Name="SaveButton"
+                    Grid.Column="2"
+                    Content="حفظ"
+                    Style="{StaticResource InformButton}"
+                    Click="SaveButton_Click"></Button>
+        </Grid>
+    </Grid>
+</Page>

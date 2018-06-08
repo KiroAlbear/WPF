@@ -1,0 +1,896 @@
+﻿<Controls:MetroWindow x:Class="WPF.Windows.SearchWindows"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:fsxaml="http://github.com/fsprojects/FsXaml"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:local="clr-namespace:WPF.Windows"
+                    
+                      WindowState="Maximized"
+                      WindowStartupLocation="CenterScreen"
+                      Style="{StaticResource WindowStyle}"
+                      Background="{StaticResource EntryBrush}"
+                      Title="SearchWindows"
+                      Height="auto"
+                      Width="auto">
+    
+    <Controls:MetroWindow.Flyouts>
+        <Controls:FlyoutsControl x:Name="flyoutsControl" >
+            <Controls:Flyout x:Name="GlobalSearchFlyout"
+                             Header="بَحث"
+                               
+                             Position="Right">
+
+                <Grid  VerticalAlignment="Stretch" Background="White">
+
+
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Row="0"
+                             Grid.ColumnSpan="4"
+                             Grid.Column="0"
+                             x:Name="FatherTextBox"
+                             Text="اسم رب الاسرة"
+                             GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+             
+                             Style="{StaticResource SearchTextBoxStyle}"/>
+
+
+
+
+                    <TextBox Name="NameTextBox"
+                             Grid.Row="1"
+                             Grid.Column="0"
+                          
+                             Text="الاسم"
+                             GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                             Grid.ColumnSpan="4"
+                             Style="{StaticResource SearchTextBoxStyle}"></TextBox>
+
+                    <TextBox Name="EmailTextBox"
+                             Grid.Row="2"
+                             Text="Email,الايميل"
+                                GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2"
+                             Style="{StaticResource SearchTextBoxStyle}"></TextBox>
+
+                    <TextBox Name="PhoneNumberTextBox"
+                             Grid.Row="2"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2"
+                              GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                             Text="رقم التليفون"
+                             Style="{StaticResource SearchTextBoxStyle}"></TextBox>
+
+                    <TextBox Name="QualificationTextBox"
+                             Grid.Row="3"
+                              GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2"
+                             Text="المؤهل"
+                             Style="{StaticResource SearchTextBoxStyle}"></TextBox>
+
+                    <Grid Name="PersonsGrid"
+                          Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="8*"></ColumnDefinition>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="8*"></ColumnDefinition>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+
+                        <TextBox Name="PersonFromTextBox"
+                                 Text="من"
+                                 Grid.ColumnSpan="2"
+                                  GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                                 Style="{StaticResource SearchTextBoxStyle}"
+                                 Grid.Column="2"></TextBox>
+                        <TextBox Name="PersonToTextBox" 
+                                 GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                                 Style="{StaticResource SearchTextBoxStyle}"
+                                 Text="إلى"
+                                 Grid.ColumnSpan="2"
+                                 Grid.Column="0"></TextBox>
+                    </Grid>
+
+                    <TextBox Name="JobTextBox"
+                             Grid.Row="4"
+                             Text="الوظيفة"
+                              GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2"
+                             Style="{StaticResource SearchTextBoxStyle}"></TextBox>
+
+                    <TextBox Name="ServiceTextBox"
+                             Grid.Row="4"
+                              GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2"
+                             Text="الخدمة"
+                             Style="{StaticResource SearchTextBoxStyle}"></TextBox>
+
+                    <TextBox Name="NationalIDTextBox"
+                             Grid.Row="5"
+                             Grid.Column="2"
+                              GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                             Text="ألرقم القومى"
+                             Grid.ColumnSpan="2"
+                             Style="{StaticResource SearchTextBoxStyle}"></TextBox>
+
+                    <TextBox Name="LivingTypeTextBox"
+                             Grid.Row="5"
+                              GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                             Text="نوع السكن"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2"
+                             Style="{StaticResource SearchTextBoxStyle}"></TextBox>
+
+                    <TextBox Name="PabtismTextBox"
+                             Grid.Row="6"
+                              GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                             Text="نوع المعمودية"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2"
+                             Style="{StaticResource SearchTextBoxStyle}"></TextBox>
+
+                    <TextBox Name="DiseaseTextBox"
+                             Grid.Row="6"
+                              GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                             Text="نوع المرض"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2"
+                             Style="{StaticResource SearchTextBoxStyle}"></TextBox>
+
+                    <TextBox Name="HouseNumberTextBox"
+                             Grid.Row="7"
+                             Text="رقم المنزل"
+                              GotFocus="GlobalTextBox_GotFocus"
+                              LostFocus="GlobalTextBox_Loaded"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2"
+                             Style="{StaticResource SearchTextBoxStyle}"></TextBox>
+
+
+                    <Grid Name="LastVisitDateGrid"
+                          Grid.Column="0"
+                          Grid.Row="8"
+                          Grid.ColumnSpan="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="8*"></ColumnDefinition>
+                            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                            <ColumnDefinition Width="8*"></ColumnDefinition>
+                            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <TextBox Name="LastVisitFromTextBox"
+                                 Grid.Column="2"
+                                 Grid.ColumnSpan="2"
+                                  GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                                 Text="ابتداء من    "
+                                 Style="{StaticResource SearchTextBoxStyle}"></TextBox>
+                        <TextBox Name="LastVisitToTextBox"
+                                 Grid.Column="0"
+                                    Grid.ColumnSpan="2"
+                                  GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                                 Text="انتهاء الى    "
+                                 Style="{StaticResource SearchTextBoxStyle}"></TextBox>
+
+                    </Grid>
+
+
+                    <Label Name="StartPersonCounterLabel"
+                           Grid.Column="1"
+                           Grid.Row="8"
+                           Style="{StaticResource SearchLabelStyl}" />
+
+                    <Label Name="EndPersonCounterLabel"
+                           Content="الافراد"
+                           Margin="0,4,5,0"
+                           Grid.Column="1"
+                           Grid.Row="3"
+              
+                           Style="{StaticResource SearchLabelStyl}" RenderTransformOrigin="0.014,0.949" Grid.RowSpan="2" />
+
+                    <Border  Name="BirthDateSectionBorder"
+                             Grid.Row="9"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="4"
+                             Grid.RowSpan="4"
+                             BorderThickness="0,0,0,0"
+                             BorderBrush="LightGray"
+                             Margin="8,0,8,0"
+                             Padding="0,5,0,0">
+                        <Grid Name="BirthDateSectionGrid">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="15*"></ColumnDefinition>
+                                <ColumnDefinition Width="300*" />
+                                <ColumnDefinition Width="68*"></ColumnDefinition>
+                                <ColumnDefinition Width="300*"></ColumnDefinition>
+                                <ColumnDefinition Width="48*" />
+                                <ColumnDefinition Width="68*"></ColumnDefinition>
+                                <ColumnDefinition Width="200*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Border  Name="BirthDateTitlesSectionBorder"
+                                     BorderThickness="1.5,0,0,0"
+                                     BorderBrush="LightGray"
+                                     Grid.Row="0"
+                                     Grid.Column="6"
+                                     Grid.RowSpan="4"
+                                     Margin="0,2,0,3">
+
+                                <Grid Name="BirthDateTitlesSectionGrid"
+                                      Grid.Row="0"
+                                      Grid.Column="4"
+                                      Grid.RowSpan="4">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Name="BirthDateLabel"
+                                           Grid.Row="0"
+                                         
+                                           Grid.Column="3"
+                              
+                                           Content="ت الميلاد"
+                                           Style="{StaticResource SearchLabelStyl}">
+                                    </Label>
+                                    <Label Name="DayBirthLabel"
+                                           Grid.Column="3"
+                                           Grid.Row="1"
+                                           Content="يوم"
+                               
+                                           Style="{StaticResource SearchLabelStyl}"></Label>
+                                    <Label Name="MonthBirthLabel"
+                                           Grid.Column="3"
+                                           Grid.Row="2"
+                                        
+                                           Content="شهر"
+                                         
+                                           Style="{StaticResource SearchLabelStyl}"></Label>
+                                    <Label Name="YearBirthLabel"
+                                           Grid.Column="3"
+                                           Grid.Row="3"
+                                          
+                                           Content="سنة"
+                                
+                                 
+                                           Style="{StaticResource SearchLabelStyl}"></Label>
+                                </Grid>
+                            </Border>
+
+
+
+
+
+
+
+                            <TextBox Name="BirhtDateFromTextBox"
+                                     Text="ابتداء من"
+                                   
+                                     GotFocus="GlobalTextBox_GotFocus"
+                                     LostFocus="GlobalTextBox_Loaded"
+                                     Style="{StaticResource SearchTextBoxStyle}"
+                                     Grid.Column="3"
+                                     Grid.ColumnSpan="3" />
+                            <TextBox Name="BirhtDateToTextBox"
+                                     Text="انتهاء الى"
+                                      GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                                     Style="{StaticResource SearchTextBoxStyle}"
+                                     Grid.Column="0"
+                                     Grid.ColumnSpan="3"></TextBox>
+
+                            <TextBox Name="BirhtDayFromTextBox"
+                                     Text="ابتداء من "
+                                     
+                                     Style="{StaticResource SearchTextBoxStyle}"
+                                     Grid.Column="3"
+                                      GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                                     Grid.Row="1"
+                                     Grid.ColumnSpan="3"></TextBox>
+                            <TextBox Name="BirhtDayToTextBox"
+                                     Text="أنتهاء الى "
+                                      GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                                     Style="{StaticResource SearchTextBoxStyle}"
+                                     Grid.Column="0"
+                                     Grid.Row="1"
+                                     Grid.ColumnSpan="3"></TextBox>
+
+
+                            <TextBox Name="BirhtMonthFromTextBox"
+                                     Text="ابتداء من  "
+                                      GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                                     Style="{StaticResource SearchTextBoxStyle}"
+                                     Grid.Column="3"
+                                     Grid.Row="2"
+                            
+                                     Grid.ColumnSpan="3"></TextBox>
+                            <TextBox Name="BirhtMontToTextBox"
+                                     Style="{StaticResource SearchTextBoxStyle}"
+                                     Grid.Column="0"
+                                      GotFocus="GlobalTextBox_GotFocus"
+                                 LostFocus="GlobalTextBox_Loaded"
+                                     Text="انتهاء الى  "
+                                     Grid.Row="2"
+                                     Grid.ColumnSpan="3"></TextBox>
+
+                            <TextBox Name="BirhtYearFromTextBox"
+                                     Text="ابتداء من   "
+                                     Style="{StaticResource SearchTextBoxStyle}"
+                                     Grid.Column="3"
+                                     
+                                      GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                                     Grid.Row="3"
+                                     Grid.ColumnSpan="3"></TextBox>
+
+
+                            <TextBox Name="BirhtYearToTextBox"
+                                     Style="{StaticResource SearchTextBoxStyle}"
+                                     Grid.Column="0"
+                                     Text="انتهاء الى   "
+                                      GotFocus="GlobalTextBox_GotFocus"
+                             LostFocus="GlobalTextBox_Loaded"
+                                     Grid.Row="3"
+                                     Grid.ColumnSpan="3"></TextBox>
+
+                        </Grid>
+
+                    </Border>
+
+                    <Label Grid.Row="8"
+                           Grid.Column="3"
+                           Content="الزيارة"
+           
+                           Style="{StaticResource SearchLabelStyl}"></Label>
+                    <Grid Name="ButtonsGrid" Grid.Row="13" Grid.RowSpan="4"  Grid.ColumnSpan="4" Margin="0,8,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Name="FourButtonsGrid" Grid.ColumnSpan="2" Grid.RowSpan="4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Button Name="SearchStreetButton"
+                        
+                         Grid.Column="2"
+                         Grid.Row="1"
+                            Content="الشوارع"
+                            Style="{StaticResource InformButton}"
+                            Click="SearchStreetButton_Click"
+                  
+                          ></Button>
+
+                            <Button  Name="SearchPriestButton"
+                          
+                             Grid.Column="2"
+                             Content="الكاهن المسئول"
+                             Click="SearchPriestButton_Click"
+                             Style="{StaticResource InformButton}"></Button>
+
+                            <Button  Name="SearchConfisionButton"
+                             Grid.Row="1"
+                             Grid.Column="3"
+                             Content="أب الاعتراف"
+                             
+                             Click="SearchConfisionButton_Click"
+                             Style="{StaticResource InformButton}">
+                            </Button>
+                            <Button  Name="SearchSocialButton"
+                              Grid.Column="3"
+                             Click="SearchSocialButton_Click"
+                             Content="الحالة الاجتماعية"
+                             Style="{StaticResource InformButton}">
+                            </Button>
+
+                            <Button Name="SearchButton"
+                          
+                            Grid.Column="0"
+                            Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                          
+                            Click="SearchButton_Click"
+                            Content="بحث"
+                            Style="{StaticResource InformButton}">
+                            </Button>
+
+                            <Button Name="PrintButton"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                    
+                            Style="{StaticResource InformButton}"
+                
+                           Grid.ColumnSpan="2"
+                            Click="PrintButton_Click"
+                            Content="اطبع"></Button>
+
+                        </Grid>
+
+
+
+
+                    </Grid>
+
+
+
+                </Grid>
+
+            </Controls:Flyout>
+
+            <Controls:Flyout Name="StreetFlyOut"
+                             Position="Left"
+                             FlowDirection="LeftToRight"
+                             Header="بحث الشوارع"
+                             Background="{StaticResource StreetFlyoutBrush}"
+                             >
+                <Grid x:Name="StreetTwoListGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="1.11*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="16*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid  x:Name="StreetFirstRightGrid"
+                           Grid.Row="0"
+                           Grid.ColumnSpan="2"
+                           HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0"
+                                 x:Name="StreetSearchListTextBox"
+                                 Background="White"
+                                 Foreground="Black"
+                                 Margin="5,3,20,0"></TextBox>
+                        <Grid Grid.Column="1"
+                              x:Name="StreetSelectAllRadioButtonGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Grid.Column="1"
+                                         Background="White"
+                                         Checked="StreetSelectAllRadioButton_Checked"
+                                         x:Name="StreetSelectAllRadioButton"></RadioButton>
+                            <Label x:Name="SelectAllLabl"
+                                   Content="تحديد الكل"
+                                   Style="{StaticResource LabelStyl}"
+                                   Foreground="White"
+                                   TextBlock.FontSize="20"></Label>
+                        </Grid>
+                        <Grid Grid.Column="2"
+                              Name="StreetDeSelectAllGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Grid.Column="1"
+                                         x:Name="StreetDeSelectAllRadioButton" Background="White" Checked="StreetDeSelectAllRadioButton_Checked"></RadioButton>
+                            <Label x:Name="StreetDeSelectAllLabl"
+                                   Content="الغاء الكل"
+                                   TextBlock.FontSize="20"
+                                   Style="{StaticResource LabelStyl}"
+                                   Foreground="White"></Label>
+                        </Grid>
+
+                    </Grid>
+                    <Grid Grid.Column="0"
+                          Grid.Row="1"
+                          x:Name="StreetRightGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <ListView Grid.Column="0"
+                                  Grid.Row="1"
+                                  Margin="0,10,5,10"
+                                  x:Name="StreetAllListView"
+                                  Background="LightGray"></ListView>
+
+                    </Grid>
+                    <ListView Grid.Column="1"
+                              x:Name="StreetSelectedListView"
+                              Margin="7,10,7,10"
+                              Grid.Row="2"
+                              Background="LightGray"></ListView>
+                </Grid>
+
+            </Controls:Flyout>
+
+            <Controls:Flyout Name="ConfisionFlyout"
+                             Position="Left"
+                             FlowDirection="LeftToRight"
+                             Header="بحث أب ألأعتراف"
+                           
+                          
+                             Background="{StaticResource StreetFlyoutBrush}">
+                <Grid x:Name="ConfisionTwoListGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="1.11*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="16*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid  x:Name="ConfisionFirstRightGrid"
+                           Grid.Row="0"
+                           Grid.ColumnSpan="2"
+                           HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0"
+                                 x:Name="ConfisionSearchListTextBox"
+                                 Background="White"
+                                 Foreground="Black"
+                                 Margin="5,3,20,0"></TextBox>
+                        <Grid Grid.Column="1"
+                              x:Name="ConfisionSelectAllRadioButtonGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Grid.Column="1"
+                                         Background="White"
+                                         Checked="ConfisionSelectAllRadioButton_Checked"
+                                         x:Name="ConfisionSelectAllRadioButton"></RadioButton>
+                            <Label x:Name="ConfisionSelectAllLabel"
+                                   Content="تحديد الكل"
+                                   Style="{StaticResource LabelStyl}"
+                                   Foreground="White"
+                                   TextBlock.FontSize="20"></Label>
+                        </Grid>
+                        <Grid Grid.Column="2"
+                              Name="ConfisionDeSelectAllGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Grid.Column="1"
+                                         x:Name="ConfisionDeSelectAllRadioButton"
+                                         Checked="ConfisionDeSelectAllRadioButton_Checked"
+                                         Background="White"></RadioButton>
+                            <Label x:Name="ConfisionDeSelectAllLabl"
+                                   Content="الغاء الكل"
+                                   TextBlock.FontSize="20"
+                                   Style="{StaticResource LabelStyl}"
+                                   Foreground="White"></Label>
+                        </Grid>
+
+                    </Grid>
+                    <Grid Grid.Column="0"
+                          Grid.Row="1"
+                          x:Name="ConfisionRightGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <ListView Grid.Column="0"
+                                  Grid.Row="1"
+                                  Margin="0,10,5,10"
+                                  x:Name="ConfisionAllListView"
+                                  Background="LightGray"></ListView>
+
+                    </Grid>
+                    <ListView Grid.Column="1"
+                              x:Name="ConfisionSelectedListView"
+                              Margin="7,10,7,10"
+                              Grid.Row="2"
+                              Background="LightGray"></ListView>
+                </Grid>
+
+            </Controls:Flyout>
+            
+            <Controls:Flyout Name="PriestFlyout"
+                             Position="Left"
+                             FlowDirection="LeftToRight"
+                             Header="بحث الكاهن المسؤل"
+                             Background="{StaticResource StreetFlyoutBrush}">
+                <Grid x:Name="PriestTwoListGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="1.11*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="16*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid  x:Name="PriestFirstRightGrid"
+                           Grid.Row="0"
+                           Grid.ColumnSpan="2"
+                           HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0"
+                                 x:Name="PriestSearchListTextBox"
+                                 Background="White"
+                                 Foreground="Black"
+                                 Margin="5,3,20,0"></TextBox>
+                        <Grid Grid.Column="1"
+                              x:Name="PriestSelectAllRadioButtonGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Grid.Column="1"
+                                         Background="White"
+                                         
+                                         Checked="PriestSelectAllRadioButton_Checked"
+                                         x:Name="PriestSelectAllRadioButton"></RadioButton>
+                            <Label x:Name="PriestSelectAllLabel"
+                                   Content="تحديد الكل"
+                                   Style="{StaticResource LabelStyl}"
+                                   Foreground="White"
+                                   TextBlock.FontSize="20"></Label>
+                        </Grid>
+                        <Grid Grid.Column="2"
+                              Name="PriestDeSelectAllGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Grid.Column="1"
+                                         x:Name="PriestDeSelectAllRadioButton"
+                                         Checked="PriestDeSelectAllRadioButton_Checked"
+                                         Background="White"></RadioButton>
+                            <Label x:Name="PriestDeSelectAllLabl"
+                                   Content="الغاء الكل"
+                                   TextBlock.FontSize="20"
+                                   Style="{StaticResource LabelStyl}"
+                                   Foreground="White"></Label>
+                        </Grid>
+
+                    </Grid>
+                    <Grid Grid.Column="0"
+                          Grid.Row="1"
+                          x:Name="PriestRightGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <ListView Grid.Column="0"
+                                  Grid.Row="1"
+                                  Margin="0,10,5,10"
+                                  x:Name="PriestAllListView"
+                                  Background="LightGray"></ListView>
+
+                    </Grid>
+                    <ListView Grid.Column="1"
+                              x:Name="PriestSelectedListView"
+                              Margin="7,10,7,10"
+                              Grid.Row="2"
+                              Background="LightGray"></ListView>
+                </Grid>
+
+            </Controls:Flyout>
+            
+            <Controls:Flyout Name="SocialFlyout"
+                             Position="Left"
+                             FlowDirection="LeftToRight"
+                             Header="بحث الحالة الاجتماعية"
+                             Background="{StaticResource StreetFlyoutBrush}">
+                <Grid x:Name="SocialTwoListGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="1.11*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="16*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid  x:Name="SocialFirstRightGrid"
+                           Grid.Row="0"
+                           Grid.ColumnSpan="2"
+                           HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0"
+                                 x:Name="SocialSearchListTextBox"
+                                 Background="White"
+                                 Foreground="Black"
+                                 Margin="5,3,20,0"></TextBox>
+                        <Grid Grid.Column="1"
+                              x:Name="SocialSelectAllRadioButtonGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Grid.Column="1"
+                                         Background="White"
+                                         Checked="SocialSelectAllRadioButton_Checked"
+                                         x:Name="SocialSelectAllRadioButton"></RadioButton>
+                            <Label x:Name="SocialSelectAllLabel"
+                                   Content="تحديد الكل"
+                                   Style="{StaticResource LabelStyl}"
+                                   Foreground="White"
+                                   TextBlock.FontSize="20"></Label>
+                        </Grid>
+                        <Grid Grid.Column="2"
+                              Name="SocialDeSelectAllGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Grid.Column="1"
+                                         x:Name="SocialDeSelectAllRadioButton"
+                                         Checked="SocialDeSelectAllRadioButton_Checked"
+                                         Background="White"></RadioButton>
+                            <Label x:Name="SocialDeSelectAllLabl"
+                                   Content="الغاء الكل"
+                                   TextBlock.FontSize="20"
+                                   Style="{StaticResource LabelStyl}"
+                                   Foreground="White"></Label>
+                        </Grid>
+
+                    </Grid>
+                    <Grid Grid.Column="0"
+                          Grid.Row="1"
+                          x:Name="SocialRightGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <ListView Grid.Column="0"
+                                  Grid.Row="1"
+                                  Margin="0,10,5,10"
+                                  x:Name="SocialAllListView"
+                                  Background="LightGray"></ListView>
+
+                    </Grid>
+                    <ListView Grid.Column="1"
+                              x:Name="SocialSelectedListView"
+                              Margin="7,10,7,10"
+                              Grid.Row="2"
+                              Background="LightGray"></ListView>
+                </Grid>
+
+            </Controls:Flyout>
+
+        </Controls:FlyoutsControl>
+
+    </Controls:MetroWindow.Flyouts>
+
+    
+    
+    
+    <Grid>                       
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".055*"></RowDefinition>
+            
+            <RowDefinition Height="*"></RowDefinition>
+            
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" x:Name="FlyOutButtonGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="SearchFlyOutButton" Grid.Column="7" Content="بحث" Style="{StaticResource ButtonStyle}" Click="SearchFlyOutButton_Click">
+                <Button.Background>
+                    <ImageBrush />
+                </Button.Background>
+            </Button>
+            <!--<Button Name="SearchStreetFlyoutButton"
+                    Grid.Column="6"
+                    Content="بحث الشوارع"
+                    Click="SearchStreetFlyoutButton_Click"
+                    Style="{StaticResource ButtonStyle}"></Button>-->
+        </Grid>
+
+            <Grid Name="GridViewGrid" Grid.Row="1" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Frame Name="GridFrame"></Frame>
+
+        </Grid>
+  
+        <Frame x:Name="FloatingFrame"
+               Grid.Row="0"
+               Grid.RowSpan="3"
+               Grid.ColumnSpan="2"
+               Grid.Column="0" />
+
+    </Grid>
+</Controls:MetroWindow>

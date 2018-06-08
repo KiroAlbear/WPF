@@ -1,0 +1,110 @@
+﻿<Page x:Class="WPF.ComponentPages.DataGridView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF.ComponentPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="DataGridView">
+
+        <Grid FlowDirection="LeftToRight">
+
+        <ScrollViewer IsEnabled="True"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+            <StackPanel x:Name="MainStackPanel" Orientation="Vertical" Loaded="MydataGride_Loaded" Background="White">
+
+                <!--<DataGrid MouseDoubleClick=""></DataGrid>-->
+            <!--<DataGrid  x:Name="MydataGride"
+                       FlowDirection="RightToLeft"
+                       VerticalAlignment="Stretch"
+                       HorizontalAlignment="Stretch"
+                       AutoGenerateColumns="True"
+                       EnableRowVirtualization="True"
+                       Margin="17,0,25,0"
+                       MouseDoubleClick="MydataGride_MouseDoubleClick"
+                       Loaded="MydataGride_Loaded">-->
+            <!--<DataGrid.Columns>
+                <DataGridTextColumn x:Name="namecol"
+                                    CanUserResize="True"
+                                    Header="لايعيش مع "
+                                    Width="150"
+                                    Binding="{Binding name}"
+                                    TextBlock.Foreground="Red" />
+                <DataGridTextColumn x:Name="idcol"
+                                    CanUserResize="True"
+                                    Header="ملاحظات"
+                                    Width="150"
+                                    Binding="{Binding age}"
+                                    TextBlock.Foreground="Red" />-->
+                <!--<DataGridTextColumn CanUserResize="True" Header="العنوان" Width="200"  Binding="{Binding XPath=@Name}" />
+                <DataGridTextColumn CanUserResize="True" Header="Email" Width="200"  Binding="{Binding XPath=@Name}" />
+                <DataGridTextColumn CanUserResize="True" Header="محمول" Width="150"  Binding="{Binding XPath=@Name}" />
+                <DataGridTextColumn CanUserResize="True" Header="الشموسيه" Width="150"  Binding="{Binding XPath=@Name}" />
+                <DataGridTextColumn CanUserResize="True" Header="الرقم القومى" Width="150"  Binding="{Binding XPath=@Name}" />
+                <DataGridTextColumn CanUserResize="True" Header="الخدمة" Width="200"  Binding="{Binding XPath=@Name}" />
+                <DataGridTextColumn CanUserResize="True" Header="اب الاعتراف" Width="200"  Binding="{Binding XPath=@Name}" />
+                <DataGridTextColumn CanUserResize="True" Header="المعمودية" Width="200"  Binding="{Binding XPath=@Name}" />-->
+            <!--</DataGrid.Columns>
+               
+              
+
+            </DataGrid>-->
+
+            <!--<ListView Name="MainList"
+                    
+                      Loaded="MydataGride_Loaded">
+                <ListView.View>
+                    <GridView x:Name="MainGrid">-->
+                        <!--<GridViewColumn Header="tony"
+                                        Width="120"
+                                        DisplayMemberBinding ="{Binding Name}"></GridViewColumn>
+
+                        <GridViewColumn Header="Age"
+                                        Width="120"
+                                        DisplayMemberBinding="{Binding Age}"></GridViewColumn>-->
+
+                    <!--</GridView>
+                </ListView.View>-->
+            <!--<Expander Header="Number1" Name="Number1" Foreground="White" FlowDirection="LeftToRight">
+                <Expander.Content>
+                    <DataGrid Name="MainDataGrid"
+                              FlowDirection="LeftToRight"
+                              EnableRowVirtualization="True"
+                              Loaded="MydataGride_Loaded"
+                              AutoGenerateColumns="True">
+       
+                    </DataGrid>
+
+                </Expander.Content>
+            </Expander>-->
+
+            <!--<Expander Grid.Column="0">
+                    <Label Content="lalala"
+                           Foreground="Black"></Label>
+                </Expander>
+                <Expander Grid.Column="1">
+                    <Label Content="lalala"
+                           Foreground="Black"></Label>
+                </Expander>
+                <Expander Header="asd"
+                          Grid.Column="1">
+                    <Label Content="lalala"
+                           Foreground="Black"></Label>
+                </Expander>-->
+        
+        
+            <!--</ListView>-->
+
+                <!--<Expander MouseDown="Expander_MouseDown"></Expander>-->
+        
+    </StackPanel>
+
+        </ScrollViewer>
+        <Frame x:Name="PopUpFrame" Width="auto" Height="auto" Navigated="PopUpFrame_Navigated"></Frame>
+    
+        </Grid>
+        
+   
+</Page>

@@ -1,0 +1,121 @@
+﻿<Page x:Class="WPF.ComponentPages.TabPages.ChurchesTab"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF.ComponentPages.TabPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="ChurchesTab">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+    
+      <Grid Name="churchGrid" Grid.Column="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Name="FreeSpaceButton"
+                Grid.ColumnSpan="2"
+                Grid.RowSpan="10"
+                Opacity="0" />
+        <Label Content="اسم الكنيسة"
+               Grid.Row="0"
+               Style="{StaticResource SearchLabelStyl}"
+               Foreground="Black"
+               Grid.Column="1" />
+
+        <Label Content="العنوان"
+               Grid.Row="1"
+               Style="{StaticResource SearchLabelStyl}"
+               Foreground="Black"
+               Grid.Column="1" />
+
+        <Label Content="تليفون 1"
+               Grid.Row="2"
+               Style="{StaticResource SearchLabelStyl}"
+               Foreground="Black"
+               Grid.Column="1" />
+
+        <Label Content="تليفون 2"
+               Grid.Row="3"
+               Style="{StaticResource SearchLabelStyl}"
+               Foreground="Black"
+               Grid.Column="1" />
+        <ComboBox Name="NameComboBox"
+                  Grid.Row="0"
+                  IsEditable="True"
+                  Style="{StaticResource ComboStyle}"
+                  MouseDoubleClick="NameComboBox_MouseDoubleClick"
+                  FlowDirection="RightToLeft"></ComboBox>
+        
+          <TextBox Name="AdressTextBox"
+                 Grid.Row="1"
+                   GotFocus="GlobalTextBox_GotFocus"
+                   Loaded="GlobalTextBox_Loaded"
+                   LostFocus="GlobalTextBox_LostFocus"
+                   MouseDoubleClick="AdressTextBox_MouseDoubleClick"
+                   Style="{StaticResource NewTextBoxStyleGotFocus}"
+                   
+                 Grid.Column="0"></TextBox>
+        <TextBox Name="Telephone1TextBox"
+                 Grid.Row="2"
+                  GotFocus="GlobalTextBox_GotFocus"
+                   Loaded="GlobalTextBox_Loaded"
+                   LostFocus="GlobalTextBox_LostFocus"
+                 Style="{StaticResource NewTextBoxStyleGotFocus}"
+                 Grid.Column="0"></TextBox>
+
+        <TextBox Name="Telephone2TextBox"
+                 Grid.Row="3"
+                  GotFocus="GlobalTextBox_GotFocus"
+                   Loaded="GlobalTextBox_Loaded"
+                   LostFocus="GlobalTextBox_LostFocus"
+                 Style="{StaticResource NewTextBoxStyleGotFocus}"
+                 Grid.Column="0"></TextBox>
+
+       
+    </Grid>
+
+        <Grid Grid.Column="0" VerticalAlignment="Bottom"
+              Name="ThreeButtonGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Name="RemoveButton"
+                    Grid.Column="0"
+                    Content="حذف"
+                    Click="RemoveButton_Click" Style="{StaticResource InformButton}"></Button>
+            <Button Name="EditButton"
+                    Grid.Column="1"
+                    Content="تعديل"
+                    Style="{StaticResource InformButton}"
+                    Click="EditButton_Click"></Button>
+            <Button Name="SaveButton"
+                    Grid.Column="2"
+                    Content="حفظ"
+                    Style="{StaticResource InformButton}"
+                    Click="SaveButton_Click"></Button>
+        </Grid>
+
+
+    </Grid>
+
+</Page>

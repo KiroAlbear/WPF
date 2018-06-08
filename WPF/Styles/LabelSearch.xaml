@@ -1,0 +1,30 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WPF">
+
+    <Style TargetType="Label"
+           x:Key="SearchLabelStyl">
+        <Setter Property="Margin"
+                Value="0,0,5,0"></Setter>
+
+       
+        <Setter Property="TextBlock.Foreground">
+            <Setter.Value>
+                <SolidColorBrush Color="Black" Opacity="1"> </SolidColorBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="TextBlock.FontWeight" Value="Bold"></Setter>
+        <Setter Property="FontSize"
+                Value="18"></Setter>
+        <Setter Property="MinHeight"
+                Value="20"></Setter>
+        <Setter Property="HorizontalAlignment"
+                Value="Right"></Setter>
+        <Setter Property="FontWeight"
+                Value="Thin"></Setter>
+        <Setter Property="VerticalAlignment"
+                Value="Top"></Setter>
+
+        
+    </Style>
+</ResourceDictionary>

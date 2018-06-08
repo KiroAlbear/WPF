@@ -1,0 +1,56 @@
+P:\Projects\Offline Wpf\WPF\bin\Debug\WPF.exe.config
+P:\Projects\Offline Wpf\WPF\bin\Debug\WPF.exe
+P:\Projects\Offline Wpf\WPF\bin\Debug\WPF.pdb
+P:\Projects\Offline Wpf\WPF\obj\Debug\EntryWindow.g.cs
+P:\Projects\Offline Wpf\WPF\obj\Debug\MainWindow.g.cs
+P:\Projects\Offline Wpf\WPF\obj\Debug\Pop.g.cs
+P:\Projects\Offline Wpf\WPF\obj\Debug\App.g.cs
+P:\Projects\Offline Wpf\WPF\obj\Debug\WPF_MarkupCompile.cache
+P:\Projects\Offline Wpf\WPF\obj\Debug\WPF_MarkupCompile.lref
+P:\Projects\Offline Wpf\WPF\obj\Debug\App.baml
+P:\Projects\Offline Wpf\WPF\obj\Debug\EntryWindow.baml
+P:\Projects\Offline Wpf\WPF\obj\Debug\MainWindow.baml
+P:\Projects\Offline Wpf\WPF\obj\Debug\Pop.baml
+P:\Projects\Offline Wpf\WPF\obj\Debug\Styles\ComBoBox.baml
+P:\Projects\Offline Wpf\WPF\obj\Debug\Styles\Button.baml
+P:\Projects\Offline Wpf\WPF\obj\Debug\Styles\PopTextBox.baml
+P:\Projects\Offline Wpf\WPF\obj\Debug\Styles\TexBox.baml
+P:\Projects\Offline Wpf\WPF\obj\Debug\Styles\window.baml
+P:\Projects\Offline Wpf\WPF\obj\Debug\Styles\WindowWithSize.baml
+P:\Projects\Offline Wpf\WPF\obj\Debug\Styles\Label.baml
+P:\Projects\Offline Wpf\WPF\obj\Debug\Styles\fonts.baml
+P:\Projects\Offline Wpf\WPF\obj\Debug\WPF.g.resources
+P:\Projects\Offline Wpf\WPF\obj\Debug\WPF.Properties.Resources.resources
+P:\Projects\Offline Wpf\WPF\obj\Debug\WPF.csproj.GenerateResource.Cache
+P:\Projects\Offline Wpf\WPF\obj\Debug\WPF.exe
+P:\Projects\Offline Wpf\WPF\obj\Debug\WPF.pdb
+P:\Projects\Offline Wpf\WPF\obj\Debug\WPF.csprojResolveAssemblyReference.cache
+P:\Projects\OfflineWpf\WPF\bin\Debug\WPF.exe.config
+P:\Projects\OfflineWpf\WPF\bin\Debug\WPF.exe
+P:\Projects\OfflineWpf\WPF\bin\Debug\WPF.pdb
+P:\Projects\OfflineWpf\WPF\obj\Debug\EntryWindow.g.cs
+P:\Projects\OfflineWpf\WPF\obj\Debug\MainWindow.g.cs
+P:\Projects\OfflineWpf\WPF\obj\Debug\Pop.g.cs
+P:\Projects\OfflineWpf\WPF\obj\Debug\App.g.cs
+P:\Projects\OfflineWpf\WPF\obj\Debug\WPF_MarkupCompile.cache
+P:\Projects\OfflineWpf\WPF\obj\Debug\WPF_MarkupCompile.lref
+P:\Projects\OfflineWpf\WPF\obj\Debug\App.baml
+P:\Projects\OfflineWpf\WPF\obj\Debug\EntryWindow.baml
+P:\Projects\OfflineWpf\WPF\obj\Debug\MainWindow.baml
+P:\Projects\OfflineWpf\WPF\obj\Debug\Pop.baml
+P:\Projects\OfflineWpf\WPF\obj\Debug\Styles\ComBoBox.baml
+P:\Projects\OfflineWpf\WPF\obj\Debug\Styles\Button.baml
+P:\Projects\OfflineWpf\WPF\obj\Debug\Styles\PopTextBox.baml
+P:\Projects\OfflineWpf\WPF\obj\Debug\Styles\TexBox.baml
+P:\Projects\OfflineWpf\WPF\obj\Debug\Styles\window.baml
+P:\Projects\OfflineWpf\WPF\obj\Debug\Styles\WindowWithSize.baml
+P:\Projects\OfflineWpf\WPF\obj\Debug\Styles\Label.baml
+P:\Projects\OfflineWpf\WPF\obj\Debug\Styles\fonts.baml
+P:\Projects\OfflineWpf\WPF\obj\Debug\WPF.g.resources
+P:\Projects\OfflineWpf\WPF\obj\Debug\WPF.Properties.Resources.resources
+P:\Projects\OfflineWpf\WPF\obj\Debug\WPF.csproj.GenerateResource.Cache
+P:\Projects\OfflineWpf\WPF\obj\Debug\WPF.exe
+P:\Projects\OfflineWpf\WPF\obj\Debug\WPF.pdb
+P:\Projects\OfflineWpf\WPF\obj\Debug\WPF.csprojResolveAssemblyReference.cache
+P:\Projects\OfflineWpf\WPF\obj\Debug\ComponentPages\DataPage.g.cs
+P:\Projects\OfflineWpf\WPF\obj\Debug\ComponentPages\DataPage.baml

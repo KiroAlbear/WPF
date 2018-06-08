@@ -1,0 +1,277 @@
+﻿<Page x:Class="WPF.Pop"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WPF"
+      mc:Ignorable="d"
+      VerticalAlignment="Stretch"
+      HorizontalAlignment="Stretch"
+      d:DesignWidth="800"
+      d:DesignHeight="450"
+      Background="White"
+      Title="Pop">
+
+    <ScrollViewer>
+        <Grid x:Name="PopUpGrid"
+              Width="auto"
+              Height="auto"
+            
+            
+              Margin="9,0,0,0"
+              Grid.Row="1"
+              Grid.Column="0"
+              Visibility="Visible">
+         
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+
+
+            </Grid.RowDefinitions>
+           
+            <Label Grid.Row="0"
+                   Grid.Column="3"
+                   Style="{StaticResource LabelStyl}"
+                   Content="الاسم"></Label>
+            <Label Grid.Row="1"
+                   Grid.Column="3"
+                   Style="{StaticResource LabelStyl}"
+                   Content="الوظيفه"></Label>
+            <Label Grid.Row="2"
+                   Grid.Column="3"
+                   Style="{StaticResource LabelStyl}"
+                   Content="اب الاعتراف"></Label>
+            <Label Grid.Row="3"
+                   Grid.Column="3"
+                   Style="{StaticResource LabelStyl}"
+                   Content="المحمول"></Label>
+            <Label Grid.Row="4"
+                   Grid.Column="3"
+                   Style="{StaticResource LabelStyl}"
+                   Content="تاريخ الميلاد"></Label>
+
+            <Label Grid.Row="5"
+                   Grid.Column="3"
+                   Style="{StaticResource LabelStyl}"
+                   Content="المعودية"></Label>
+
+            <Label Grid.Row="0"
+                   Grid.Column="1"
+                   Style="{StaticResource LabelStyl}"
+                   Content="المؤهل"></Label>
+            <Label Grid.Row="1"
+                   Grid.Column="1"
+                   Style="{StaticResource LabelStyl}"
+                   Content="السن"></Label>
+            <Label Grid.Row="2"
+                   Grid.Column="1"
+                   Style="{StaticResource LabelStyl}"
+                   Content="الحاله الاجتماعية"></Label>
+            <Label Grid.Row="3"
+                   Grid.Column="1"
+                   Style="{StaticResource LabelStyl}"
+                   Content="القرابة"></Label>
+
+            <Label Grid.Row="4"
+                   Grid.Column="1"
+                   Style="{StaticResource LabelStyl}"
+                   Content="الشموسية"></Label>
+
+            <Label Grid.Row="5"
+                   Grid.Column="1"
+                   Style="{StaticResource LabelStyl}"
+                   Content="الرقم القومى"></Label>
+
+            <Label Grid.Row="6"
+                   Grid.Column="3"
+                   Style="{StaticResource LabelStyl}"
+                   Content="Email"></Label>
+
+            <Label Grid.Row="6"
+                   Grid.Column="1"
+                   Style="{StaticResource LabelStyl}"
+                   Content="ملاحظات"></Label>
+
+            <TextBox x:Name="PopNameBox"
+                     Grid.Row="0"
+                     Grid.Column="2"
+                     GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+            <TextBox x:Name="PopQualificationBox"
+                     Grid.Row="0"
+                     Grid.Column="0"
+                      GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+
+            <TextBox x:Name="PopJobBox"
+                     Grid.Row="1"
+                     Grid.Column="2"
+                      GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+
+            <TextBox x:Name="PopAgeBox"
+                     Grid.Row="1"
+                     Grid.Column="0"
+                      GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+
+            <TextBox x:Name="PopComfessionBox"
+                     Grid.Row="2"
+                      GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Grid.Column="2"
+                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+
+            <TextBox x:Name="PopSocialCaseBox"
+                     Grid.Row="2"
+                      GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Grid.Column="0"
+                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+
+            <TextBox x:Name="PopMobileBox"
+                     Grid.Row="3"
+                      GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Grid.Column="2"
+                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+
+            <TextBox x:Name="PopRelativeBox"
+                     Grid.Row="3"
+                      GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Grid.Column="0"
+                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+
+            <TextBox x:Name="PopBirthDateBox"
+                     Grid.Row="4"
+                      GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Grid.Column="2"
+                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+
+            <TextBox x:Name="PopShamosiaBox"
+                     Grid.Row="4"
+                      GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Grid.Column="0"
+                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+
+            <TextBox x:Name="PopBabtismBox"
+                     Grid.Row="5"
+                      GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Grid.Column="2"
+                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+            <TextBox x:Name="PopNationalIdBox"
+                     Grid.Row="5"
+                      GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Grid.Column="0"
+                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+
+            <TextBox x:Name="PopEmailBox"
+                     Grid.Row="6"
+                      GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Grid.Column="2"
+                     Style="{StaticResource PopTextBoxGotFocus}"
+                     />
+
+            <TextBox x:Name="PopNoticeBox"
+                     Grid.Row="6"
+                      GotFocus="GLOBALTextBox_GotFocus"
+                     Loaded="TextBox_Loaded"
+                     LostFocus="GlobalTextBox_Loaded"
+                     Height="auto"
+                     Margin="10,10,0,0"
+                     Grid.RowSpan="2"
+                     Grid.Column="0"
+                     Style="{StaticResource BigTextBoxGotFocus}"
+                     MinLines="3" />
+
+            <Grid Grid.Row="8"
+                  Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="PopSaVeButton"
+                        Style="{StaticResource InformButton}"
+                        HorizontalAlignment="Stretch"
+                        Margin="0,0,8,0"
+                        Grid.Column="0"
+                        Content="حفظ">
+
+                </Button>
+
+                <Button x:Name="PopEditButton"
+                        Margin="0,0,8,0"
+                        Style="{StaticResource InformButton}"
+                        HorizontalAlignment="Stretch"
+                        Grid.Column="1"
+                        Content="تعديل">
+
+                </Button>
+
+                <Button x:Name="PopCancelButton"
+                        HorizontalAlignment="Stretch"
+                        Grid.Column="2"
+                        Style="{StaticResource InformButton}"
+                        Content="الغاء"
+                        Click="PopCancelButton_Click">
+
+                </Button>
+
+            </Grid>
+
+            <CheckBox VerticalAlignment="Center"
+                      HorizontalAlignment="Right"
+                      Background="White"
+                      Grid.Row="7"
+                      Grid.Column="2"></CheckBox>
+            <Label Grid.Row="7"
+                   Grid.Column="3"
+                   Content="هام"
+                   Style="{StaticResource LabelStyl}"></Label>
+
+        </Grid>
+    </ScrollViewer>
+
+</Page>

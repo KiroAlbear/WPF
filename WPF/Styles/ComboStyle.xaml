@@ -1,0 +1,92 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WPF.Styles">
+    <Style x:Key="ComboStyle" TargetType="ComboBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBox" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+
+                            <RowDefinition Height="20*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Border SnapsToDevicePixels="true"
+                            x:Name="Bd"   
+                            BorderBrush="Black"
+                            Grid.Row="0"
+                          
+                            Opacity="0.7"
+                            BorderThickness="0,0,0,0">
+                            <ScrollViewer SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                      x:Name="PART_ContentHost"
+                                      HorizontalAlignment="Right"
+                                      VerticalAlignment="Center" >
+
+                            </ScrollViewer>
+
+                            <!--<Border.Effect>
+
+                            <DropShadowEffect ShadowDepth="2" Color="LightSlateGray" Opacity="0.8" x:Name="BorderShadow" />
+
+                        </Border.Effect>-->
+
+                        </Border>
+                        <Grid Grid.Row="1" Background="#1184b2" x:Name="linegrid" Width="1000"></Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="GotFocus">
+                            <BeginStoryboard>
+
+                                <Storyboard x:Name="GotFocusStoryBoard">
+
+                                    <!--<ThicknessAnimation  To="-200,0,-200,0"
+                                                         Duration="0:0:0:2"
+                                                         Storyboard.TargetProperty="Margin"
+                                                         Storyboard.TargetName="linegrid
+                                        "></ThicknessAnimation>-->
+                                    <!--<ThicknessAnimation   To="100"
+                                                         Duration="0:0:2:2"
+                                                         Storyboard.TargetProperty="width"
+                                                         Storyboard.TargetName="linegrid"></ThicknessAnimation>-->
+
+                                    <DoubleAnimation x:Name="DoubleAnimation1" Storyboard.TargetName="linegrid" Storyboard.TargetProperty="(Grid.Width)"
+                                                     To="10" Duration="0:0:0" AutoReverse="False"/>
+
+                                    <DoubleAnimation x:Name="DoubleAnimation" Storyboard.TargetName="linegrid" Storyboard.TargetProperty="(Grid.Width)"
+                                                     To="500" Duration="0:0:0.7" AutoReverse="False"/>
+                                </Storyboard>
+
+
+                            </BeginStoryboard>
+                            <!--<BeginStoryboard>
+                                <Storyboard>
+                                    <ThicknessAnimation  To="-1000,0,0,0"
+                                                         Duration="0:0:7:0"
+                                                         Storyboard.TargetProperty="Margin"
+                                                         Storyboard.TargetName="linegrid"></ThicknessAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>-->
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="LostFocus">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <!--<DoubleAnimation x:Name="DoubleAnimation2" Storyboard.TargetName="linegrid" Storyboard.TargetProperty="(Grid.Width)"
+                                                     To="500" Duration="0:0:0.01" AutoReverse="False"/>-->
+                                    <!--<ThicknessAnimation  To="100,0,100,0"
+                                                         Duration="0:0:0:.01"
+                                                         Storyboard.TargetProperty="Margin"
+                                                         Storyboard.TargetName="linegrid2"></ThicknessAnimation>-->
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+
+    </Style>
+</ResourceDictionary>

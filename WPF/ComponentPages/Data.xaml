@@ -1,0 +1,340 @@
+﻿<Page x:Class="WPF.ComponentPages.Data"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WPF.ComponentPages"
+      mc:Ignorable="d"
+      d:DesignWidth="800"
+      d:DesignHeight="800"
+      Background="white"
+      Title="DataPage" >
+
+    <Grid x:Name="DataGrid"
+          Grid.Row="1"
+          Grid.Column="1"
+          VerticalAlignment="Stretch"
+          HorizontalAlignment="Stretch">
+        
+        <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Visible"
+                      Margin="0,22,0,0">
+            <Border  Margin="0,0,0,0"
+                      BorderBrush="Black"
+                     BorderThickness="2,0,0,0">
+                <Grid Name="TableGrid"
+                      Margin="15,0,0,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition  Width="3*"></ColumnDefinition>
+                        <ColumnDefinition  Width="1.5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="PriestTextBox"
+                             Grid.Row="0"
+                                
+                             TextChanged="GLOBAL_TextChanged"
+                             LostFocus="GlobalTextBox_Loaded"
+                             GotFocus="GLOBALTextBox_GotFocus"
+                             Loaded="GlobalBox_Loaded"
+                             PreviewKeyDown="PriestTextBox_PreviewKeyDown"
+                             MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
+                             Style="{StaticResource NewTextBoxStyleGotFocus}">
+                    </TextBox>
+
+                    <Label x:Name="PriestLabel"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           Content="الكاهن المسؤل"
+                           Style="{StaticResource LabelStyl}" />
+
+                    <TextBox Grid.Row="1"
+                             Grid.Column="0"
+                             x:Name="ChurchBox"
+                             TextChanged="GLOBAL_TextChanged"
+                             LostFocus="GlobalTextBox_Loaded"
+                             GotFocus="GLOBALTextBox_GotFocus"
+          Loaded="GlobalBox_Loaded"
+                             PreviewKeyDown="PriestTextBox_PreviewKeyDown"
+                             MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
+                             Style="{StaticResource NewTextBoxStyleGotFocus}" />
+
+                    <Label x:Name="ChurchLabel"
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           Content="الكنيسة"
+                           Style="{StaticResource LabelStyl}" />
+
+                    <TextBox Grid.Row="2"
+                             Grid.Column="0"
+                             x:Name="PersonBox"
+                             TextChanged="GLOBAL_TextChanged"
+                             LostFocus="GlobalTextBox_Loaded"
+                             GotFocus="GLOBALTextBox_GotFocus"
+                             Loaded="GlobalBox_Loaded"
+                             PreviewKeyDown="PriestTextBox_PreviewKeyDown"
+                             MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
+                             Style="{StaticResource NewTextBoxStyleGotFocus}" />
+
+                    <Label Grid.Row="2"
+                           Style="{StaticResource LabelStyl}"
+                           Grid.Column="1"
+                           Name="PersonLabel"
+                           Content="رب الاسرة">
+                    </Label>
+
+                    <Grid x:Name="HouseStreetGride"
+                          Grid.Row="3"
+                          Grid.Column="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition  Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="1.3*"></ColumnDefinition>
+                            <ColumnDefinition  Width="1.1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox x:Name="HouseNuberBox"
+                                 Grid.Column="2"
+                                 LostFocus="GlobalTextBox_Loaded"
+                             GotFocus="GLOBALTextBox_GotFocus"
+                             Loaded="GlobalBox_Loaded"
+                                 Style="{StaticResource NewTextBoxStyleGotFocus}" />
+                        <Label    x:Name="StreetLabel"
+                                  Grid.Column="1"
+                                  Content="الشارع"
+                                  Style="{StaticResource LabelStyl}"
+                                  HorizontalAlignment="Left" />
+                        <TextBox  x:Name="StreetTextBox"
+                                  LostFocus="GlobalTextBox_Loaded"
+                                  GotFocus="GLOBALTextBox_GotFocus"
+
+                             Loaded="GlobalBox_Loaded"
+                                  MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
+                                  PreviewKeyDown="PriestTextBox_PreviewKeyDown"
+                                  Grid.Column="0"
+                                  TextChanged="GLOBAL_TextChanged"
+
+                                  Style="{StaticResource NewTextBoxStyleGotFocus}"></TextBox>
+                    </Grid>
+
+                    <Label x:Name="floorlabel"
+                           Grid.Row="4"
+                           Grid.Column="1"
+                           Content="الدور"
+                           Style="{StaticResource LabelStyl}"></Label>
+
+                    <Grid x:Name="FloorApartmentGride"
+                          Grid.Row="4"
+                          Grid.Column="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width=".44*"></ColumnDefinition>
+                            <ColumnDefinition Width=".5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="FloorTextBox"
+                                 Style="{StaticResource NewTextBoxStyleGotFocus}"
+                               LostFocus="GlobalTextBox_Loaded"
+                             GotFocus="GLOBALTextBox_GotFocus"
+                             Loaded="GlobalBox_Loaded"
+                                 Grid.Column="2"></TextBox>
+
+                        <Label x:Name="ApartmentLabel"
+                               HorizontalAlignment="Left"
+                               Content="شقة"
+                               Style="{StaticResource LabelStyl}"
+                               Grid.Column="1"></Label>
+                        <TextBox x:Name="ApartmentTextBox"
+                                 Style="{StaticResource NewTextBoxStyleGotFocus}"
+                          LostFocus="GlobalTextBox_Loaded"
+                             GotFocus="GLOBALTextBox_GotFocus"
+                             Loaded="GlobalBox_Loaded"
+                                 Grid.Column="0"></TextBox>
+                    </Grid>
+
+                    <Label x:Name="HouseNumber"
+                           Grid.Row="3"
+                           Grid.Column="2"
+                           Content="رقم المنزل"
+                           Style="{StaticResource LabelStyl}"></Label>
+
+                    <TextBox x:Name="RegionTextBox"
+                             Grid.Row="5"
+                             Grid.Column="0"
+                             TextChanged="GLOBAL_TextChanged"
+                             LostFocus="GlobalTextBox_Loaded"
+                             GotFocus="GLOBALTextBox_GotFocus"
+ 
+                             Loaded="GlobalBox_Loaded"
+                             PreviewKeyDown="PriestTextBox_PreviewKeyDown"
+                             MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
+                             Style="{StaticResource NewTextBoxStyleGotFocus}"></TextBox>
+
+                    <TextBox Name="AdressDesciption"
+                             Grid.Row="6"
+                             Grid.Column="0"
+ LostFocus="GlobalTextBox_Loaded"
+                             GotFocus="GLOBALTextBox_GotFocus"
+                             Loaded="GlobalBox_Loaded"
+                             Style="{StaticResource NewTextBoxStyleGotFocus}"></TextBox>
+
+                    <TextBox Name="Telefone1Textbox"
+                             Grid.Row="7"
+                             Grid.Column="0"
+                             MouseDoubleClick="Telefone1Textbox_OnMouseDoubleClick"
+                           LostFocus="GlobalTextBox_Loaded"
+                             GotFocus="GLOBALTextBox_GotFocus"
+                             Loaded="GlobalBox_Loaded"
+                             Style="{StaticResource NewTextBoxStyleGotFocus}"></TextBox>
+
+                    <TextBox Name="Telefone2Textbox"
+                             Grid.Row="8"
+                             Grid.Column="0"
+                            LostFocus="GlobalTextBox_Loaded"
+                             GotFocus="GLOBALTextBox_GotFocus"
+                             Loaded="GlobalBox_Loaded"
+                             Style="{StaticResource NewTextBoxStyleGotFocus}"></TextBox>
+                    <Grid Name="MariageGrid"
+                          Grid.Row="9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="9*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="VisitDateTextBox"
+                                 Grid.Column="1"
+                                LostFocus="GlobalTextBox_Loaded"
+                             GotFocus="GLOBALTextBox_GotFocus"
+                             Loaded="GlobalBox_Loaded"
+                                 KeyDown="PassCalendar_KeyDown"
+                                 Style="{StaticResource NewTextBoxStyleGotFocus}" TextChanged="MariageDateTextBox_TextChanged"></TextBox>
+
+                        <DatePicker x:Name="MarriageDataPicker"
+                                    Grid.Column="0"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    LostFocus="MarriageDataPicker_LostFocus"
+                               
+                                    BorderBrush="#0e0e0e"
+                                    Loaded="MarriageDataPicker_Loaded" />
+                    </Grid>
+
+                    <TextBox x:Name="PersonsNumberTextBox"
+                             Grid.Row="10"
+                             Grid.Column="0"
+                             LostFocus="GlobalTextBox_Loaded"
+                             GotFocus="GLOBALTextBox_GotFocus"
+                             Loaded="GlobalBox_Loaded"
+                             Style="{StaticResource NewTextBoxStyleGotFocus}"
+                             HorizontalAlignment="Right"
+                             KeyDown="PassCalendar_KeyDown"
+                             Margin="0,5"
+                             Width="48"></TextBox>
+
+
+                    <TextBox Name="NotesTextbox"
+                             Grid.Row="11"
+                             Grid.Column="0"
+                             Grid.RowSpan="3"
+                             LostFocus="GlobalTextBox_Loaded"
+                             GotFocus="GLOBALTextBox_GotFocus"
+                             Loaded="GlobalBox_Loaded"
+                             Style="{StaticResource BigTextBoxGotFocus}"></TextBox>
+
+
+
+
+
+                    <Label x:Name="RegionLabel"
+                           Grid.Row="5"
+                           Grid.Column="3"
+                           Style="{StaticResource LabelStyl}"
+                           Content="المنطقة"></Label>
+
+                    <!--<ComboBox x:Name="RegionCombo"
+                              Grid.Row="5"
+                              Grid.Column="0"
+                              Margin="0,5" />-->
+
+                    <!--<ComboBox x:Name="AdressDesciptionCombo"
+                              Grid.Row="6"
+                              Grid.Column="0"
+                              Margin="0,5" />-->
+
+                    <Label x:Name="AdressLabel"
+                           Grid.Row="6"
+                           Grid.Column="3"
+                           Style="{StaticResource LabelStyl}"
+                           Content="وصف العنوان" />
+
+                    <Label Name="Telefone1Label"
+                           Content="تليفون 1 "
+                           Grid.Column="2"
+                           Grid.Row="7"
+                           Style="{StaticResource LabelStyl}" />
+
+                    <Label Name="Telefone2Label"
+                           Content="تليفون 2 "
+                           Grid.Column="2"
+                           Grid.Row="8"
+                           Style="{StaticResource LabelStyl}" />
+
+                    <Label Name="VisitDateDateLabel"
+                           Content="تاريخ الزيارة"
+                           Grid.Column="2"
+                           Grid.Row="9"
+                           Style="{StaticResource LabelStyl}" />
+
+                    <Label  x:Name="PersonsNumberLabel"
+                            Content="عدد الافراد"
+                            Grid.Column="2"
+                            Grid.Row="10"
+                            Style="{StaticResource LabelStyl}" />
+
+
+                    <Label  x:Name="NotesLabel"
+                            Content="الملاحظات"
+                            Grid.Column="2"
+                            Grid.Row="11"
+                            Style="{StaticResource LabelStyl}" />
+
+
+                    <!--<ListView Name="PriestList"
+                              Grid.Column="1"
+                              Grid.Row="1"
+                              Visibility="Collapsed"
+                              SelectionChanged="AutoCompleteList_SelectionChanged"
+                              Style="{StaticResource StylishList}" />
+
+                    <ListView Name="ChurchCompleteList"
+                              Grid.Column="1"
+                              Grid.Row="2"
+                              Visibility="Collapsed"
+                              SelectionChanged="AutoCompleteList_SelectionChanged"
+                              Style="{StaticResource StylishList}" />-->
+
+                    <!--<ListView Name="PersonCompleteList"
+                              Grid.Column="1"
+                              Grid.Row="2"
+                              Visibility="Collapsed"
+                              SelectionChanged="AutoCompleteList_SelectionChanged"
+                              Style="{StaticResource StylishList}" />-->
+                </Grid>
+            </Border>
+        </ScrollViewer>
+    </Grid>
+</Page>

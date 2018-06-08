@@ -1,0 +1,275 @@
+﻿<Page x:Class="WPF.ComponentPages.DataPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF.ComponentPages"
+      mc:Ignorable="d"
+      d:DesignWidth="800"
+      d:DesignHeight="450"
+      Title="DataPage">
+
+    <Grid x:Name="DataGrid"
+          Grid.Row="1"
+          Grid.Column="1"
+          VerticalAlignment="Stretch"
+          HorizontalAlignment="Stretch">
+
+        <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Visible"
+                      Margin="0,22,0,0">
+            <Border  Margin="0,0,0,0"
+                     BorderBrush="#54c0ff"
+                     BorderThickness="2,0,0,0">
+                <Grid Margin="15,0,0,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition  Width=".3*"></ColumnDefinition>
+                        <ColumnDefinition  Width="3*"></ColumnDefinition>
+                        <ColumnDefinition  Width="1.5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="PriestTextBox"
+                             Grid.Row="0"
+                             Grid.Column="1"
+                             Loaded="TextBox_Loaded"
+                             Style="{StaticResource TextBoxStyle}">
+                    </TextBox>
+
+                    <Label x:Name="PriestLabel"
+                           Grid.Row="0"
+                           Grid.Column="2"
+                           Content="الكاهن المسؤل"
+                           Style="{StaticResource LabelStyl}" />
+
+                    <TextBox Grid.Row="1"
+                             Grid.Column="1"
+                             x:Name="ChurchBox"
+                             Style="{StaticResource TextBoxStyle}" />
+
+                    <Label x:Name="ChurchLabel"
+                           Grid.Row="1"
+                           Grid.Column="2"
+                           Content="الكنيسة"
+                           Style="{StaticResource LabelStyl}" />
+
+                    <TextBox Grid.Row="2"
+                             Grid.Column="1"
+                             x:Name="PersonBox"
+                             Style="{StaticResource TextBoxStyle}" />
+
+                    <Label Grid.Row="2"
+                           Style="{StaticResource LabelStyl}"
+                           Grid.Column="2"
+                           Name="PersonLabel"
+                           Content="رب الاسرة">
+                    </Label>
+
+                    <Grid x:Name="HouseStreetGride"
+                          Grid.Row="3"
+                          Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition  Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="1.3*"></ColumnDefinition>
+                            <ColumnDefinition  Width="1.1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox x:Name="HouseNuberBox"
+                                 Grid.Column="2"
+                                 Style="{StaticResource TextBoxStyle}" />
+                        <Label    x:Name="StreetLabel"
+                                  Grid.Column="1"
+                                  Content="الشارع"
+                                  Style="{StaticResource LabelStyl}"
+                                  HorizontalAlignment="Left" />
+                        <TextBox  x:Name="StreetTextBox"
+                                  Grid.Column="0"
+                                  Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </Grid>
+
+                    <Label x:Name="floorlabel"
+                           Grid.Row="4"
+                           Grid.Column="2"
+                           Content="الدور"
+                           Style="{StaticResource LabelStyl}"></Label>
+
+                    <Grid x:Name="FloorApartmentGride"
+                          Grid.Row="4"
+                          Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width=".44*"></ColumnDefinition>
+                            <ColumnDefinition Width=".5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="FloorTextBox"
+                                 Style="{StaticResource TextBoxStyle}"
+                                 Grid.Column="2"></TextBox>
+                        <Label x:Name="ApartmentLabel"
+                               HorizontalAlignment="Left"
+                               Content="شقة"
+                               Style="{StaticResource LabelStyl}"
+                               Grid.Column="1"></Label>
+                        <TextBox x:Name="ApartmentTextBox"
+                                 Style="{StaticResource TextBoxStyle}"
+                                 Grid.Column="0"></TextBox>
+                    </Grid>
+
+                    <Label x:Name="HouseNumber"
+                           Grid.Row="3"
+                           Grid.Column="2"
+                           Content="رقم المنزل"
+                           Style="{StaticResource LabelStyl}"></Label>
+
+                    <TextBox x:Name="RegionTextBox"
+                             Grid.Row="5"
+                             Grid.Column="1"
+                             Style="{StaticResource TextBoxStyle}"></TextBox>
+
+                    <TextBox Name="AdressDesciption"
+                             Grid.Row="6"
+                             Grid.Column="1"
+                             Style="{StaticResource TextBoxStyle}"></TextBox>
+
+                    <TextBox Name="Telefone1Textbox"
+                             Grid.Row="7"
+                             Grid.Column="1"
+                             Style="{StaticResource TextBoxStyle}"></TextBox>
+
+                    <TextBox Name="Telefone2Textbox"
+                             Grid.Row="8"
+                             Grid.Column="1"
+                             Style="{StaticResource TextBoxStyle}"></TextBox>
+                    <TextBox x:Name="MariageDateTextBox"
+                             Grid.Row="9"
+                             Grid.Column="1"
+                             Style="{StaticResource TextBoxStyle}"></TextBox>
+
+                    <TextBox x:Name="PersonsNumberTextBox"
+                             Grid.Row="10"
+                             Grid.Column="1"
+                             Style="{StaticResource TextBoxStyle}"
+                             HorizontalAlignment="Right"
+                             Margin="0,5"
+                             Width="48"></TextBox>
+                    <Button x:Name="SubmitButton"
+                            BorderThickness="0"
+                            Grid.Row="12"
+                            Grid.RowSpan="2"
+                            Grid.Column="1"
+                            Height="70"
+                           
+                            Style="{StaticResource ButtonStyle}"
+                            Content="إنهاء"
+                            FontFamily="{StaticResource newfont}"
+                            FontSize="30"
+                            TextBlock.FontWeight="Light"
+                            TextBlock.TextAlignment="Center"
+                            Foreground="White" />
+
+                    <ComboBox x:Name="ChurchCombo"
+                              GotFocus="ChurchCombo_GotFocus"
+                              Grid.Column="0"
+                              Margin="0,5"
+                              Grid.Row="1">
+
+                    </ComboBox>
+                    <ComboBox x:Name="PriestCombo"
+                              Grid.Row="0"
+                              Grid.Column="0"
+                              Margin="0,5" SelectionChanged="PriestCombo_SelectionChanged" />
+                    <ComboBox x:Name="StreetCombo"
+                              Grid.Row="3"
+                              Grid.Column="0"
+                              Margin="0,5" />
+                    <ComboBox x:Name="PersonCombo"
+                              Grid.Row="2"
+                              Padding="0,0,7,0"
+                              Grid.Column="0"
+                              Margin="0,5" />
+
+                    <Label x:Name="RegionLabel"
+                           Grid.Row="5"
+                           Grid.Column="3"
+                           Style="{StaticResource LabelStyl}"
+                           Content="المنطقة"></Label>
+
+                    <ComboBox x:Name="RegionCombo"
+                              Grid.Row="5"
+                              Grid.Column="0"
+                              Margin="0,5" />
+
+                    <ComboBox x:Name="AdressDesciptionCombo"
+                              Grid.Row="6"
+                              Grid.Column="0"
+                              Margin="0,5" />
+
+                    <Label x:Name="AdressLabel"
+                           Grid.Row="6"
+                           Grid.Column="3"
+                           Style="{StaticResource LabelStyl}"
+                           Content="وصف العنوان" />
+
+                    <Label Name="Telefone1Label"
+                           Content="تليفون 1 "
+                           Grid.Column="2"
+                           Grid.Row="7"
+                           Style="{StaticResource LabelStyl}" />
+
+                    <Label Name="Telefone2Label"
+                           Content="تليفون 2 "
+                           Grid.Column="2"
+                           Grid.Row="8"
+                           Style="{StaticResource LabelStyl}" />
+
+                    <DatePicker Grid.Row="9"
+                                x:Name="MarriageDataPicker"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Bottom"
+                                Width="30"
+                                LostFocus="MarriageDataPicker_LostFocus"
+                                BorderBrush="#0e0e0e"
+                                Loaded="MarriageDataPicker_Loaded"
+                                Margin="0,5,0,13" />
+
+                    <Label Name="MariageDateLabel"
+                           Content="تاريخ الزواج"
+                           Grid.Column="2"
+                           Grid.Row="9"
+                           Style="{StaticResource LabelStyl}" />
+
+                    <Label  x:Name="PersonsNumberLabel"
+                            Content="عدد الافراد"
+                            Grid.Column="2"
+                            Grid.Row="10"
+                            Style="{StaticResource LabelStyl}" />
+                    
+                    <ListView Grid.Row="1"
+                              Grid.Column="1"
+                              Background="Red"
+                             
+                              ></ListView>
+
+                   
+                </Grid>
+            </Border>
+
+        </ScrollViewer>
+
+    </Grid>
+</Page>

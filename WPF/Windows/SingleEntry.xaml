@@ -1,0 +1,180 @@
+﻿<Controls:MetroWindow x:Class="WPF.Windows.SingleEntry"
+                      xmlns:fsxaml="http://github.com/fsprojects/FsXaml"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:local="clr-namespace:WPF.Windows"
+                      mc:Ignorable="d"
+                      Title="SingleEntry"
+                      MinHeight="300"
+                      MinWidth="864.256"
+                       WindowStartupLocation="CenterScreen"
+                    
+                       Height="500"
+                     
+                       Width="900">
+    <Grid FlowDirection="RightToLeft">
+      
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+          
+        </Grid.RowDefinitions>
+        <TabControl Grid.Row="0"
+             
+                    Margin="0,25,0,0"
+                    Controls:TabControlHelper.IsUnderlined="True">
+
+            <TabItem x:Name="ResponsiblePriestTab"
+                     Header="الكاهن المسئول"
+                     Margin="3,-17,0,0"
+                  
+                     PreviewMouseDown="ResponsiblePriestTab_PreviewMouseDown"
+                  
+                     Template="{StaticResource TabTemplat}"
+                   
+                     
+                   >
+              
+                    <Frame Name="ResponsiblePriestFrame" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+                    
+              
+               
+            </TabItem>
+
+            <TabItem x:Name="ChurchesTab"
+                     Header="الكنائس"
+                     PreviewMouseDown="ChurchesTab_PreviewMouseDown"
+                     Controls:TabControlHelper.Transition="Down"
+                     Margin="3,-17,0,0"
+                     TextBlock.TextAlignment="Right"
+                     Template="{StaticResource TabTemplat}">
+                
+                    
+                    <Frame Name="ChurchFrame"
+                       VerticalAlignment="Stretch"
+                       Grid.Column="0"
+                       HorizontalAlignment="Stretch"
+                      ></Frame>
+              
+                
+            </TabItem>
+            <TabItem x:Name="RegionTab"
+                     Header="المناطق"
+                     Margin="3,-17,0,0"
+                     PreviewMouseDown="RegionTab_PreviewMouseDown"
+                     Template="{StaticResource TabTemplat}"
+                     Controls:TabControlHelper.Transition="Down">
+               
+                    <Frame Name="RegionFrame"
+                       VerticalAlignment="Stretch"
+                       Grid.Column="0"
+                           HorizontalAlignment="Stretch">
+                        
+                        
+                    </Frame>
+                
+                
+            </TabItem>
+            <TabItem x:Name="SocialConditionTabTab"
+                     Header="الحالة الاجتماعية"
+                     Margin="3,-17,0,0"
+                     PreviewMouseDown="SocialConditionTabTab_PreviewMouseDown"
+                     Template="{StaticResource TabTemplat}"
+                     Controls:TabControlHelper.Transition="Down">
+             
+                    <Frame Name="SocialConditionFrame"
+                       VerticalAlignment="Stretch"
+                       HorizontalAlignment="Stretch"
+                      ></Frame>
+              
+
+               
+            </TabItem>
+
+            <TabItem x:Name="StreetTab"
+                     Header="الشوارع"
+                     Margin="3,-17,0,0"
+                     PreviewMouseDown="StreetTab_PreviewMouseDown"
+                     Template="{StaticResource TabTemplat}"
+                     Controls:TabControlHelper.Transition="Down">
+             
+                   
+                    <Frame Name="StreetsFrame"
+                       VerticalAlignment="Stretch"
+                       HorizontalAlignment="Stretch"
+                      ></Frame>
+               
+            </TabItem>
+
+            <TabItem x:Name="ConfessionTab"
+                     Header="اب الاعتراف"
+                     Margin="3,-17,0,0"
+                     PreviewMouseDown="ConfessionTab_PreviewMouseDown"
+                     Template="{StaticResource TabTemplat}"
+                     Controls:TabControlHelper.Transition="Down">
+               
+                    <Frame Name="ConfessionPriestFrame"
+                       VerticalAlignment="Stretch"
+                       HorizontalAlignment="Stretch"
+                      ></Frame>
+                
+            </TabItem>
+
+            <TabItem x:Name="LivingTypeTab"
+                     Header="نوع السكن"
+                     Margin="3,-17,0,0"
+                     PreviewMouseDown="LivingTypeTab_PreviewMouseDown"
+                     Template="{StaticResource TabTemplat}"
+                     Controls:TabControlHelper.Transition="Down">
+               
+                    <Frame Name="LivingTypeFrame"
+                       VerticalAlignment="Stretch"
+                       HorizontalAlignment="Stretch"
+                      ></Frame>
+            
+            </TabItem>
+
+            <TabItem x:Name="baptismTab"
+                     Header="المعمودية"
+                     Margin="3,-17,0,0"
+                     PreviewMouseDown="baptismTab_PreviewMouseDown"
+                     Template="{StaticResource TabTemplat}"
+                     Controls:TabControlHelper.Transition="Down">
+              
+                    <Frame Name="PabtismFrame"
+                       VerticalAlignment="Stretch"
+                       HorizontalAlignment="Stretch"
+                       ></Frame>
+                
+            </TabItem>
+            <TabItem x:Name="ServersTab"
+                     Header="الخدام"
+                     Margin="3,-17,0,0"
+                     PreviewMouseDown="ServersTab_PreviewMouseDown"
+                     Template="{StaticResource TabTemplat}"
+                     Controls:TabControlHelper.Transition="Down">
+
+                    <Frame Name="ServersFrame"
+                       VerticalAlignment="Stretch"
+                       HorizontalAlignment="Stretch"
+                     ></Frame>
+                
+            </TabItem>
+            <TabItem x:Name="ServiceTab"
+                     Header="الخدمة"
+                     Margin="3,-17,0,0"
+                     PreviewMouseDown="ServiceTab_PreviewMouseDown"
+                     Template="{StaticResource TabTemplat}"
+                     Controls:TabControlHelper.Transition="Down">
+              
+                    <Frame Name="ServiceFrame"
+                       VerticalAlignment="Stretch"
+                       HorizontalAlignment="Stretch"></Frame>
+             
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Controls:MetroWindow>

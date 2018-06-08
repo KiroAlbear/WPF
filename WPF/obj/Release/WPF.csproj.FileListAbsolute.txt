@@ -1,0 +1,192 @@
+P:\Projects\WPF\WPF\bin\Release\WPF.exe.config
+P:\Projects\WPF\WPF\bin\Release\WPF.exe
+P:\Projects\WPF\WPF\bin\Release\WPF.pdb
+P:\Projects\WPF\WPF\obj\Release\EntryWindow.g.cs
+P:\Projects\WPF\WPF\obj\Release\MainWindow.g.cs
+P:\Projects\WPF\WPF\obj\Release\App.g.cs
+P:\Projects\WPF\WPF\obj\Release\WPF_MarkupCompile.cache
+P:\Projects\WPF\WPF\obj\Release\WPF_MarkupCompile.lref
+P:\Projects\WPF\WPF\obj\Release\App.baml
+P:\Projects\WPF\WPF\obj\Release\EntryWindow.baml
+P:\Projects\WPF\WPF\obj\Release\MainWindow.baml
+P:\Projects\WPF\WPF\obj\Release\WPF.g.resources
+P:\Projects\WPF\WPF\obj\Release\WPF.Properties.Resources.resources
+P:\Projects\WPF\WPF\obj\Release\WPF.csproj.GenerateResource.Cache
+P:\Projects\WPF\WPF\obj\Release\WPF.exe
+P:\Projects\WPF\WPF\obj\Release\WPF.pdb
+P:\Projects\WPF\WPF\obj\Release\Pop.g.cs
+P:\Projects\WPF\WPF\obj\Release\Pop.baml
+P:\Projects\WPF\wpf_original\WPF\bin\Release\WPF.exe.config
+P:\Projects\WPF\wpf_original\WPF\bin\Release\WPF.exe
+P:\Projects\WPF\wpf_original\WPF\bin\Release\WPF.pdb
+P:\Projects\WPF\wpf_original\WPF\obj\Release\EntryWindow.g.cs
+P:\Projects\WPF\wpf_original\WPF\obj\Release\MainWindow.g.cs
+P:\Projects\WPF\wpf_original\WPF\obj\Release\Pop.g.cs
+P:\Projects\WPF\wpf_original\WPF\obj\Release\App.g.cs
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF_MarkupCompile.cache
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF_MarkupCompile.lref
+P:\Projects\WPF\wpf_original\WPF\obj\Release\App.baml
+P:\Projects\WPF\wpf_original\WPF\obj\Release\EntryWindow.baml
+P:\Projects\WPF\wpf_original\WPF\obj\Release\MainWindow.baml
+P:\Projects\WPF\wpf_original\WPF\obj\Release\Pop.baml
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF.g.resources
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF.Properties.Resources.resources
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF.csproj.GenerateResource.Cache
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF.exe
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF.pdb
+C:\Users\anton\Google Drive\wpf_original\WPF\bin\Release\WPF.exe.config
+C:\Users\anton\Google Drive\wpf_original\WPF\bin\Release\WPF.exe
+C:\Users\anton\Google Drive\wpf_original\WPF\bin\Release\WPF.pdb
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\EntryWindow.g.cs
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\MainWindow.g.cs
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\Pop.g.cs
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\App.g.cs
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF_MarkupCompile.cache
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF_MarkupCompile.lref
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\App.baml
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\EntryWindow.baml
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\MainWindow.baml
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\Pop.baml
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF.g.resources
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF.Properties.Resources.resources
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF.csproj.GenerateResource.Cache
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF.exe
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF.pdb
+P:\Projects\OfflineWpf\WPF\bin\Release\WPF.exe.config
+P:\Projects\OfflineWpf\WPF\bin\Release\WPF.exe
+P:\Projects\OfflineWpf\WPF\bin\Release\WPF.pdb
+P:\Projects\OfflineWpf\WPF\obj\Release\ComponentPages\Data.g.cs
+P:\Projects\OfflineWpf\WPF\obj\Release\ComponentPages\DataGridView.g.cs
+P:\Projects\OfflineWpf\WPF\obj\Release\EntryWindow.g.cs
+P:\Projects\OfflineWpf\WPF\obj\Release\MainWindow.g.cs
+P:\Projects\OfflineWpf\WPF\obj\Release\Pop.g.cs
+P:\Projects\OfflineWpf\WPF\obj\Release\App.g.cs
+P:\Projects\OfflineWpf\WPF\obj\Release\WPF_MarkupCompile.cache
+P:\Projects\OfflineWpf\WPF\obj\Release\WPF_MarkupCompile.lref
+P:\Projects\OfflineWpf\WPF\obj\Release\App.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\ComponentPages\Data.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\ComponentPages\DataGridView.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\EntryWindow.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\MainWindow.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\Pop.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\Styles\ComBoBox.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\Styles\Button.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\Styles\ListStyle.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\Styles\PopTextBox.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\Styles\TexBox.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\Styles\window.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\Styles\WindowWithSize.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\Styles\Label.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\Styles\fonts.baml
+P:\Projects\OfflineWpf\WPF\obj\Release\WPF.g.resources
+P:\Projects\OfflineWpf\WPF\obj\Release\WPF.Properties.Resources.resources
+P:\Projects\OfflineWpf\WPF\obj\Release\WPF.csproj.GenerateResource.Cache
+P:\Projects\OfflineWpf\WPF\obj\Release\WPF.exe
+P:\Projects\OfflineWpf\WPF\obj\Release\WPF.pdb
+P:\Projects\OfflineWpf\WPF\obj\Release\WPF.csprojResolveAssemblyReference.cache
+P:\Projects\OfflineWpf\WPF\obj\Release\ComponentPages\BottomPage.g.cs
+P:\Projects\OfflineWpf\WPF\obj\Release\ComponentPages\BottomPage.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\familydbFULL.mdf
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\familydbFULL_log.ldf
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\WPF.exe.config
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\WPF.exe
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\WPF.pdb
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\itextsharp.dll
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\MahApps.Metro.dll
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\MetroFramework.Design.dll
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\MetroFramework.dll
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\MetroFramework.Fonts.dll
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\System.Windows.Interactivity.dll
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\itextsharp.xml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\MahApps.Metro.pdb
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\bin\Release\MahApps.Metro.xml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\WPF.csprojResolveAssemblyReference.cache
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\BottomPage.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\ConfessionPriest.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\Data.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\DataGridView.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\ResponsiblePriest.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\Search.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\SocialCondition.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\StreetPage.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\RegionsTab.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\LivingTypeTab.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\PabtismTab.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\ResPonsible_Priest_Tab.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\ServerPersonType.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\ServiceTypeTab.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\SocialConditionTab.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\ConfessionTab.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\StreetsTab.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\ChurchesTab.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TestWindow.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TopThreeButtons.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\EntryWindow.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\MainWindow.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Pop.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Search\SearchDataGrid.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\DataGridDecoration.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Windows\SearchWindows.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Windows\SingleEntry.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Windows\TablePreview.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\App.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\WPF_Content.g.cs
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\WPF_MarkupCompile.cache
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\WPF_MarkupCompile.lref
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\App.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\BottomPage.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\ConfessionPriest.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\Data.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\DataGridView.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\ResponsiblePriest.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\Search.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\SocialCondition.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\StreetPage.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\RegionsTab.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\LivingTypeTab.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\PabtismTab.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\ResPonsible_Priest_Tab.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\ServerPersonType.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\ServiceTypeTab.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\SocialConditionTab.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\ConfessionTab.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\StreetsTab.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TabPages\ChurchesTab.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TestWindow.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\ComponentPages\TopThreeButtons.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\EntryWindow.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\MainWindow.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Pop.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Search\SearchDataGrid.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\Button.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\Colors.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\DataGridDecoration.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\ExpanderStyle.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\LabelSearch.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\ListStyle.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\NewButtonStyle.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\NewHoverTextBoxStyle.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\NewTextBoxStyleGotFocus.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\NewTextBoxStyle.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\TabTemplate.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\TextBoxSearch.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\TexBox.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\TonyCellStyle.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\window.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\WindowWithSize.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\Label.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\fonts.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Windows\SearchWindows.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Windows\SingleEntry.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Windows\TablePreview.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\WPF.g.resources
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\WPF.Properties.Resources.resources
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\WPF.csproj.GenerateResource.Cache
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\WPF.csproj.CoreCompileInputs.cache
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\WPF.exe
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\WPF.pdb
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\WPF.csproj.CopyComplete
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\BottomPage\BottomDataGrid.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\BigTextBox.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\PopTextBoxes.baml
+E:\Projects\wpf2\wpf_original\WPF_ONLINE\WPF\obj\Release\Styles\ComboStyle.baml

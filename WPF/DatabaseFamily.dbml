@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="familydbFULL" Class="DatabaseFamilyDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\familydbFULL.mdf;Integrated Security=True" SettingsObjectName="WPF.Properties.Settings" SettingsPropertyName="familydbFULLConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.areas" Member="areas">
+    <Type Name="area">
+      <Column Name="areacode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="areaname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="area_family" Member="families" ThisKey="areacode" OtherKey="areacode" Type="family" />
+    </Type>
+  </Table>
+  <Table Name="dbo.churches" Member="churches">
+    <Type Name="church">
+      <Column Name="churchcode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="churchname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="churchtel1" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="churchtel2" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="churchaddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="church_family" Member="families" ThisKey="churchcode" OtherKey="churchcode" Type="family" />
+    </Type>
+  </Table>
+  <Table Name="dbo.calldetails" Member="calldetails">
+    <Type Name="calldetail">
+      <Column Name="familycode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SSMA_TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Conversion Errors]" Member="Conversion_Errors">
+    <Type Name="Conversion_Error">
+      <Column Name="[Object Type]" Member="Object_Type" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Object Name]" Member="Object_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Error Description]" Member="Error_Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SSMA_TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.family" Member="families">
+    <Type Name="family">
+      <Column Name="familycode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="familyname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="buildingnumber" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Column Name="apparmentnumber" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="floornumber" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="streetcode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="familyaddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="familytel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="familynumber" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="economicstatus" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="housetypecode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="home" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="responsiblepriestcode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="churchcode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="areacode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lastvisitdate" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="priestname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="computerfl" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="dishfl" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="familytel2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="marriagedate" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="marriagedatefl" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="comments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="lastcalldate" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="SSMA_TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="family_familydetail" Member="familydetails" ThisKey="familycode" OtherKey="familycodedetails" Type="familydetail" />
+      <Association Name="family_visitdetail" Member="visitdetail" ThisKey="familycode" OtherKey="familycode" Type="visitdetail" Cardinality="One" />
+      <Association Name="area_family" Member="area" ThisKey="areacode" OtherKey="areacode" Type="area" IsForeignKey="true" />
+      <Association Name="church_family" Member="church" ThisKey="churchcode" OtherKey="churchcode" Type="church" IsForeignKey="true" />
+      <Association Name="housetype_family" Member="housetype" ThisKey="housetypecode" OtherKey="housetypecode" Type="housetype" IsForeignKey="true" />
+      <Association Name="responsiblepriest_family" Member="responsiblepriest" ThisKey="responsiblepriestcode" OtherKey="responsiblepriestcode" Type="responsiblepriest" IsForeignKey="true" />
+      <Association Name="street_family" Member="street" ThisKey="streetcode" OtherKey="streetcode" Type="street" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.familydetails" Member="familydetails">
+    <Type Name="familydetail">
+      <Column Name="familycodedetails" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="paxname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="relativity" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="birthdate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="birthplace" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mamodia" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="confesspriestcode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="moahel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="job" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maritalstatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maritalstatuscode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="socialnumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="healthstatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="electionnumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="birthdt" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="mobile" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="paxaddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="comments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="movedfl" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="khedmacode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shmosiacode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mamodiacode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="housetypecode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="churchcode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SSMA_TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="family_familydetail" Member="family" ThisKey="familycodedetails" OtherKey="familycode" Type="family" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="khedma_familydetail" Member="khedma" ThisKey="khedmacode" OtherKey="khedmacode" Type="khedma" IsForeignKey="true" />
+      <Association Name="mamodia_familydetail" Member="mamodia1" ThisKey="mamodiacode" OtherKey="mamodiacode" Type="mamodia" IsForeignKey="true" />
+      <Association Name="maritalstatus_familydetail" Member="maritalstatus1" ThisKey="maritalstatuscode" OtherKey="maritalstatuscode" Type="maritalstatus" IsForeignKey="true" />
+      <Association Name="priest_familydetail" Member="priest" ThisKey="confesspriestcode" OtherKey="priestcode" Type="priest" IsForeignKey="true" />
+      <Association Name="shmosia_familydetail" Member="shmosia" ThisKey="shmosiacode" OtherKey="shmosiacode" Type="shmosia" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.housetypes" Member="housetypes">
+    <Type Name="housetype">
+      <Column Name="housetypecode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="housetypename" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="housetype_family" Member="families" ThisKey="housetypecode" OtherKey="housetypecode" Type="family" />
+    </Type>
+  </Table>
+  <Table Name="dbo.khedma" Member="khedmas">
+    <Type Name="khedma">
+      <Column Name="khedmacode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="khedmaname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="khedma_familydetail" Member="familydetails" ThisKey="khedmacode" OtherKey="khedmacode" Type="familydetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mamodia" Member="mamodias">
+    <Type Name="mamodia">
+      <Column Name="mamodiacode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mamodianame" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="mamodia_familydetail" Member="familydetails" ThisKey="mamodiacode" OtherKey="mamodiacode" Type="familydetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.maritalstatus" Member="maritalstatus">
+    <Type Name="maritalstatus">
+      <Column Name="maritalstatuscode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="maritalstatusname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="maritalstatus_familydetail" Member="familydetails" ThisKey="maritalstatuscode" OtherKey="maritalstatuscode" Type="familydetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.priests" Member="priests">
+    <Type Name="priest">
+      <Column Name="priestcode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="priestname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="priestaddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="priesttel" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="priestmobile" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="churchcode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="areacode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="comments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SSMA_TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="priest_familydetail" Member="familydetails" ThisKey="priestcode" OtherKey="confesspriestcode" Type="familydetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.reporttitle" Member="reporttitles">
+    <Type Name="reporttitle">
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SSMA_TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.shmosia" Member="shmosias">
+    <Type Name="shmosia">
+      <Column Name="shmosiacode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="shmosianame" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="shmosia_familydetail" Member="familydetails" ThisKey="shmosiacode" OtherKey="shmosiacode" Type="familydetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.responsiblepriests" Member="responsiblepriests">
+    <Type Name="responsiblepriest">
+      <Column Name="responsiblepriestcode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="responsiblepriestname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="responsiblepriestaddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="responsiblepriesttel" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="responsiblepriestmobile" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="churchcode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="areacode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="comments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SSMA_TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="responsiblepriest_family" Member="families" ThisKey="responsiblepriestcode" OtherKey="responsiblepriestcode" Type="family" />
+    </Type>
+  </Table>
+  <Table Name="dbo.streetmap" Member="streetmaps">
+    <Type Name="streetmap">
+      <Column Name="streetcode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="areacode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="itemorder" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="kind" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="number" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="direction" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.streets" Member="streets">
+    <Type Name="street">
+      <Column Name="streetcode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="streetname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="street_family" Member="families" ThisKey="streetcode" OtherKey="streetcode" Type="family" />
+    </Type>
+  </Table>
+  <Table Name="dbo.visitdetails" Member="visitdetails">
+    <Type Name="visitdetail">
+      <Column Name="familycode" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="visitkindcode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SSMA_TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="family_visitdetail" Member="family" ThisKey="familycode" OtherKey="familycode" Type="family" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="visitkind_visitdetail" Member="visitkind" ThisKey="visitkindcode" OtherKey="visitkindcode" Type="visitkind" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.visitkinds" Member="visitkinds">
+    <Type Name="visitkind">
+      <Column Name="visitkindcode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="visitkindname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="visitkind_visitdetail" Member="visitdetails" ThisKey="visitkindcode" OtherKey="visitkindcode" Type="visitdetail" />
+    </Type>
+  </Table>
+</Database>

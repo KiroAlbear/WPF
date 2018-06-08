@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WPF">
+
+    <Style TargetType="Label"
+           x:Key="LabelStyl">
+        <Setter Property="Margin"
+                Value="0,0,7,0"></Setter>
+
+        <!--<Setter Property="TextBlock.FontFamily"
+                Value="{StaticResource newfont}"></Setter>-->
+        <Setter Property="Foreground"
+                Value="Black"></Setter>
+        <Setter Property="FontSize"
+                Value="18"></Setter>
+
+        <Setter Property="HorizontalAlignment"
+                Value="Right"></Setter>
+        <Setter Property="FontWeight"
+                Value="Thin"></Setter>
+        <Setter Property="VerticalAlignment"
+                Value="Center"></Setter>
+
+        
+    </Style>
+</ResourceDictionary>
