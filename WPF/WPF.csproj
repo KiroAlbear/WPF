@@ -451,6 +451,7 @@
   <ItemGroup>
     <Folder Include="Edit\" />
     <Folder Include="Register\" />
+    <Folder Include="tony\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\x-mark-3-xxl.png" />
