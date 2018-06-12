@@ -14,7 +14,7 @@ namespace WPF.Functions
 {
     public class ExpanderFunctions
     {
-        const string DataGridBackGroundPath = @"E:\Projects\OfflineWpf\WPF\BackGroundImages\DataGridBackGround.png";
+        const string DataGridBackGroundPath = @"\BackGroundImages\DataGridBackGround.png";
         StackPanel stackpanel;
         BitmapImage DataGridBackGround = Functions.BitmapFunctions.FillBitMap(DataGridBackGroundPath);
         DataTable dataTable;
