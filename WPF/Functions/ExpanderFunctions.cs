@@ -14,16 +14,16 @@ namespace WPF.Functions
 {
     public class ExpanderFunctions
     {
-        const string DataGridBackGroundPath = @"E:\Projects\OfflineWpf\WPF\BackGroundImages\DataGridBackGround.png";
+        //const string DataGridBackGroundPath = @"E:\Projects\OfflineWpf\WPF\BackGroundImages\DataGridBackGround.png";
         StackPanel stackpanel;
-        BitmapImage DataGridBackGround = Functions.BitmapFunctions.FillBitMap(DataGridBackGroundPath);
+        //BitmapImage DataGridBackGround = Functions.BitmapFunctions.FillBitMap(DataGridBackGroundPath);
         DataTable dataTable;
         public ExpanderFunctions(StackPanel stackpanel)
         {
             this.stackpanel = stackpanel;
 
             ImageBrush imagebrush = new ImageBrush();
-            imagebrush.ImageSource = DataGridBackGround;
+          //  imagebrush.ImageSource = DataGridBackGround;
 
 
 
