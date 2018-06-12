@@ -164,6 +164,7 @@
     <Compile Include="Styles\DataGridDecoration.xaml.cs">
       <DependentUpon>DataGridDecoration.xaml</DependentUpon>
     </Compile>
+    <Compile Include="tony\Class1.cs" />
     <Compile Include="Windows\SearchWindows.xaml.cs">
       <DependentUpon>SearchWindows.xaml</DependentUpon>
     </Compile>
@@ -451,7 +452,6 @@
   <ItemGroup>
     <Folder Include="Edit\" />
     <Folder Include="Register\" />
-    <Folder Include="tony\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\x-mark-3-xxl.png" />
