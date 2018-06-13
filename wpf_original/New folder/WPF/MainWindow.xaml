@@ -1,0 +1,65 @@
+﻿<Window x:Class="WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        WindowStartupLocation="CenterScreen"
+       
+       Style="{StaticResource WindowStyle}"
+        Height="700" Width="493.9"
+     
+        
+       
+        ShowInTaskbar="True"
+   
+        >
+
+
+    <Grid Name="frist"  Background="#FF030D23" >
+   
+        <Grid.RowDefinitions >
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="40"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+
+        <Button
+        Grid.Row="0"
+        Grid.Column="1"
+        HorizontalAlignment="Right"
+        VerticalAlignment="Top"
+        Width="40"
+        Height="40"
+        Background="Red" Click="Button_Click"></Button>
+
+        <Button 
+                Content="ادخال" 
+                Height="120" Width="450" 
+                FontSize="50"
+                FontWeight="DemiBold"
+                FontStyle="Normal"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" 
+                Margin="-150,0,-150,60"
+                Background="#9ba5a0" Grid.Row="1" Grid.ColumnSpan="2" ClipToBounds="True" Click="EnteryButton_Click_1"
+                
+                >
+
+        </Button>
+
+
+
+    </Grid>
+
+
+
+
+</Window>

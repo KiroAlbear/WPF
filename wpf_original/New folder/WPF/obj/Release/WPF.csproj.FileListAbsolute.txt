@@ -1,0 +1,73 @@
+P:\Projects\WPF\WPF\bin\Release\WPF.exe.config
+P:\Projects\WPF\WPF\bin\Release\WPF.exe
+P:\Projects\WPF\WPF\bin\Release\WPF.pdb
+P:\Projects\WPF\WPF\obj\Release\EntryWindow.g.cs
+P:\Projects\WPF\WPF\obj\Release\MainWindow.g.cs
+P:\Projects\WPF\WPF\obj\Release\App.g.cs
+P:\Projects\WPF\WPF\obj\Release\WPF_MarkupCompile.cache
+P:\Projects\WPF\WPF\obj\Release\WPF_MarkupCompile.lref
+P:\Projects\WPF\WPF\obj\Release\App.baml
+P:\Projects\WPF\WPF\obj\Release\EntryWindow.baml
+P:\Projects\WPF\WPF\obj\Release\MainWindow.baml
+P:\Projects\WPF\WPF\obj\Release\WPF.g.resources
+P:\Projects\WPF\WPF\obj\Release\WPF.Properties.Resources.resources
+P:\Projects\WPF\WPF\obj\Release\WPF.csproj.GenerateResource.Cache
+P:\Projects\WPF\WPF\obj\Release\WPF.exe
+P:\Projects\WPF\WPF\obj\Release\WPF.pdb
+P:\Projects\WPF\WPF\obj\Release\Pop.g.cs
+P:\Projects\WPF\WPF\obj\Release\Pop.baml
+P:\Projects\WPF\wpf_original\WPF\bin\Release\WPF.exe.config
+P:\Projects\WPF\wpf_original\WPF\bin\Release\WPF.exe
+P:\Projects\WPF\wpf_original\WPF\bin\Release\WPF.pdb
+P:\Projects\WPF\wpf_original\WPF\obj\Release\EntryWindow.g.cs
+P:\Projects\WPF\wpf_original\WPF\obj\Release\MainWindow.g.cs
+P:\Projects\WPF\wpf_original\WPF\obj\Release\Pop.g.cs
+P:\Projects\WPF\wpf_original\WPF\obj\Release\App.g.cs
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF_MarkupCompile.cache
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF_MarkupCompile.lref
+P:\Projects\WPF\wpf_original\WPF\obj\Release\App.baml
+P:\Projects\WPF\wpf_original\WPF\obj\Release\EntryWindow.baml
+P:\Projects\WPF\wpf_original\WPF\obj\Release\MainWindow.baml
+P:\Projects\WPF\wpf_original\WPF\obj\Release\Pop.baml
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF.g.resources
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF.Properties.Resources.resources
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF.csproj.GenerateResource.Cache
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF.exe
+P:\Projects\WPF\wpf_original\WPF\obj\Release\WPF.pdb
+C:\Users\anton\Google Drive\wpf_original\WPF\bin\Release\WPF.exe.config
+C:\Users\anton\Google Drive\wpf_original\WPF\bin\Release\WPF.exe
+C:\Users\anton\Google Drive\wpf_original\WPF\bin\Release\WPF.pdb
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\EntryWindow.g.cs
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\MainWindow.g.cs
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\Pop.g.cs
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\App.g.cs
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF_MarkupCompile.cache
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF_MarkupCompile.lref
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\App.baml
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\EntryWindow.baml
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\MainWindow.baml
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\Pop.baml
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF.g.resources
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF.Properties.Resources.resources
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF.csproj.GenerateResource.Cache
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF.exe
+C:\Users\anton\Google Drive\wpf_original\WPF\obj\Release\WPF.pdb
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\WPF.csprojResolveAssemblyReference.cache
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\EntryWindow.g.cs
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\MainWindow.g.cs
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\Pop.g.cs
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\App.g.cs
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\WPF_MarkupCompile.cache
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\WPF_MarkupCompile.lref
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\App.baml
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\EntryWindow.baml
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\MainWindow.baml
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\Pop.baml
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\WPF.g.resources
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\WPF.Properties.Resources.resources
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\WPF.csproj.GenerateResource.Cache
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\WPF.pdb
+P:\Projects\WPF\wpf_original\New folder\WPF\bin\Release\WPF.exe.config
+P:\Projects\WPF\wpf_original\New folder\WPF\bin\Release\WPF.exe
+P:\Projects\WPF\wpf_original\New folder\WPF\bin\Release\WPF.pdb
+P:\Projects\WPF\wpf_original\New folder\WPF\obj\Release\WPF.exe
