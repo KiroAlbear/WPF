@@ -102,6 +102,15 @@
     <Compile Include="ComponentPages\ConfessionPriest.xaml.cs">
       <DependentUpon>ConfessionPriest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ComponentPages\MessageBoxes\ErrorMessageBox.xaml.cs">
+      <DependentUpon>ErrorMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentPages\MessageBoxes\WarningMessageBox.xaml.cs">
+      <DependentUpon>WarningMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentPages\MessageBoxes\YesNoMessageBox.xaml.cs">
+      <DependentUpon>YesNoMessageBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ComponentPages\ResponsiblePriest.xaml.cs">
       <DependentUpon>ResponsiblePriest.xaml</DependentUpon>
     </Compile>
@@ -187,6 +196,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ComponentPages\DataGridView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentPages\MessageBoxes\ErrorMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentPages\MessageBoxes\WarningMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentPages\MessageBoxes\YesNoMessageBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -473,6 +494,9 @@
     <Resource Include="BackGroundImages\SearchBackGround2.jpg" />
     <Resource Include="BackGroundImages\PopVackGround.jpeg" />
     <Resource Include="BackGroundImages\RegisterBackground.jpg" />
+    <Resource Include="ComponentPages\MessageBoxes\Icons\WarningIcon.png" />
+    <Resource Include="ComponentPages\MessageBoxes\Icons\ErrorIcon.png" />
+    <Resource Include="ComponentPages\MessageBoxes\Icons\BlueWarning.png" />
     <Content Include="familydbFULL.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
