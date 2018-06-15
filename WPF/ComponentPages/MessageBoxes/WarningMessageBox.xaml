@@ -1,0 +1,56 @@
+﻿<Controls:MetroWindow x:Class="WPF.ComponentPages.MessageBoxes.WarningMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF.ComponentPages.MessageBoxes"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+       
+        ShowInTaskbar="True"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="WarningMessageBox" 
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+     
+       >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="6*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1">
+            <Grid Grid.Row="2" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,5,0">
+                <Grid.Background>
+                    <ImageBrush ImageSource="pack://application:,,,/ComponentPages/MessageBoxes/Icons/WarningIcon.png"></ImageBrush>
+                </Grid.Background>
+            </Grid>
+
+        </Grid>
+        <TextBlock Grid.Row="0" Grid.Column="0" Name="MessageTextBlock" TextAlignment="Right" Height="auto" Width="auto" TextWrapping="WrapWithOverflow" FontSize="20" Margin="5,5,2,4" VerticalAlignment="Top" HorizontalAlignment="Stretch"></TextBlock>
+        <Grid x:Name="ButtonGrid" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Style="{StaticResource InformButton}" Content="موافق" 
+                        FontSize="22" 
+                        Height="auto"
+                        Width="auto"
+                        Click="Button_Click"
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                        Margin="0,2,0,5"
+                        >
+
+            </Button>
+        </Grid>
+
+    </Grid>
+</Controls:MetroWindow>

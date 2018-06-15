@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF.classes;
 using WPF.ComponentPages;
+using WPF.ComponentPages.MessageBoxes;
 
 namespace WPF
 {
@@ -33,8 +34,7 @@ namespace WPF
 
             ShowMaxRestoreButton = false;
             ResizeMode = ResizeMode.CanMinimize;
-
-
+            
           
 
             // var mainWindow = Application.Current.MainWindow;
@@ -54,8 +54,6 @@ namespace WPF
             
             EntryWindow entrywindow= new EntryWindow(sender);
             entrywindow.Show();
-          
-            
         }
 
 
