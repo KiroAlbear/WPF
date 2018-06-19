@@ -21,6 +21,7 @@ namespace WPF.ComponentPages
         private async void Page_loaded(object sender, RoutedEventArgs e)
         {
             await Animation();
+            
         }
 
         public async Task Animation()
@@ -62,6 +63,7 @@ namespace WPF.ComponentPages
 
         private void PopSaVeButton_Click(object sender, RoutedEventArgs e)
         {
+
         }
 
 

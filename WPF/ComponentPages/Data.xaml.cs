@@ -18,7 +18,7 @@ namespace WPF.ComponentPages
     public partial class Data : Page
     {
         // private List<string> MyList = new List<string>();
-       
+       public BottomPage my_own_bottom { set; get; }
         private ListView GlobalListView = new ListView();
         string spaces = "                                                                                                          ";
         bool firsttime = false;
@@ -35,6 +35,17 @@ namespace WPF.ComponentPages
             this.Loaded += Page_loaded;
             CreatGlobalList();
             
+            
+        }
+        public Data(BottomPage b)
+        {
+            my_own_bottom = b;
+            InitializeComponent();
+            MarriageDataPicker.SelectedDate = DateTime.Today;
+            this.Loaded += Page_loaded;
+            CreatGlobalList();
+
+
         }
 
         private async void Page_loaded(object sender, RoutedEventArgs e)
@@ -42,9 +53,11 @@ namespace WPF.ComponentPages
             await Animation();
         }
 
-        public async void abc(object sender, RoutedEventArgs e)
+        public  family abc(object sender)
         {
-            Console.WriteLine("f");
+            family f = new family();
+            f.familyname = PersonBox.Text;
+            return f;
         }
 
         private void MarriageDataPicker_LostFocus(object sender, RoutedEventArgs e)

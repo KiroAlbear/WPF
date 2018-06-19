@@ -25,7 +25,8 @@ namespace WPF
     /// </summary>
     public partial class MainWindow : MahApps.Metro.Controls.MetroWindow
     {
-      
+        public Data my_own_data { set; get; }
+        public BottomPage my_own_bottom { set; get; }
         const string MainWindowName = "MainWindow";
         public MainWindow()
         {
@@ -46,12 +47,31 @@ namespace WPF
             //  ThreeButtonsFrame.NavigationService.Navigate(new ComponentPages.TopThreeButtons(this));
 
         }
-     
-     
+        public MainWindow(Data d,BottomPage b)
+        {
+            InitializeComponent();
+            this.Name = MainWindowName;
+            ShowMaxRestoreButton = false;
+            ResizeMode = ResizeMode.CanMinimize;
+            my_own_data = d;
+            my_own_bottom = b;
+
+
+            // var mainWindow = Application.Current.MainWindow;
+            // if (mainWindow != null)//should never be
+
+            //  mainWindow.WindowStyle = System.Windows.WindowStyle.None; // removes top bar (icon, title, close buttons etc)
+            // mainWindow.AllowsTransparency = true; //removes the border around the outside
+            //mainWindow.PreviewMouseLeftButtonDown += (s, e) => DragMove();
+            //  ThreeButtonsFrame.NavigationService.Navigate(new ComponentPages.TopThreeButtons(this));
+
+        }
+
+
 
         private void EnteryButton_Click_1(object sender, RoutedEventArgs e)
         {
-            
+          
             EntryWindow entrywindow= new EntryWindow(sender);
             entrywindow.Show();
         }
