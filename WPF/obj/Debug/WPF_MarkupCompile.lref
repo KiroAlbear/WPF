@@ -49,4 +49,7 @@ FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\Styles\fonts.xaml;;
 FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\Windows\SearchWindows.xaml;;
 FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\Windows\SingleEntry.xaml;;
 FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\Windows\TablePreview.xaml;;
+FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\MessageBoxes\ErrorMessageBox.xaml;;
+FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\MessageBoxes\WarningMessageBox.xaml;;
+FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\MessageBoxes\YesNoMessageBox.xaml;;
 

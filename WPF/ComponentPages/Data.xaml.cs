@@ -10,6 +10,7 @@ using System.Windows.Media.Animation;
 using MahApps.Metro.Controls;
 using WPF.Functions;
 
+
 namespace WPF.ComponentPages
 {
     /// <summary>
@@ -22,6 +23,7 @@ namespace WPF.ComponentPages
         private ListView GlobalListView = new ListView();
         string spaces = "                                                                                                          ";
         bool firsttime = false;
+        
         //private SqlConnection con;
         //private SqlCommand com;
         //private SqlDataAdapter rdr;
@@ -35,6 +37,7 @@ namespace WPF.ComponentPages
             this.Loaded += Page_loaded;
             CreatGlobalList();
             
+
         }
 
         private async void Page_loaded(object sender, RoutedEventArgs e)
@@ -411,6 +414,14 @@ namespace WPF.ComponentPages
         {
             ((TextBox)sender).Text = spaces;
 
+        }
+
+        private void GlobalBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if(((TextBox)sender).Name==PersonBox.Name)
+            data_passing.family_pass.familyname = PersonBox.Text;
+            if (((TextBox)sender).Name == Telefone1Textbox.Name)
+                data_passing.family_pass.familytel = Telefone1Textbox.Text;
         }
     }
 }

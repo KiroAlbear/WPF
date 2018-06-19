@@ -184,13 +184,15 @@ namespace WPF
 
         private void DataPage_Load()
         {
-            DataFrame.NavigationService.Navigate(new ComponentPages.Data());
+            family f = new family();
+            DataFrame.NavigationService.Navigate(new ComponentPages.Data() );
             DataFrame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
             //MainGrid.Children.Add(DataFrame);
         }
 
         private void BottomPage_Load()
         {
+            family f = new family();
             BottomPageFrame.NavigationService.Navigate(new ComponentPages.BottomPage());
             BottomPageFrame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
         }

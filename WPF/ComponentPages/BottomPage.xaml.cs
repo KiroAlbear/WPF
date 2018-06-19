@@ -62,6 +62,7 @@ namespace WPF.ComponentPages
 
         private void PopSaVeButton_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show(Functions.data_passing.person_name+"tel \n"+Functions.data_passing.family_pass.familytel);
         }
 
 

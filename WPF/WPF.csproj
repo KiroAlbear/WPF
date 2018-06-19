@@ -163,6 +163,7 @@
     </Compile>
     <Compile Include="Functions\BitmapFunctions.cs" />
     <Compile Include="Functions\DataGridAccess.cs" />
+    <Compile Include="Functions\data_passing.cs" />
     <Compile Include="Functions\ExpanderFunctions.cs" />
     <Compile Include="Functions\ListViewTransportation.cs" />
     <Compile Include="Functions\TextBoxValidation.cs" />
