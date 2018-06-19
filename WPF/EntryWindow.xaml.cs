@@ -11,8 +11,6 @@ namespace WPF
     /// </summary>
     public partial class EntryWindow : MahApps.Metro.Controls.MetroWindow
     {
-        public ComponentPages.Data my_own_data { set; get; }
-        public ComponentPages.BottomPage my_own_bottom { set; get; }
         object sender=null;
         public EntryWindow(object sender)
         {
@@ -32,33 +30,13 @@ namespace WPF
             //StreetFrame.NavigationService.Navigate(new ComponentPages.StreetPage());
             
         }
-        public EntryWindow(object sender,ComponentPages.Data d,ComponentPages.BottomPage b)
-        {
-            
-            InitializeComponent();
-            this.sender = sender;
-            this.Closing += new System.ComponentModel.CancelEventHandler(Window4_Closing);
-            //MarriageDataPicker.SelectedDate = DateTime.Today;
-            my_own_data = d;
-            my_own_bottom = b;
-            if (((Button)sender).Name == ItemsNames.ItemsNameStrings.RegisterButton)
-            {
-
-                DataPage_Load();
-                DataGridView_Load();
-                BottomPage_Load();
-
-            }
-            //StreetFrame.NavigationService.Navigate(new ComponentPages.StreetPage());
-
-        }
 
         /////////////// Border Change Color/////////////////////
 
         /// ///////91, 194, 255//////////////// msh asly
         //// 22, 169, 255/////////asly
 
-
+       
         public string RearrangeDate(string time)
         {
             char[] TimeAr = new char[12];
@@ -206,17 +184,14 @@ namespace WPF
 
         private void DataPage_Load()
         {
-            // this object created to be passed into anywhere i want
-            ComponentPages.Data my_data_oblect = new ComponentPages.Data();
-            DataFrame.NavigationService.Navigate(my_own_data);
+            DataFrame.NavigationService.Navigate(new ComponentPages.Data());
             DataFrame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
             //MainGrid.Children.Add(DataFrame);
         }
 
         private void BottomPage_Load()
         {
-            // this object created to be passed into anywhere i want
-            BottomPageFrame.NavigationService.Navigate(my_own_bottom);
+            BottomPageFrame.NavigationService.Navigate(new ComponentPages.BottomPage());
             BottomPageFrame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
         }
 
