@@ -34,7 +34,10 @@ namespace WPF.ComponentPages
             MarriageDataPicker.SelectedDate = DateTime.Today;
             this.Loaded += Page_loaded;
             CreatGlobalList();
-            
+
+
+
+
         }
 
         private async void Page_loaded(object sender, RoutedEventArgs e)
@@ -411,6 +414,19 @@ namespace WPF.ComponentPages
         {
             ((TextBox)sender).Text = spaces;
 
+        }
+
+        private void PriestTextBox_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            List<string> testlist = new List<string>();
+
+            testlist.Add("Hello");
+            testlist.Add("World");
+            testlist.Add("Hai");
+
+
+            PriestTextBox.ItemsSource = testlist;
         }
     }
 }

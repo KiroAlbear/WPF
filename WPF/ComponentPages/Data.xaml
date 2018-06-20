@@ -47,17 +47,15 @@
                         <ColumnDefinition  Width="3*"></ColumnDefinition>
                         <ColumnDefinition  Width="1.5*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="PriestTextBox"
+                    <ComboBox x:Name="PriestTextBox"
                              Grid.Row="0"
                                 
-                             TextChanged="GLOBAL_TextChanged"
-                             LostFocus="GlobalTextBox_Loaded"
-                             GotFocus="GLOBALTextBox_GotFocus"
-                             Loaded="GlobalBox_Loaded"
-                             PreviewKeyDown="PriestTextBox_PreviewKeyDown"
-                             MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
-                             Style="{StaticResource NewTextBoxStyleGotFocus}">
-                    </TextBox>
+                        
+                          
+                           
+                             Loaded="PriestTextBox_Loaded"
+                             Style="{StaticResource ComboStyle}">
+                    </ComboBox>
 
                     <Label x:Name="PriestLabel"
                            Grid.Row="0"
