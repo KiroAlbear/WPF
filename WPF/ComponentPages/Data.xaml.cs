@@ -118,7 +118,9 @@ namespace WPF.ComponentPages
 
         private void GlobalTextBox_Loaded(object sender, RoutedEventArgs e)
         {
-           
+            ((TextBox)sender).Text = spaces;
+
+
             if (TableGrid.Children.Contains(GlobalListView))
             {
                 GlobalListView.ItemsSource = null;
@@ -410,12 +412,7 @@ namespace WPF.ComponentPages
 
         }
 
-        private void GlobalBox_Loaded(object sender, RoutedEventArgs e)
-        {
-            ((TextBox)sender).Text = spaces;
-
-        }
-
+     
         private void PriestTextBox_Loaded(object sender, RoutedEventArgs e)
         {
 
@@ -426,7 +423,18 @@ namespace WPF.ComponentPages
             testlist.Add("Hai");
 
 
-            PriestTextBox.ItemsSource = testlist;
+          
+        }
+
+        private void PriestTextBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void GlobalTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (((TextBox)sender).Text == string.Empty || ((TextBox)sender).Text == spaces)
+                ((TextBox)sender).Text = spaces;
         }
     }
 }

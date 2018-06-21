@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:WPF.Styles">
     <Style x:Key="ComboStyle" TargetType="ComboBox">
-        <Setter Property="IsEditable" Value="True"/>
+   
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ComboBox" >
@@ -19,15 +19,18 @@
                                       VerticalAlignment="Center" >
                              
                             </ScrollViewer>-->
-                        
+                       
+                           
+                                
                             <ToggleButton x:Name="DropDownToggle"
-                  
-                                      
-                  HorizontalContentAlignment="Left"
+                                     Foreground="Black"
+                                          Opacity=".4"
+                    HorizontalAlignment="Left"
+                  HorizontalContentAlignment="Center"
                   IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,
                               RelativeSource={RelativeSource TemplatedParent}}">
                                 <Path x:Name="BtnArrow" Height="7" Width="14" 
-                    Stretch="Uniform" Margin="0,0,4,0"  Fill="Black"
+                    Stretch="Uniform" Fill="Black"
                     Data="F1 M 300,-190L 310,-190L 305,-183L 301,-190 Z " />
 
                             <!--<ToggleButton.Triggers>
@@ -41,7 +44,18 @@
                            
 
                         </ToggleButton>
+                                <ScrollViewer SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                      x:Name="PART_ContentHost"
+                                      HorizontalAlignment="Right"
+                                      VerticalAlignment="Center" >
 
+                                </ScrollViewer>
+
+
+                        
+
+
+                       
                       
 
                             <!--<ComboBoxItem MinWidth="100" MinHeight="10" FontFamily="Verdana" FontSize="12"  FlowDirection="LeftToRight"
@@ -62,6 +76,7 @@
                         <Popup x:Name="PART_Popup" PopupAnimation="Scroll"
                   IsOpen="{TemplateBinding IsDropDownOpen}">
                             <Border x:Name="PopupBorder" 
+                                    
                     HorizontalAlignment="Stretch" Height="Auto" 
                     MinWidth="{TemplateBinding ActualWidth}"
                     MaxHeight="{TemplateBinding MaxDropDownHeight}"
@@ -73,7 +88,9 @@
                             </Border>
                         </Popup>
 
+                       
 
+                      
                         <Grid Grid.Row="1" Background="#1184b2" x:Name="linegrid" Width="1000"></Grid>
                     </Grid>
                     <ControlTemplate.Triggers>
