@@ -49,9 +49,12 @@
                     </Grid.ColumnDefinitions>
                     <TextBox x:Name="PriestTextBox"
                              Grid.Row="0"
-                             LostFocus="GlobalTextBox_LostFocus"
-                             GotFocus="GLOBALTextBox_GotFocus"
-                             Loaded="GlobalTextBox_Loaded"
+                             LostFocus="PriestTextBox_LostFocus"
+                             Loaded="PriestTextBox_Loaded"
+                             MouseLeftButtonDown="PriestTextBox_MouseLeftButtonDown"
+                          
+                             PreviewMouseLeftButtonDown="PriestTextBox_PreviewMouseLeftButtonDown"
+                              
                              Style="{StaticResource TextBoxComboStyle}">
                     </TextBox>
 
@@ -64,12 +67,10 @@
                     <TextBox Grid.Row="1"
                              Grid.Column="0"
                              x:Name="ChurchBox"
-                             TextChanged="GLOBAL_TextChanged"
-                             LostFocus="GlobalTextBox_LostFocus"
-                             GotFocus="GLOBALTextBox_GotFocus"
-                Loaded="GlobalTextBox_Loaded"
-                             PreviewKeyDown="PriestTextBox_PreviewKeyDown"
-                             MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
+                LostFocus="ChurchBox_LostFocus"
+                             Loaded="ChurchBox_Loaded"
+                          
+                             PreviewMouseLeftButtonDown="ChurchBox_PreviewMouseLeftButtonDown"
                              Style="{StaticResource TextBoxComboStyle}" />
 
                     <Label x:Name="ChurchLabel"
@@ -85,7 +86,7 @@
                              LostFocus="GlobalTextBox_LostFocus"
                              GotFocus="GLOBALTextBox_GotFocus"
                              Loaded="GlobalTextBox_Loaded"
-                             PreviewKeyDown="PriestTextBox_PreviewKeyDown"
+                            
                              MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
                              Style="{StaticResource NewTextBoxStyleGotFocus}" />
 
@@ -117,15 +118,13 @@
                                   Style="{StaticResource LabelStyl}"
                                   HorizontalAlignment="Left" />
                         <TextBox  x:Name="StreetTextBox"
-                                  LostFocus="GlobalTextBox_LostFocus"
-                                  GotFocus="GLOBALTextBox_GotFocus"
-
-                             Loaded="GlobalTextBox_Loaded"
-                                  MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
-                                  PreviewKeyDown="PriestTextBox_PreviewKeyDown"
+                                   LostFocus="StreetTextBox_LostFocus"
+                                    Loaded="StreetTextBox_Loaded"
+                          
+                                   PreviewMouseLeftButtonDown="StreetTextBox_PreviewMouseLeftButtonDown"
+                                 
                                   Grid.Column="0"
-                                  TextChanged="GLOBAL_TextChanged"
-
+                                 
                                   Style="{StaticResource TextBoxComboStyle}"></TextBox>
                     </Grid>
 
@@ -177,7 +176,7 @@
                              GotFocus="GLOBALTextBox_GotFocus"
  
                              Loaded="GlobalTextBox_Loaded"
-                             PreviewKeyDown="PriestTextBox_PreviewKeyDown"
+                          
                              MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
                              Style="{StaticResource NewTextBoxStyleGotFocus}"></TextBox>
 
