@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
+using System.Data;
+using System.Linq;
+using WPF.Functions;
 
 namespace WPF.ComponentPages
 {
@@ -62,7 +65,9 @@ namespace WPF.ComponentPages
 
         private void PopSaVeButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(Functions.data_passing.person_name+"tel \n"+Functions.data_passing.family_pass.familytel);
+            DatabaseFamilyDataContext dd = new DatabaseFamilyDataContext();
+
+            MessageBox.Show(data_passing.family_pass.familyname+"   \n"+data_passing.family_pass.familytel);
         }
 
 

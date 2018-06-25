@@ -418,8 +418,8 @@ namespace WPF.ComponentPages
 
         private void GlobalBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            if(((TextBox)sender).Name==PersonBox.Name)
-            data_passing.family_pass.familyname = PersonBox.Text;
+            if (((TextBox)sender).Name == PersonBox.Name)
+                data_passing.family_pass.familyname = "سسسسسسسسسس";
             if (((TextBox)sender).Name == Telefone1Textbox.Name)
                 data_passing.family_pass.familytel = Telefone1Textbox.Text;
         }

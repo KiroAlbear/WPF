@@ -9,7 +9,9 @@ namespace WPF.Functions
     static class data_passing
     {
         public static string person_name { set; get; }
-        public static family family_pass { set; get; }
+        public static family family_pass = new family();
+        
+        
             
     }
 }

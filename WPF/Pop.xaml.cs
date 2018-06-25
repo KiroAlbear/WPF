@@ -86,7 +86,7 @@ namespace WPF
         }
 
         private void TextBox_Loaded(object sender, RoutedEventArgs e)
-        {
+            {
             ((TextBox)sender).Focus();
         }
 
