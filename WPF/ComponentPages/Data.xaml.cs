@@ -26,9 +26,7 @@ namespace WPF.ComponentPages
 
         string spaces = "                                                                                                          ";
         bool firsttime = false;
-<<<<<<< HEAD
-        
-=======
+
         bool visible = false;
 
         string PriestListName = "PriestList";
@@ -43,7 +41,7 @@ namespace WPF.ComponentPages
         bool priestlistvisible = false;
         bool churchlistvisible = false;
         bool streetlistvisible = false;
->>>>>>> Kiro_Branch
+
         //private SqlConnection con;
         //private SqlCommand com;
         //private SqlDataAdapter rdr;
@@ -55,15 +53,15 @@ namespace WPF.ComponentPages
             InitializeComponent();
             MarriageDataPicker.SelectedDate = DateTime.Today;
             this.Loaded += Page_loaded;
-<<<<<<< HEAD
+
             CreatGlobalList();
             
-=======
 
 
 
 
->>>>>>> Kiro_Branch
+
+
 
         }
 
@@ -555,7 +553,7 @@ namespace WPF.ComponentPages
 
         }
 
-<<<<<<< HEAD
+
         private void GlobalBox_LostFocus(object sender, RoutedEventArgs e)
         {
             if (((TextBox)sender).Name == PersonBox.Name)
@@ -563,7 +561,7 @@ namespace WPF.ComponentPages
             if (((TextBox)sender).Name == Telefone1Textbox.Name)
                 data_passing.family_pass.familytel = Telefone1Textbox.Text;
         }
-=======
+
         private void PriestTextBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
           
@@ -632,6 +630,6 @@ namespace WPF.ComponentPages
 
 
 
->>>>>>> Kiro_Branch
+
     }
 }
