@@ -407,6 +407,7 @@ namespace WPF.ComponentPages
         private void PriestTextBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
+			 MessageBox.Show("Hello World");
             if (firsttimepriest == true)
             {
 
