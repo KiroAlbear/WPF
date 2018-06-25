@@ -402,5 +402,3 @@ O:\Projects\WPF\WPF\obj\Release\ComponentPages\MessageBoxes\ErrorMessageBox.g.cs
 O:\Projects\WPF\WPF\obj\Release\ComponentPages\MessageBoxes\YesNoMessageBox.g.cs
 O:\Projects\WPF\WPF\obj\Release\ComponentPages\MessageBoxes\ErrorMessageBox.baml
 O:\Projects\WPF\WPF\obj\Release\ComponentPages\MessageBoxes\YesNoMessageBox.baml
-O:\Projects\WPF\WPF\obj\Release\Styles\ToggleButtonStyle.baml
-O:\Projects\WPF\WPF\obj\Release\Styles\TextBoxCombo.baml

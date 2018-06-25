@@ -33,15 +33,11 @@
                             <RowDefinition Height="20*"></RowDefinition>
                             <RowDefinition Height="*"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                            <ColumnDefinition Width="7*"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
                         <Border SnapsToDevicePixels="true"
                             x:Name="Bd"   
                             BorderBrush="Black"
                             Grid.Row="0"
-                          Grid.Column="1"
+                          
                             Opacity="0.7"
                             BorderThickness="0,0,0,0">
                             <ScrollViewer SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
@@ -51,9 +47,6 @@
 
                             </ScrollViewer>
 
-                           
-
-
                             <!--<Border.Effect>
 
                             <DropShadowEffect ShadowDepth="2" Color="LightSlateGray" Opacity="0.8" x:Name="BorderShadow" />
@@ -61,8 +54,7 @@
                         </Border.Effect>-->
 
                         </Border>
-                   
-                        <Grid  Grid.Row="1" Background="#1184b2" x:Name="linegrid" Width="1000" Grid.Column="0" Grid.ColumnSpan="2"></Grid>
+                        <Grid  Grid.Row="1" Background="#1184b2" x:Name="linegrid" Width="1000"></Grid>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <EventTrigger RoutedEvent="GotFocus">

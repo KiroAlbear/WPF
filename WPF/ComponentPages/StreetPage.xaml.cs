@@ -81,8 +81,6 @@ namespace WPF.ComponentPages
             transport.Transport();
         }
 
-       
-
         /// <summary>
         /// Test Class///
         /// 
