@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:WPF.Styles">
     <Style x:Key="ComboStyle" TargetType="ComboBox">
+   
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ComboBox" >
@@ -11,19 +12,59 @@
                             <RowDefinition Height="20*"></RowDefinition>
                             <RowDefinition Height="*"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <Border SnapsToDevicePixels="true"
-                            x:Name="Bd"   
-                            BorderBrush="Black"
-                            Grid.Row="0"
-                          
-                            Opacity="0.7"
-                            BorderThickness="0,0,0,0">
-                            <ScrollViewer SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                     
+                            <!--<ScrollViewer SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                      x:Name="PART_ContentHost"
+                                      HorizontalAlignment="Right"
+                                      VerticalAlignment="Center" >
+                             
+                            </ScrollViewer>-->
+                       
+                           
+                                
+                            <ToggleButton x:Name="DropDownToggle"
+                                     Foreground="Black"
+                                          Opacity=".4"
+                    HorizontalAlignment="Left"
+                  HorizontalContentAlignment="Center"
+                  IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,
+                              RelativeSource={RelativeSource TemplatedParent}}">
+                                <Path x:Name="BtnArrow" Height="7" Width="14" 
+                    Stretch="Uniform" Fill="Black"
+                    Data="F1 M 300,-190L 310,-190L 305,-183L 301,-190 Z " />
+
+                            <!--<ToggleButton.Triggers>
+                                
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter Property="Background" Value="Black"/>
+                                    
+                                </Trigger>
+                            </ToggleButton.Triggers>-->
+
+                           
+
+                        </ToggleButton>
+                                <ScrollViewer SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                       x:Name="PART_ContentHost"
                                       HorizontalAlignment="Right"
                                       VerticalAlignment="Center" >
 
-                            </ScrollViewer>
+                                </ScrollViewer>
+
+
+                        
+
+
+                       
+                      
+
+                            <!--<ComboBoxItem MinWidth="100" MinHeight="10" FontFamily="Verdana" FontSize="12"  FlowDirection="LeftToRight"
+                                          HorizontalContentAlignment="Left"
+                                          
+                                           VerticalAlignment="Bottom">
+                                <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="15" Width="100"/>
+                            </ComboBoxItem>-->
+
 
                             <!--<Border.Effect>
 
@@ -31,7 +72,25 @@
 
                         </Border.Effect>-->
 
-                        </Border>
+                       
+                        <Popup x:Name="PART_Popup" PopupAnimation="Scroll"
+                  IsOpen="{TemplateBinding IsDropDownOpen}">
+                            <Border x:Name="PopupBorder" 
+                                    
+                    HorizontalAlignment="Stretch" Height="Auto" 
+                    MinWidth="{TemplateBinding ActualWidth}"
+                    MaxHeight="{TemplateBinding MaxDropDownHeight}"
+                    BorderThickness="{TemplateBinding BorderThickness}" 
+                    BorderBrush="Black" Background="White" CornerRadius="3">
+                                <ScrollViewer x:Name="ScrollViewer" BorderThickness="0" Padding="1">
+                                    <ItemsPresenter/>
+                                </ScrollViewer>
+                            </Border>
+                        </Popup>
+
+                       
+
+                      
                         <Grid Grid.Row="1" Background="#1184b2" x:Name="linegrid" Width="1000"></Grid>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -80,6 +139,7 @@
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
+
                     </ControlTemplate.Triggers>
 
 

@@ -49,6 +49,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBox x:Name="PriestTextBox"
                              Grid.Row="0"
+<<<<<<< HEAD
                                 
                              TextChanged="GLOBAL_TextChanged"
                              LostFocus="GlobalBox_LostFocus"
@@ -57,6 +58,15 @@
                              PreviewKeyDown="PriestTextBox_PreviewKeyDown"
                              MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
                              Style="{StaticResource NewTextBoxStyleGotFocus}">
+=======
+                             LostFocus="PriestTextBox_LostFocus"
+                             Loaded="PriestTextBox_Loaded"
+                             MouseLeftButtonDown="PriestTextBox_MouseLeftButtonDown"
+                          
+                             PreviewMouseLeftButtonDown="PriestTextBox_PreviewMouseLeftButtonDown"
+                              
+                             Style="{StaticResource TextBoxComboStyle}">
+>>>>>>> Kiro_Branch
                     </TextBox>
 
                     <Label x:Name="PriestLabel"
@@ -68,6 +78,7 @@
                     <TextBox Grid.Row="1"
                              Grid.Column="0"
                              x:Name="ChurchBox"
+<<<<<<< HEAD
                              TextChanged="GLOBAL_TextChanged"
                              LostFocus="GlobalBox_LostFocus"
                              GotFocus="GLOBALTextBox_GotFocus"
@@ -75,6 +86,13 @@
                              PreviewKeyDown="PriestTextBox_PreviewKeyDown"
                              MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
                              Style="{StaticResource NewTextBoxStyleGotFocus}" />
+=======
+                LostFocus="ChurchBox_LostFocus"
+                             Loaded="ChurchBox_Loaded"
+                          
+                             PreviewMouseLeftButtonDown="ChurchBox_PreviewMouseLeftButtonDown"
+                             Style="{StaticResource TextBoxComboStyle}" />
+>>>>>>> Kiro_Branch
 
                     <Label x:Name="ChurchLabel"
                            Grid.Row="1"
@@ -86,10 +104,14 @@
                              Grid.Column="0"
                              x:Name="PersonBox"
                              TextChanged="GLOBAL_TextChanged"
+<<<<<<< HEAD
                              LostFocus="GlobalBox_LostFocus"
+=======
+                             LostFocus="GlobalTextBox_LostFocus"
+>>>>>>> Kiro_Branch
                              GotFocus="GLOBALTextBox_GotFocus"
-                             Loaded="GlobalBox_Loaded"
-                             PreviewKeyDown="PriestTextBox_PreviewKeyDown"
+                             Loaded="GlobalTextBox_Loaded"
+                            
                              MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
                              Style="{StaticResource NewTextBoxStyleGotFocus}" />
 
@@ -111,9 +133,13 @@
 
                         <TextBox x:Name="HouseNuberBox"
                                  Grid.Column="2"
+<<<<<<< HEAD
                                  LostFocus="GlobalBox_LostFocus"
+=======
+                                 LostFocus="GlobalTextBox_LostFocus"
+>>>>>>> Kiro_Branch
                              GotFocus="GLOBALTextBox_GotFocus"
-                             Loaded="GlobalBox_Loaded"
+                             Loaded="GlobalTextBox_Loaded"
                                  Style="{StaticResource NewTextBoxStyleGotFocus}" />
                         <Label    x:Name="StreetLabel"
                                   Grid.Column="1"
@@ -121,16 +147,23 @@
                                   Style="{StaticResource LabelStyl}"
                                   HorizontalAlignment="Left" />
                         <TextBox  x:Name="StreetTextBox"
+<<<<<<< HEAD
                                   LostFocus="GlobalBox_LostFocus"
                                   GotFocus="GLOBALTextBox_GotFocus"
 
                              Loaded="GlobalBox_Loaded"
                                   MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
                                   PreviewKeyDown="PriestTextBox_PreviewKeyDown"
+=======
+                                   LostFocus="StreetTextBox_LostFocus"
+                                    Loaded="StreetTextBox_Loaded"
+                          
+                                   PreviewMouseLeftButtonDown="StreetTextBox_PreviewMouseLeftButtonDown"
+                                 
+>>>>>>> Kiro_Branch
                                   Grid.Column="0"
-                                  TextChanged="GLOBAL_TextChanged"
-
-                                  Style="{StaticResource NewTextBoxStyleGotFocus}"></TextBox>
+                                 
+                                  Style="{StaticResource TextBoxComboStyle}"></TextBox>
                     </Grid>
 
                     <Label x:Name="floorlabel"
@@ -149,9 +182,13 @@
                         </Grid.ColumnDefinitions>
                         <TextBox x:Name="FloorTextBox"
                                  Style="{StaticResource NewTextBoxStyleGotFocus}"
+<<<<<<< HEAD
                                LostFocus="GlobalBox_LostFocus"
+=======
+                               LostFocus="GlobalTextBox_LostFocus"
+>>>>>>> Kiro_Branch
                              GotFocus="GLOBALTextBox_GotFocus"
-                             Loaded="GlobalBox_Loaded"
+                             Loaded="GlobalTextBox_Loaded"
                                  Grid.Column="2"></TextBox>
 
                         <Label x:Name="ApartmentLabel"
@@ -161,9 +198,13 @@
                                Grid.Column="1"></Label>
                         <TextBox x:Name="ApartmentTextBox"
                                  Style="{StaticResource NewTextBoxStyleGotFocus}"
+<<<<<<< HEAD
                           LostFocus="GlobalBox_LostFocus"
+=======
+                          LostFocus="GlobalTextBox_LostFocus"
+>>>>>>> Kiro_Branch
                              GotFocus="GLOBALTextBox_GotFocus"
-                             Loaded="GlobalBox_Loaded"
+                             Loaded="GlobalTextBox_Loaded"
                                  Grid.Column="0"></TextBox>
                     </Grid>
 
@@ -177,37 +218,53 @@
                              Grid.Row="5"
                              Grid.Column="0"
                              TextChanged="GLOBAL_TextChanged"
+<<<<<<< HEAD
                              LostFocus="GlobalBox_LostFocus"
+=======
+                             LostFocus="GlobalTextBox_LostFocus"
+>>>>>>> Kiro_Branch
                              GotFocus="GLOBALTextBox_GotFocus"
  
-                             Loaded="GlobalBox_Loaded"
-                             PreviewKeyDown="PriestTextBox_PreviewKeyDown"
+                             Loaded="GlobalTextBox_Loaded"
+                          
                              MouseDoubleClick="GlobalTextBox_MouseDoubleClick"
                              Style="{StaticResource NewTextBoxStyleGotFocus}"></TextBox>
 
                     <TextBox Name="AdressDesciption"
                              Grid.Row="6"
                              Grid.Column="0"
+<<<<<<< HEAD
  LostFocus="GlobalBox_LostFocus"
+=======
+ LostFocus="GlobalTextBox_LostFocus"
+>>>>>>> Kiro_Branch
                              GotFocus="GLOBALTextBox_GotFocus"
-                             Loaded="GlobalBox_Loaded"
+                             Loaded="GlobalTextBox_Loaded"
                              Style="{StaticResource NewTextBoxStyleGotFocus}"></TextBox>
 
                     <TextBox Name="Telefone1Textbox"
                              Grid.Row="7"
                              Grid.Column="0"
                              MouseDoubleClick="Telefone1Textbox_OnMouseDoubleClick"
+<<<<<<< HEAD
                            LostFocus="GlobalBox_LostFocus"
+=======
+                           LostFocus="GlobalTextBox_LostFocus"
+>>>>>>> Kiro_Branch
                              GotFocus="GLOBALTextBox_GotFocus"
-                             Loaded="GlobalBox_Loaded"
+                             Loaded="GlobalTextBox_Loaded"
                              Style="{StaticResource NewTextBoxStyleGotFocus}"></TextBox>
 
                     <TextBox Name="Telefone2Textbox"
                              Grid.Row="8"
                              Grid.Column="0"
+<<<<<<< HEAD
                             LostFocus="GlobalBox_LostFocus"
+=======
+                            LostFocus="GlobalTextBox_LostFocus"
+>>>>>>> Kiro_Branch
                              GotFocus="GLOBALTextBox_GotFocus"
-                             Loaded="GlobalBox_Loaded"
+                             Loaded="GlobalTextBox_Loaded"
                              Style="{StaticResource NewTextBoxStyleGotFocus}"></TextBox>
                     <Grid Name="MariageGrid"
                           Grid.Row="9">
@@ -217,9 +274,13 @@
                         </Grid.ColumnDefinitions>
                         <TextBox x:Name="VisitDateTextBox"
                                  Grid.Column="1"
+<<<<<<< HEAD
                                 LostFocus="GlobalBox_LostFocus"
+=======
+                                LostFocus="GlobalTextBox_LostFocus"
+>>>>>>> Kiro_Branch
                              GotFocus="GLOBALTextBox_GotFocus"
-                             Loaded="GlobalBox_Loaded"
+                             Loaded="GlobalTextBox_Loaded"
                                  KeyDown="PassCalendar_KeyDown"
                                  Style="{StaticResource NewTextBoxStyleGotFocus}" TextChanged="MariageDateTextBox_TextChanged"></TextBox>
 
@@ -236,9 +297,13 @@
                     <TextBox x:Name="PersonsNumberTextBox"
                              Grid.Row="10"
                              Grid.Column="0"
+<<<<<<< HEAD
                              LostFocus="GlobalBox_LostFocus"
+=======
+                             LostFocus="GlobalTextBox_LostFocus"
+>>>>>>> Kiro_Branch
                              GotFocus="GLOBALTextBox_GotFocus"
-                             Loaded="GlobalBox_Loaded"
+                             Loaded="GlobalTextBox_Loaded"
                              Style="{StaticResource NewTextBoxStyleGotFocus}"
                              HorizontalAlignment="Right"
                              KeyDown="PassCalendar_KeyDown"
@@ -250,9 +315,13 @@
                              Grid.Row="11"
                              Grid.Column="0"
                              Grid.RowSpan="3"
+<<<<<<< HEAD
                              LostFocus="GlobalBox_LostFocus"
+=======
+                             LostFocus="GlobalTextBox_LostFocus"
+>>>>>>> Kiro_Branch
                              GotFocus="GLOBALTextBox_GotFocus"
-                             Loaded="GlobalBox_Loaded"
+                             Loaded="GlobalTextBox_Loaded"
                              Style="{StaticResource BigTextBoxGotFocus}"></TextBox>
 
 

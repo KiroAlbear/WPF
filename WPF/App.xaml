@@ -34,6 +34,7 @@
                 <ResourceDictionary Source="Styles/BigTextBox.xaml"/>
                 <ResourceDictionary Source="Styles/PopTextBoxes.xaml"/>
                 <ResourceDictionary Source="Styles/ComboStyle.xaml"/>
+                <ResourceDictionary Source="Styles/TextBoxCombo.xaml"/>
 
 
 
