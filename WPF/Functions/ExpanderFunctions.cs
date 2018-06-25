@@ -18,6 +18,7 @@ namespace WPF.Functions
         StackPanel stackpanel;
         //BitmapImage DataGridBackGround = Functions.BitmapFunctions.FillBitMap(DataGridBackGroundPath);
         DataTable dataTable;
+         Frame PopUpFrame = null;
         public ExpanderFunctions(StackPanel stackpanel)
         {
             this.stackpanel = stackpanel;
@@ -35,6 +36,13 @@ namespace WPF.Functions
            
 
             stackpanel.Background = mySolidColorBrush;
+        }
+
+
+        public ExpanderFunctions(StackPanel stackpanel,Frame popupframe)
+        {
+            this.stackpanel = stackpanel;
+            this.PopUpFrame = popupframe;
         }
 
         public DataTable Table()
@@ -349,7 +357,9 @@ namespace WPF.Functions
         {
             var columnIndex = ((DataGrid)sender).Columns.IndexOf(((DataGrid)sender).CurrentColumn);
             MessageBox.Show(columnIndex.ToString());
+
         }
+
         public void MydataGride_MouseRightClick(object sender, MouseButtonEventArgs e)
         {
             DependencyObject dep = (DependencyObject)e.OriginalSource;
@@ -370,6 +380,7 @@ namespace WPF.Functions
                 }
 
                 DataGridRow row = dep as DataGridRow;
+                
                 ((DataGrid)sender).SelectedItem = row.DataContext;
                  var columnIndex = ((DataGrid)sender).Columns.IndexOf(((DataGrid)sender).CurrentColumn);
 
@@ -378,7 +389,10 @@ namespace WPF.Functions
 
                 object item = ((DataGrid)sender).SelectedItem;
                 string ID = (((DataGrid)sender).SelectedCells[columnIndex].Column.GetCellContent(item) as TextBlock).Text;
-                MessageBox.Show(ID);
+              //  MessageBox.Show(ID);
+                PopUpFrame.NavigationService.Navigate(new Pop(row));
+                
+              
 
 
             }

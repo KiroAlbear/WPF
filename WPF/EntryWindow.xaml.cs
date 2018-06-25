@@ -11,23 +11,24 @@ namespace WPF
     /// </summary>
     public partial class EntryWindow : MahApps.Metro.Controls.MetroWindow
     {
-        object sender=null;
-        public EntryWindow(object sender)
+       
+        public EntryWindow()
         {
             
             InitializeComponent();
-            this.sender = sender;
+
             this.Closing += new System.ComponentModel.CancelEventHandler(Window4_Closing);
             //MarriageDataPicker.SelectedDate = DateTime.Today;
 
-            if (((Button)sender).Name== ItemsNames.ItemsNameStrings.RegisterButton)
-            {
+         
+         
                 DataPage_Load();
                 DataGridView_Load();
                 BottomPage_Load();
               
-            }
+            
             //StreetFrame.NavigationService.Navigate(new ComponentPages.StreetPage());
+             
             
         }
 

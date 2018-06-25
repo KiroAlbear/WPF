@@ -52,7 +52,7 @@ namespace WPF
         private void EnteryButton_Click_1(object sender, RoutedEventArgs e)
         {
             
-            EntryWindow entrywindow= new EntryWindow(sender);
+            EntryWindow entrywindow= new EntryWindow();
             entrywindow.Show();
         }
 

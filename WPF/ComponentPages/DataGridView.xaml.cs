@@ -14,6 +14,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
 
 
 namespace WPF.ComponentPages
@@ -67,64 +68,23 @@ namespace WPF.ComponentPages
         
         private void MydataGride_Loaded(object sender, RoutedEventArgs e)
         {
-            Functions.ExpanderFunctions myfunctions = new Functions.ExpanderFunctions(MainStackPanel);
+            Functions.ExpanderFunctions myfunctions = new Functions.ExpanderFunctions(MainStackPanel,PopUpFrame);
             List<string> names = new List<string>();
             names.Add("hai");
             names.Add("SoWhat");
-            
-            // MydataGride.ItemsSource = kero.DefaultView;
 
-            //DataTable kero = new DataTable();
+            DataTable table_view = new DataTable();
+            table_view.Columns.Add("Name");
+            table_view.Columns.Add("num");
+            table_view.Columns.Add("4");
+            table_view.Columns.Add("3");
+            table_view.Columns.Add("2");
+            table_view.Columns.Add("1");
+            table_view.Rows.Add("tony", "123", "123", "123", "123", "123");
+            myfunctions.AddTableToDataGrid(table_view, MyDataGrid);
 
-            //    kero.Columns.Add("ان مكنتش تدلعنى مين هيدلعنى");
+         MyDataGrid.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(myfunctions.MydataGride_MouseRightClick);
 
-            //List<Person> t = new List<Person>();
-            //t.Add(new Person() { Name = "asd", Age = "19" });
-            //DataTable dt = new DataTable();
-            //for (int i = 0; i < names.Count; i++)
-            //{
-            //    dt.Columns.Add(names[i]);
-            //}
-            //for (int i = 0; i < 5; i++)
-            //{
-
-            //}
-            //dt.Columns.Add("Name");
-
-            //dt.Rows.Add("ayValue");
-
-            //string expandername = "ExpanderNumber ";
-            //string datagridname = "DataGridNumber ";
-
-            //DataTable table = myfunctions.Table();
-            //for (int i = 0; i < 9; i++)
-            //{
-
-            //    Expander expander = myfunctions.AddExpanderToStackPanel(expandername+i.ToString());
-            //    DataGrid datagrid = myfunctions.NewDataGridToExpander(datagridname + i.ToString(), expander);
-
-            //    myfunctions.AddTableToDataGrid(table, datagrid);
-
-            //}
-
-          
-
-
-
-
-            //AddExpanderToStackPanel("FirstExpander");
-
-
-            //Expander Search = GetExpander("FirstExpander");
-
-
-            //if (Search != null)
-            //{
-            //    AddExpanderToExpander(Search, "SecondExpander");
-            //}
-
-            //AddExpanderToStackPanel("third");
-            //// MessageBox.Show(t[0].Name);
 
 
 

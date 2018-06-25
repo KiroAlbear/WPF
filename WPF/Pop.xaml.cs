@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,11 +22,24 @@ namespace WPF
     /// </summary>
     public partial class Pop : Page
     {
+        public DataGridRow new_row;
+        string rr;
         string spaces = "                                                                                                      ";
         public Pop()
         {
             InitializeComponent();
             this.Loaded += Page_loaded;
+        }
+        public Pop(DataGridRow row)
+        {
+            
+            InitializeComponent();
+            new_row = row;
+            this.Loaded += Page_loaded;
+            DataRowView dr = (DataRowView)row.Item;
+            PopNameBox.Text= dr.Row[0].ToString();
+            PopJobBox.Text = dr.Row[1].ToString();
+
         }
         private async void Page_loaded(object sender, RoutedEventArgs e)
         {
