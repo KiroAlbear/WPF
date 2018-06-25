@@ -402,3 +402,9 @@ O:\Projects\WPF\WPF\obj\Release\ComponentPages\MessageBoxes\ErrorMessageBox.g.cs
 O:\Projects\WPF\WPF\obj\Release\ComponentPages\MessageBoxes\YesNoMessageBox.g.cs
 O:\Projects\WPF\WPF\obj\Release\ComponentPages\MessageBoxes\ErrorMessageBox.baml
 O:\Projects\WPF\WPF\obj\Release\ComponentPages\MessageBoxes\YesNoMessageBox.baml
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Release\ComponentPages\MessageBoxes\ErrorMessageBox.g.cs
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Release\ComponentPages\MessageBoxes\WarningMessageBox.g.cs
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Release\ComponentPages\MessageBoxes\YesNoMessageBox.g.cs
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Release\ComponentPages\MessageBoxes\ErrorMessageBox.baml
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Release\ComponentPages\MessageBoxes\WarningMessageBox.baml
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Release\ComponentPages\MessageBoxes\YesNoMessageBox.baml
