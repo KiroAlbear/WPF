@@ -199,3 +199,11 @@ C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\Windows\TablePreview
 C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\WPF.g.resources
 C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\WPF.Properties.Resources.resources
 C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\WPF.csproj.GenerateResource.Cache
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\ComponentPages\MessageBoxes\ErrorMessageBox.g.cs
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\ComponentPages\MessageBoxes\WarningMessageBox.g.cs
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\ComponentPages\MessageBoxes\YesNoMessageBox.g.cs
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\ComponentPages\MessageBoxes\ErrorMessageBox.baml
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\ComponentPages\MessageBoxes\WarningMessageBox.baml
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\ComponentPages\MessageBoxes\YesNoMessageBox.baml
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\Styles\TextBoxCombo.baml
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\Styles\ToggleButtonStyle.baml
