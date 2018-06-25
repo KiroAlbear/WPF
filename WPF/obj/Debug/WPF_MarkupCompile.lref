@@ -4,6 +4,9 @@ FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\BottomPage.xam
 FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\ConfessionPriest.xaml;;
 FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\Data.xaml;;
 FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\DataGridView.xaml;;
+FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\MessageBoxes\ErrorMessageBox.xaml;;
+FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\MessageBoxes\WarningMessageBox.xaml;;
+FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\MessageBoxes\YesNoMessageBox.xaml;;
 FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\ResponsiblePriest.xaml;;
 FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\Search.xaml;;
 FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\SocialCondition.xaml;;
@@ -49,7 +52,4 @@ FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\Styles\fonts.xaml;;
 FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\Windows\SearchWindows.xaml;;
 FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\Windows\SingleEntry.xaml;;
 FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\Windows\TablePreview.xaml;;
-FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\MessageBoxes\ErrorMessageBox.xaml;;
-FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\MessageBoxes\WarningMessageBox.xaml;;
-FC:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\ComponentPages\MessageBoxes\YesNoMessageBox.xaml;;
 

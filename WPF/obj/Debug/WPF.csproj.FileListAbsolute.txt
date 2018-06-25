@@ -205,3 +205,8 @@ C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\ComponentPages\Messa
 C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\ComponentPages\MessageBoxes\ErrorMessageBox.baml
 C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\ComponentPages\MessageBoxes\WarningMessageBox.baml
 C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\ComponentPages\MessageBoxes\YesNoMessageBox.baml
+<<<<<<< HEAD
+=======
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\Styles\TextBoxCombo.baml
+C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Debug\Styles\ToggleButtonStyle.baml
+>>>>>>> Kiro_Branch
