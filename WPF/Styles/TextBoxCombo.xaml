@@ -12,8 +12,8 @@
                 Value="Stretch"></Setter>
         <Setter Property="HorizontalAlignment"
                 Value="Stretch"></Setter>
-
-
+       
+        <Setter Property="IsReadOnly" Value="True"/>
         <Setter Property="TextBlock.TextAlignment" Value="Left"></Setter>
         <Setter Property="TextBlock.FontSize" Value="17"/>
         <Setter Property="Padding" Value="0,0,7,4"/>
@@ -67,6 +67,7 @@
                     Stretch="Uniform" Fill="Black"
                     Data="F1 M 300,-190L 310,-190L 305,-183L 301,-190 Z " />
                         </Grid>
+                        <Button Name="InvisibleButton" Grid.Column="0" Grid.ColumnSpan="2" Opacity="0" Grid.Row="0"/>
                         <Grid  Grid.Row="1" Background="#1184b2" x:Name="linegrid" Width="1000" Grid.Column="0" Grid.ColumnSpan="2"></Grid>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -115,6 +116,8 @@
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
+
+
                     </ControlTemplate.Triggers>
 
 
