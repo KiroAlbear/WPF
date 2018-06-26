@@ -345,7 +345,10 @@ namespace WPF.ComponentPages
         private void PriestTextBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
+<<<<<<< HEAD
 	        
+=======
+>>>>>>> parent of 7d297ef... Hello World
             if (firsttimepriest == true)
 =======
             if (e.Key == Key.Down&&GlobalListView.Visibility==Visibility.Visible)
