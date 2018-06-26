@@ -99,6 +99,7 @@
     </ApplicationDefinition>
     <Compile Include="Animation\Page_Animation.cs" />
     <Compile Include="Animation\StoryBoard_Detailes.cs" />
+    <Compile Include="classes\family_data_shared.cs" />
     <Compile Include="ComponentPages\ConfessionPriest.xaml.cs">
       <DependentUpon>ConfessionPriest.xaml</DependentUpon>
     </Compile>

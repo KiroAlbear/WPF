@@ -9,6 +9,8 @@ using System.Windows.Input;
 using System.Windows.Media.Animation;
 using MahApps.Metro.Controls;
 using WPF.Functions;
+using WPF.classes;
+using System.Linq;
 
 namespace WPF.ComponentPages
 {
@@ -18,7 +20,7 @@ namespace WPF.ComponentPages
     public partial class Data : Page
     {
         // private List<string> MyList = new List<string>();
-       
+        DatabaseFamilyDataContext dd = new DatabaseFamilyDataContext();
         private ListView PriestListView;
         private ListView ChurchListView;
         private ListView StreetListView;
@@ -50,7 +52,7 @@ namespace WPF.ComponentPages
             InitializeComponent();
             MarriageDataPicker.SelectedDate = DateTime.Today;
             this.Loaded += Page_loaded;
-
+            
 
 
 
@@ -380,26 +382,99 @@ namespace WPF.ComponentPages
      
         private void PriestTextBox_Loaded(object sender, RoutedEventArgs e)
         {
+            DatabaseFamilyDataContext dd = new DatabaseFamilyDataContext();
+            var a = (from aa in new DatabaseFamilyDataContext().responsiblepriests
+                     where aa.responsiblepriestcode > 0
+                     select new responsiblepriests
+                     {
+                         responsiblepriestname = aa.responsiblepriestname
+                     }).ToList();
             PriestTextBox.Text = spaces;
 
-            List<string> testlist = new List<string>();
-            PriestListView = new ListView();
-            PriestListView.ItemsSource = testlist;
-
-            testlist.Add("Hello");
-            testlist.Add("World");
-            testlist.Add("Hai");
-
-
+          //  List<string> testlist = dd.responsiblepriests;
           
+            PriestListView = new ListView();
+            PriestListView.ItemsSource = dd.responsiblepriests.Select(o => o.responsiblepriestname).ToList(); 
+
+
+            //testlist.Add("Hello");
+            //testlist.Add("World");
+            //testlist.Add("Hai");
+
+
+
         }
 
      
 
         private void GlobalTextBox_LostFocus(object sender, RoutedEventArgs e)
         {
+            family f = new family();
             if (((TextBox)sender).Text == string.Empty || ((TextBox)sender).Text == spaces)
                 ((TextBox)sender).Text = spaces;
+            family_data_shared.new_family_head = new family();
+            family_data_shared.new_family_head.familyname = PersonBox.Text;
+            if(((TextBox)sender).Name==PriestTextBox.Name)
+            {
+                
+            }
+            if (((TextBox)sender).Name == ChurchBox.Name)
+            {
+
+            }
+            if (((TextBox)sender).Name == PriestTextBox.Name)
+            {
+
+            }
+            if (((TextBox)sender).Name == PersonBox.Name)
+            {
+
+            }
+            if (((TextBox)sender).Name == HouseNuberBox.Name)
+            {
+
+            }
+            if (((TextBox)sender).Name == StreetTextBox.Name)
+            {
+
+            }
+            if (((TextBox)sender).Name == FloorTextBox.Name)
+            {
+
+            }
+            if (((TextBox)sender).Name == ApartmentTextBox.Name)
+            {
+
+            }
+            if (((TextBox)sender).Name == RegionTextBox.Name)
+            {
+
+            }
+            if (((TextBox)sender).Name == AdressDesciption.Name)
+            {
+
+            }
+            if (((TextBox)sender).Name == Telefone1Textbox.Name)
+            {
+
+            }
+            if (((TextBox)sender).Name == Telefone2Textbox.Name)
+            {
+
+            }
+            if (((TextBox)sender).Name == VisitDateTextBox.Name)
+            {
+
+            }
+            if (((TextBox)sender).Name == PersonsNumberTextBox.Name)
+            {
+
+            }
+            if (((TextBox)sender).Name == NotesTextbox.Name)
+            {
+
+            }
+
         }
 
      
@@ -407,7 +482,7 @@ namespace WPF.ComponentPages
         private void PriestTextBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
-			 MessageBox.Show("Hello World");
+			 
             if (firsttimepriest == true)
             {
 
@@ -454,8 +529,10 @@ namespace WPF.ComponentPages
 
         private void ChurchBox_Loaded(object sender, RoutedEventArgs e)
         {
+            
             ChurchBox.Text = spaces;
             ChurchListView = new ListView();
+            ChurchListView.ItemsSource = dd.churches.Select(o => o.churchname).ToList();
         }
 
         private void ChurchBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)

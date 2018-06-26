@@ -14,6 +14,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF.ComponentPages.MessageBoxes;
 
 namespace WPF
 {
@@ -34,11 +35,22 @@ namespace WPF
         {
             
             InitializeComponent();
-            new_row = row;
+            
             this.Loaded += Page_loaded;
-            DataRowView dr = (DataRowView)row.Item;
-            PopNameBox.Text= dr.Row[0].ToString();
-            PopJobBox.Text = dr.Row[1].ToString();
+          
+            try
+            {
+                new_row = row;
+                DataRowView dr = (DataRowView)row.Item;
+                PopNameBox.Text = dr.Row[0].ToString();
+                PopJobBox.Text = dr.Row[1].ToString();
+                ErrorMessageBox er = new ErrorMessageBox("any", dr.Row[3].ToString());
+                er.Show();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
 
         }
         private async void Page_loaded(object sender, RoutedEventArgs e)

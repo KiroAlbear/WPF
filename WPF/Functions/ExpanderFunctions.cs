@@ -212,31 +212,8 @@ namespace WPF.Functions
             // Grid gridInTemplate = (Grid)datagrid.Template.FindName("grid", myButton1);
             this.dataTable = datatable;
 
-            //var child = VisualTreeHelper.GetChild(datagrid, 1);
-            // var child = FindChild<TextBlock>(datagrid, "datagridTextBlock");
-            //  var dasd = (Style)Application.Current.Resources["DataGridRowStyle1"];
-            // var templatedControl = datagrid.Template;//.LoadContent() as FrameworkElement;
-            //     var templatedButton = datagrid.FindName("TextBlockGrid") as Grid;
-
-            //  TextBlock gridInTemplate = (TextBlock)datagrid.Template.FindName("datagridTextBlock", datagrid);
-            //if (ct != null)
-            //    MessageBox.Show(ct.ToString());
-            // MessageBox.Show(templatedControl.ToString());
-            // MessageBox.Show(datagrid.FindName("TextBlockGrid").ToString());
-            //    TextBlock textBlock = (TextBlock)datagrid.RowStyle.FindName("grid", myButton1);
-            //         MessageBox.Show(textBlock.Name);
-            //for (int row = 0; row < datatable.Rows.Count; row++)
-            //{
-            //    for (int col = 0; col < datatable.Columns.Count; col++)
-            //    {
-            //        Object ds = datatable.Rows[row][col];
-            //        string str = Convert.ToString(ds);
-
-            //    }
-
-            //}
-            // int firstcolwid = ColumnWidth(0, datatable);
-            //MessageBox.Show(firstcolwid.ToString());
+            
+         
             datagrid.ItemsSource = datatable.DefaultView;
         }
 
@@ -410,31 +387,7 @@ namespace WPF.Functions
                 var rowIndex = ((DataGrid)sender).Items.IndexOf(((DataGrid)sender).CurrentItem);
 
 
-                //object item = ((DataGrid)sender).SelectedItem;
-                //string ID = (((DataGrid)sender).SelectedCells[columnIndex].Column.GetCellContent(item) as TextBlock).Text;
-                //MessageBox.Show(ID);
-
-                // DataGridColumn col = ((DataGrid)sender).Columns[columnIndex];
-
-                ///////change columncolor
-                // ((DataGrid)sender).CurrentCell.Column.CellStyle = style;
-
-                /////change row color 
-                //  DataGridRow row = (DataGridRow)((DataGrid)sender).ItemContainerGenerator
-                // .ContainerFromIndex(rowIndex);
-
-                //  row.Background = Brushes.Yellow;
-                /////////////////////////////////////////////////////////////
-
-
-                //RowDefinition Row2= MainRow2;
-                //ColumnDefinition column1 = MainColumn1;
-                // NewGride = new Grid();
-                //NewGride.Background = Brushes.Red;
-                //NewGride.Width = 870;
-                //NewGride.Height = 550;
-                //NewGride.Margin = new Thickness(0, 0, 25, 0);
-                //NewGride.Opacity = 0.7;
+               
 
                 //NewGride.SetValue(Grid.RowProperty, 1);
                 //NewGride.SetValue(Grid.ColumnProperty, 0);

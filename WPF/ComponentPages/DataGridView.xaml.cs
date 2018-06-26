@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
-
+using System.Reflection;
 
 namespace WPF.ComponentPages
 {
@@ -72,8 +72,9 @@ namespace WPF.ComponentPages
             List<string> names = new List<string>();
             names.Add("hai");
             names.Add("SoWhat");
-
+            DatabaseFamilyDataContext dd = new DatabaseFamilyDataContext();
             DataTable table_view = new DataTable();
+          
             table_view.Columns.Add("Name");
             table_view.Columns.Add("num");
             table_view.Columns.Add("4");
@@ -81,18 +82,45 @@ namespace WPF.ComponentPages
             table_view.Columns.Add("2");
             table_view.Columns.Add("1");
             table_view.Rows.Add("tony", "123", "123", "123", "123", "123");
-            myfunctions.AddTableToDataGrid(table_view, MyDataGrid);
+             // myfunctions.AddTableToDataGrid(table_view, MyDataGrid);
+            DataTable dddd = new DataTable();
+            dddd= ToDataTable<family>(dd.families.Where(o => o.familycode < 100).ToList());
+            MyDataGrid.ItemsSource = dddd.DefaultView;
 
-         MyDataGrid.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(myfunctions.MydataGride_MouseRightClick);
-
+            MyDataGrid.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(myfunctions.MydataGride_MouseRightClick);
 
 
 
 
         }
+        public  DataTable ToDataTable<T>(List<T> items)
+        {
+            DataTable dataTable = new DataTable(typeof(T).Name);
+
+            //Get all the properties
+            PropertyInfo[] Props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            foreach (PropertyInfo prop in Props)
+            {
+                //Defining type of data column gives proper data table 
+                var type = (prop.PropertyType.IsGenericType && prop.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>) ? Nullable.GetUnderlyingType(prop.PropertyType) : prop.PropertyType);
+                //Setting column names as Property names
+                dataTable.Columns.Add(prop.Name, type);
+            }
+            foreach (T item in items)
+            {
+                var values = new object[Props.Length];
+                for (int i = 0; i < Props.Length; i++)
+                {
+                    //inserting property values to datatable rows
+                    values[i] = Props[i].GetValue(item, null);
+                }
+                dataTable.Rows.Add(values);
+            }
+            //put a breakpoint here and check datatable
+            return dataTable;
+        }
 
 
-  
 
         //private DataTable Table()
         //{
@@ -122,7 +150,7 @@ namespace WPF.ComponentPages
         //}
         //private Expander AddExpanderToStackPanel(string ExpanderName)
         //{
-        
+
         //    Expander newexpander = NewExpander(ExpanderName);
         //    MainStackPanel.Children.Add(newexpander);
         //    return newexpander;
@@ -131,7 +159,7 @@ namespace WPF.ComponentPages
         //}
         //private Expander AddExpanderToExpander(Expander ParentExpander,string NewExpanderName)
         //{
-           
+
         //    Expander newexpander = NewExpander(NewExpanderName);
         //    //if (MainStackPanel.Children.Contains(ParentExpander)) ;
         //    ParentExpander.Content = newexpander;
@@ -147,13 +175,13 @@ namespace WPF.ComponentPages
         //    newexpander.Name = NoSpaceString;
         //    newexpander.Header = ExpanderName;
         //    newexpander.Foreground = Brushes.Black;
-            
+
         //    newexpander.MouseEnter += new MouseEventHandler(Expander_MouseEnter);
         //    newexpander.MouseLeave += new MouseEventHandler(Expander_MouseLeave);
-            
+
         //    /////////Antonious    
         //    newexpander.FlowDirection = FlowDirection.RightToLeft;
-           
+
         //    ////////////////////////////
 
         //    ////Register the name of the element so we can search for it lately
@@ -205,7 +233,7 @@ namespace WPF.ComponentPages
         //    expander.RegisterName(NoSpaceString, temp);
         //    temp.FlowDirection = FlowDirection.RightToLeft;
         //    temp.AutoGenerateColumns = true;
-            
+
         //    expander.Content = temp;
         //    return temp;
 

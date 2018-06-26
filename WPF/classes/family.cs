@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF.classes
 {
-    class family
+    public class family_1
     {
         public int  familycode { set; get; }
         public string familyname { set; get; }
@@ -30,7 +30,7 @@ namespace WPF.classes
         public int marriagedatefl { set; get; }
         public string comments { set; get; }
 
-        public family(int _familycode, string _familyname, string _buildingnumber, int _apparmentnumber,
+        public family_1(int _familycode, string _familyname, string _buildingnumber, int _apparmentnumber,
             int _floornumber, int _streetcode, string _familyaddress, int _familynumber, int _economicstatus,
             int _housetypecode, int _home, int _responsiblepriestcode, int _churchcode, int _areacode,
             DateTime _lastvisitdate, int _priestname, string _familytel, string _familytel2,
