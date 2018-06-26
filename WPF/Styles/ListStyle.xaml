@@ -15,7 +15,7 @@
         <Setter Property="Margin"
                 Value="10,5,5,0"></Setter>
         <Setter Property="Grid.RowSpan"
-                Value="2"></Setter>
+                Value="4"></Setter>
         <Setter Property="Height"
                 Value="auto"></Setter>
         <Setter Property="Width"

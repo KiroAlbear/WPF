@@ -51,7 +51,7 @@
                              Grid.Row="0"
                              LostFocus="PriestTextBox_LostFocus"
                              Loaded="PriestTextBox_Loaded"
-                            
+                            FocusManager.IsFocusScope="True"
                           
                              PreviewMouseLeftButtonDown="PriestTextBox_PreviewMouseLeftButtonDown"
                               

@@ -219,9 +219,9 @@ namespace WPF.ComponentPages
             listView.SetValue(Grid.ColumnProperty, col);
             listView.Name = ListName;
           //  listView.SelectionChanged += new SelectionChangedEventHandler(ListView_SelectionChanged);
-            listView.PreviewKeyUp += new KeyEventHandler(Listview_PreviewKeyDown);
+            listView.KeyDown += new KeyEventHandler(Listview_PreviewKeyDown);
             listView.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(Listview_PreviewMouseLeftButtonUp);
-
+          
             TableGrid.Children.Add(listView);
             listView.SelectedIndex = 0;
         }
@@ -230,7 +230,7 @@ namespace WPF.ComponentPages
             if (Switch)
             {
                 listview.Visibility = Visibility.Visible;
-              
+                Keyboard.Focus(listview);
             }
             else
                 listview.Visibility = Visibility.Collapsed;
@@ -407,7 +407,9 @@ namespace WPF.ComponentPages
         private void PriestTextBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
-	        
+         
+         
+
             if (firsttimepriest == true)
             {
 
@@ -503,6 +505,7 @@ namespace WPF.ComponentPages
         private void StreetTextBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
+          
             if (firsttimestreet == true)
             {
 
@@ -597,6 +600,7 @@ namespace WPF.ComponentPages
                 StreetTextBox.Text = ((ListView)sender).SelectedItem.ToString();
                 ((ListView)sender).Visibility = Visibility.Collapsed;
             }
+
         }
 
 
