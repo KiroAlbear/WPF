@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\obj\Release\
+O:\Projects\WPF\WPF\obj\Release\
 WPF
 none
 false
 TRACE
-C:\Users\anton\OneDrive\Documents\GitHub\WPF2\WPF\App.xaml
+O:\Projects\WPF\WPF\App.xaml
 54-1769735211
 21777063561
 60-1143588598
-221109644724
+22636699116
 ComponentPages\BottomPage.xaml;ComponentPages\ConfessionPriest.xaml;ComponentPages\Data.xaml;ComponentPages\DataGridView.xaml;ComponentPages\MessageBoxes\ErrorMessageBox.xaml;ComponentPages\MessageBoxes\WarningMessageBox.xaml;ComponentPages\MessageBoxes\YesNoMessageBox.xaml;ComponentPages\ResponsiblePriest.xaml;ComponentPages\Search.xaml;ComponentPages\SocialCondition.xaml;ComponentPages\StreetPage.xaml;ComponentPages\TabPages\RegionsTab.xaml;ComponentPages\TabPages\LivingTypeTab.xaml;ComponentPages\TabPages\PabtismTab.xaml;ComponentPages\TabPages\ResPonsible_Priest_Tab.xaml;ComponentPages\TabPages\ServerPersonType.xaml;ComponentPages\TabPages\ServiceTypeTab.xaml;ComponentPages\TabPages\SocialConditionTab.xaml;ComponentPages\TabPages\ConfessionTab.xaml;ComponentPages\TabPages\StreetsTab.xaml;ComponentPages\TabPages\ChurchesTab.xaml;ComponentPages\TestWindow.xaml;ComponentPages\TopThreeButtons.xaml;EntryWindow.xaml;MainWindow.xaml;Pop.xaml;Search\SearchDataGrid.xaml;Styles\BigTextBox.xaml;Styles\BottomPage\BottomDataGrid.xaml;Styles\Button.xaml;Styles\Colors.xaml;Styles\ComboStyle.xaml;Styles\DataGridDecoration.xaml;Styles\ExpanderStyle.xaml;Styles\LabelSearch.xaml;Styles\ListStyle.xaml;Styles\NewButtonStyle.xaml;Styles\NewHoverTextBoxStyle.xaml;Styles\NewTextBoxStyleGotFocus.xaml;Styles\NewTextBoxStyle.xaml;Styles\PopTextBoxes.xaml;Styles\TabTemplate.xaml;Styles\TextBoxCombo.xaml;Styles\TextBoxSearch.xaml;Styles\TexBox.xaml;Styles\ToggleButtonStyle.xaml;Styles\TonyCellStyle.xaml;Styles\window.xaml;Styles\WindowWithSize.xaml;Styles\Label.xaml;Styles\fonts.xaml;Windows\SearchWindows.xaml;Windows\SingleEntry.xaml;Windows\TablePreview.xaml;
 
 False

@@ -51,7 +51,7 @@
                              Grid.Row="0"
                              LostFocus="PriestTextBox_LostFocus"
                              Loaded="PriestTextBox_Loaded"
-                             MouseLeftButtonDown="PriestTextBox_MouseLeftButtonDown"
+                            
                           
                              PreviewMouseLeftButtonDown="PriestTextBox_PreviewMouseLeftButtonDown"
                               
@@ -67,9 +67,9 @@
                     <TextBox Grid.Row="1"
                              Grid.Column="0"
                              x:Name="ChurchBox"
-                LostFocus="ChurchBox_LostFocus"
+                             LostFocus="ChurchBox_LostFocus"
                              Loaded="ChurchBox_Loaded"
-                          
+                           
                              PreviewMouseLeftButtonDown="ChurchBox_PreviewMouseLeftButtonDown"
                              Style="{StaticResource TextBoxComboStyle}" />
 

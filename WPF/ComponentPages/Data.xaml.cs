@@ -407,7 +407,7 @@ namespace WPF.ComponentPages
         private void PriestTextBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
-			 MessageBox.Show("Hello World");
+	        
             if (firsttimepriest == true)
             {
 
@@ -527,24 +527,24 @@ namespace WPF.ComponentPages
         }
 
 
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        //private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
           
-            string selecteditem = ((ListView)sender).SelectedItem.ToString();
+        //    string selecteditem = ((ListView)sender).SelectedItem.ToString();
 
-            if (((ListView)sender).Name == PriestListName)
-            {
-                PriestTextBox.Text = selecteditem;
-              //  PriestTextBox.Focus();
-            }
-            else if (((ListView)sender).Name == ChurchListView.Name)
-                ChurchBox.Text = selecteditem;
-            else if (((ListView)sender).Name == StreetListView.Name)
-                StreetTextBox.Text = selecteditem;
+        //    if (((ListView)sender).Name == PriestListName)
+        //    {
+        //        PriestTextBox.Text = selecteditem;
+        //      //  PriestTextBox.Focus();
+        //    }
+        //    else if (((ListView)sender).Name == ChurchListView.Name)
+        //        ChurchBox.Text = selecteditem;
+        //    else if (((ListView)sender).Name == StreetListView.Name)
+        //        StreetTextBox.Text = selecteditem;
 
 
 
-        }
+        //}
 
         private void PriestTextBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -570,21 +570,9 @@ namespace WPF.ComponentPages
                     ((ListView)sender).SelectedIndex--;
                 else if(e.Key == Key.Enter)
                 {
-                    if (((ListView)sender).Name==PriestListName)
-                    {
                     PriestTextBox.Text = ((ListView)sender).SelectedItem.ToString();
                     ((ListView)sender).Visibility = Visibility.Collapsed;
-                    }
-                    else if (((ListView)sender).Name==ChurchBox.Name)
-                    {
-                        ChurchBox.Text = ((ListView)sender).SelectedItem.ToString();
-                        ((ListView)sender).Visibility = Visibility.Collapsed;
-                    }
-                    else if (((ListView)sender).Name==StreetTextBox.Name)
-                    {
-                        StreetTextBox.Text = ((ListView)sender).SelectedItem.ToString();
-                        ((ListView)sender).Visibility = Visibility.Collapsed;
-                    }
+                 
                 }
 
             }
