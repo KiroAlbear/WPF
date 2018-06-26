@@ -38,7 +38,7 @@
                   MouseDoubleClick="StreetFirstList_MouseDoubleClick">
          
         </ListView>
-        <ListView Name="StreetSecondtList" Grid.Column="1" Grid.Row="2" Margin="0,2,0,0" Loaded="StreetSecondtList_Loaded" MouseDoubleClick="StreetSecondtList_MouseDoubleClick" ></ListView> 
+        <ListView Name="StreetSecondtList" Grid.Column="1" Grid.Row="2" Margin="0,2,0,0" Loaded="StreetSecondtList_Loaded" MouseDoubleClick="StreetSecondtList_MouseDoubleClick"></ListView> 
         <Button Name="BlankSpaceUpButton"
                 Grid.Row="0"
                 Grid.Column="0"

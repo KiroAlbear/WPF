@@ -24,6 +24,5 @@
                 Value="Right"></Setter>
         <Setter Property="FlowDirection"
                 Value="RightToLeft"></Setter>
-     
     </Style>
 </ResourceDictionary>
