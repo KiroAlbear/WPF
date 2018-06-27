@@ -6,7 +6,7 @@
            x:Key="StylishList">
         <Setter Property="MaxHeight" Value="100"></Setter>
         <Setter Property="Background"
-                Value="#393a37"></Setter>
+                Value="White"></Setter>
         <Setter Property="Foreground"
                 Value="White"></Setter>
         <Setter Property="Opacity"
@@ -14,9 +14,10 @@
         <Setter Property="Margin"
                 Value="10,5,5,0"></Setter>
         <Setter Property="Grid.RowSpan"
-                Value="2"></Setter>
+                Value="4"></Setter>
         <Setter Property="Height"
                 Value="auto"></Setter>
+        <Setter Property="FlowDirection" Value="RightToLeft"/>
         <Setter Property="Width"
                 Value="auto"></Setter>
         <Setter Property="TextBlock.TextAlignment"

@@ -232,10 +232,15 @@ namespace WPF.ComponentPages
             if (Switch)
             {
                 listview.Visibility = Visibility.Visible;
+                Keyboard.Focus(listview);
               
             }
             else
+            {
+             
                 listview.Visibility = Visibility.Collapsed;
+
+            }
         }
         private void GLOBAL_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -512,17 +517,17 @@ namespace WPF.ComponentPages
         {
             //if (priestlistvisible == true && firsttimepriest == false)
             //{
-            //    ShowList(PriestListView, false);
+                ShowList(PriestListView, false);
             //    priestlistvisible = false;
             //}
         }
 
         private void ChurchBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (churchlistvisible == true && firsttimechurch == false)
+           // if (churchlistvisible == true && firsttimechurch == false)
             {
                 ShowList(ChurchListView, false);
-                churchlistvisible = false;
+            //    churchlistvisible = false;
             }
 
         }
@@ -564,10 +569,10 @@ namespace WPF.ComponentPages
 
         private void StreetTextBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (streetlistvisible == true && firsttimestreet == false)
+           // if (streetlistvisible == true && firsttimestreet == false)
             {
                 ShowList(StreetListView, false);
-                streetlistvisible = false;
+              //  streetlistvisible = false;
             }
         }
 
@@ -635,8 +640,7 @@ namespace WPF.ComponentPages
             ListViewItem item = ((ListView)sender).ItemContainerGenerator.ContainerFromIndex(((ListView)sender).SelectedIndex) as ListViewItem;
             item.Focus();
 
-            if (((ListView)sender).Name == PriestListName)
-            {
+           
                 if (e.Key==Key.Down&& ((ListView)sender).SelectedIndex < ((ListView)sender).Items.Count)
                 {
                     ((ListView)sender).SelectedIndex++;
@@ -652,19 +656,19 @@ namespace WPF.ComponentPages
                     PriestTextBox.Text = ((ListView)sender).SelectedItem.ToString();
                     ((ListView)sender).Visibility = Visibility.Collapsed;
                     }
-                    else if (((ListView)sender).Name==ChurchBox.Name)
+                    else if (((ListView)sender).Name==ChurchListName)
                     {
                         ChurchBox.Text = ((ListView)sender).SelectedItem.ToString();
                         ((ListView)sender).Visibility = Visibility.Collapsed;
                     }
-                    else if (((ListView)sender).Name==StreetTextBox.Name)
+                    else if (((ListView)sender).Name==StreettListName)
                     {
                         StreetTextBox.Text = ((ListView)sender).SelectedItem.ToString();
                         ((ListView)sender).Visibility = Visibility.Collapsed;
                     }
                 }
 
-            }
+            
 
         }
 
@@ -676,12 +680,12 @@ namespace WPF.ComponentPages
                 PriestTextBox.Text = ((ListView)sender).SelectedItem.ToString();
                 ((ListView)sender).Visibility = Visibility.Collapsed;
             }
-            else if (((ListView)sender).Name == ChurchBox.Name)
+            else if (((ListView)sender).Name == ChurchListName)
             {
                 ChurchBox.Text = ((ListView)sender).SelectedItem.ToString();
                 ((ListView)sender).Visibility = Visibility.Collapsed;
             }
-            else if (((ListView)sender).Name == StreetTextBox.Name)
+            else if (((ListView)sender).Name == StreettListName)
             {
                 StreetTextBox.Text = ((ListView)sender).SelectedItem.ToString();
                 ((ListView)sender).Visibility = Visibility.Collapsed;
