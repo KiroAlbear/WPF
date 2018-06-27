@@ -16,7 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
 using System.Reflection;
-
+using WPF.classes;
 namespace WPF.ComponentPages
 {
     /// <summary>
@@ -26,6 +26,8 @@ namespace WPF.ComponentPages
     {
         public DataGridView(bool enablePopPage)
         {
+           
+            
             InitializeComponent();
             this.Loaded += Page_loaded;
             if(enablePopPage)
@@ -85,10 +87,12 @@ namespace WPF.ComponentPages
              // myfunctions.AddTableToDataGrid(table_view, MyDataGrid);
             DataTable dddd = new DataTable();
             dddd= ToDataTable<family>(dd.families.Where(o => o.familycode < 100).ToList());
-            MyDataGrid.ItemsSource = dddd.DefaultView;
+            DataTable fdm = new DataTable();
+            fdm = ToDataTable<familydetail>(family_data_shared.new_family_member);
+            MyDataGrid.ItemsSource = fdm.DefaultView;
 
             MyDataGrid.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(myfunctions.MydataGride_MouseRightClick);
-
+            family_data_shared.my_datagrid = MyDataGrid;
 
 
 

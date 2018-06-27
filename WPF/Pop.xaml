@@ -237,9 +237,8 @@
                         HorizontalAlignment="Stretch"
                         Margin="0,0,8,0"
                         Grid.Column="0"
-                        Content="حفظ">
-
-                </Button>
+                        Click="PopSaveButtom_Click"
+                        Content="حفظ" Height="42" VerticalAlignment="Top"/>
 
                 <Button x:Name="PopEditButton"
                         Margin="0,0,8,0"

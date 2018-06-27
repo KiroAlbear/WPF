@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 using WPF.classes;
 using WPF.ComponentPages;
 using WPF.ComponentPages.MessageBoxes;
-
+using WPF.classes;
 namespace WPF
 {
     /// <summary>
@@ -51,7 +51,8 @@ namespace WPF
 
         private void EnteryButton_Click_1(object sender, RoutedEventArgs e)
         {
-            
+            family_data_shared.new_family_head = new family();
+            family_data_shared.new_family_member = new List<familydetail>();
             EntryWindow entrywindow= new EntryWindow();
             entrywindow.Show();
         }

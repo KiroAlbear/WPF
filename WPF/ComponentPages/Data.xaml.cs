@@ -211,7 +211,7 @@ namespace WPF.ComponentPages
             //  ShowList(GlobalListView, true);
         }
 
-        private void PositioningGlobalList(int row, int col,string ListName,ListView listView)
+        private void PositioningGlobalList(int row, int col, string ListName, ListView listView)
         {
 
 
@@ -220,8 +220,8 @@ namespace WPF.ComponentPages
             listView.SetValue(Grid.RowProperty, row);
             listView.SetValue(Grid.ColumnProperty, col);
             listView.Name = ListName;
-          //  listView.SelectionChanged += new SelectionChangedEventHandler(ListView_SelectionChanged);
-            listView.PreviewKeyUp += new KeyEventHandler(Listview_PreviewKeyDown);
+            //  listView.SelectionChanged += new SelectionChangedEventHandler(ListView_SelectionChanged);
+            listView.KeyDown += new KeyEventHandler(Listview_PreviewKeyDown);
             listView.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(Listview_PreviewMouseLeftButtonUp);
 
             TableGrid.Children.Add(listView);
@@ -233,15 +233,11 @@ namespace WPF.ComponentPages
             {
                 listview.Visibility = Visibility.Visible;
                 Keyboard.Focus(listview);
-              
             }
             else
-            {
-             
                 listview.Visibility = Visibility.Collapsed;
-
-            }
-        }
+        
+    }
         private void GLOBAL_TextChanged(object sender, TextChangedEventArgs e)
         {
          
@@ -394,7 +390,7 @@ namespace WPF.ComponentPages
                      {
                          responsiblepriestname = aa.responsiblepriestname
                      }).ToList();
-            PriestTextBox.Text = spaces;
+            
 
           //  List<string> testlist = dd.responsiblepriests;
           
@@ -417,15 +413,16 @@ namespace WPF.ComponentPages
             family f = new family();
             if (((TextBox)sender).Text == string.Empty || ((TextBox)sender).Text == spaces)
                 ((TextBox)sender).Text = spaces;
-            family_data_shared.new_family_head = new family();
-            family_data_shared.new_family_head.familyname = PersonBox.Text;
+           // family_data_shared.new_family_head = new family();
+           // family_data_shared.new_family_head.familyname = PersonBox.Text;
             if(((TextBox)sender).Name==PriestTextBox.Name)
             {
-                
+             // int t=  dd.responsiblepriests.Where(o => o.responsiblepriestname == PriestTextBox.Text).Select(d => d.responsiblepriestcode).FirstOrDefault();
+                f.responsiblepriest = dd.responsiblepriests.Where(o => o.responsiblepriestname == PriestTextBox.Text).FirstOrDefault();
             }
             if (((TextBox)sender).Name == ChurchBox.Name)
             {
-
+                f.church = dd.churches.Where(o => o.churchname == ChurchBox.Text).FirstOrDefault();
             }
             if (((TextBox)sender).Name == PriestTextBox.Name)
             {
@@ -433,23 +430,23 @@ namespace WPF.ComponentPages
             }
             if (((TextBox)sender).Name == PersonBox.Name)
             {
-
+                f.familyname = PersonBox.Text;
             }
             if (((TextBox)sender).Name == HouseNuberBox.Name)
             {
-
+                f.buildingnumber = HouseNuberBox.Text;
             }
             if (((TextBox)sender).Name == StreetTextBox.Name)
             {
-
+                f.street = dd.streets.Where(o => o.streetname == StreetTextBox.Text).FirstOrDefault();
             }
             if (((TextBox)sender).Name == FloorTextBox.Name)
             {
-
+                f.floornumber = Convert.ToInt16( FloorTextBox.Text);
             }
             if (((TextBox)sender).Name == ApartmentTextBox.Name)
             {
-
+                f.apparmentnumber =Convert.ToInt16( ApartmentTextBox.Text);
             }
             if (((TextBox)sender).Name == RegionTextBox.Name)
             {
@@ -457,15 +454,15 @@ namespace WPF.ComponentPages
             }
             if (((TextBox)sender).Name == AdressDesciption.Name)
             {
-
+               
             }
             if (((TextBox)sender).Name == Telefone1Textbox.Name)
             {
-
+                f.familytel = Telefone1Textbox.Text;
             }
             if (((TextBox)sender).Name == Telefone2Textbox.Name)
             {
-
+                f.familytel2 = Telefone2Textbox.Text;
             }
             if (((TextBox)sender).Name == VisitDateTextBox.Name)
             {
@@ -477,17 +474,19 @@ namespace WPF.ComponentPages
             }
             if (((TextBox)sender).Name == NotesTextbox.Name)
             {
-
+                f.comments = NotesTextbox.Text;
             }
 
         }
 
-     
+
 
         private void PriestTextBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
-			 
+
+
+
             if (firsttimepriest == true)
             {
 
@@ -512,7 +511,6 @@ namespace WPF.ComponentPages
 
 
         }
-
         private void PriestTextBox_LostFocus(object sender, RoutedEventArgs e)
         {
             //if (priestlistvisible == true && firsttimepriest == false)
@@ -524,13 +522,14 @@ namespace WPF.ComponentPages
 
         private void ChurchBox_LostFocus(object sender, RoutedEventArgs e)
         {
-           // if (churchlistvisible == true && firsttimechurch == false)
+            if (churchlistvisible == true && firsttimechurch == false)
             {
                 ShowList(ChurchListView, false);
-            //    churchlistvisible = false;
+                churchlistvisible = false;
             }
 
         }
+
 
         private void ChurchBox_Loaded(object sender, RoutedEventArgs e)
         {
@@ -543,16 +542,16 @@ namespace WPF.ComponentPages
         private void ChurchBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
-            if (firsttimechurch==true)
+            if (firsttimechurch == true)
             {
 
-            PositioningGlobalList(2, 0, ChurchListName , ChurchListView);
-            ShowList(ChurchListView, true);
+                PositioningGlobalList(2, 0, ChurchListName, ChurchListView);
+                ShowList(ChurchListView, true);
                 firsttimechurch = false;
-               churchlistvisible = true;
+                churchlistvisible = true;
             }
 
-            else if(churchlistvisible == false&& firsttimechurch == false)
+            else if (churchlistvisible == false && firsttimechurch == false)
             {
                 ShowList(ChurchListView, true);
                 churchlistvisible = true;
@@ -569,22 +568,25 @@ namespace WPF.ComponentPages
 
         private void StreetTextBox_LostFocus(object sender, RoutedEventArgs e)
         {
-           // if (streetlistvisible == true && firsttimestreet == false)
+            if (streetlistvisible == true && firsttimestreet == false)
             {
                 ShowList(StreetListView, false);
-              //  streetlistvisible = false;
+                streetlistvisible = false;
             }
         }
 
         private void StreetTextBox_Loaded(object sender, RoutedEventArgs e)
         {
+            
             StreetTextBox.Text = spaces;
             StreetListView = new ListView();
+            StreetListView.ItemsSource= dd.streets.Select(o => o.streetname).ToList();
         }
 
         private void StreetTextBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
+
             if (firsttimestreet == true)
             {
 
@@ -605,7 +607,7 @@ namespace WPF.ComponentPages
                 ShowList(StreetListView, false);
                 streetlistvisible = false;
             }
-          
+
         }
 
 
@@ -640,33 +642,36 @@ namespace WPF.ComponentPages
             ListViewItem item = ((ListView)sender).ItemContainerGenerator.ContainerFromIndex(((ListView)sender).SelectedIndex) as ListViewItem;
             item.Focus();
 
-           
-                if (e.Key==Key.Down&& ((ListView)sender).SelectedIndex < ((ListView)sender).Items.Count)
+          
+                if (e.Key == Key.Down && ((ListView)sender).SelectedIndex < ((ListView)sender).Items.Count)
                 {
                     ((ListView)sender).SelectedIndex++;
-                   
+
                 }
 
-                else if (e.Key == Key.Up && ((ListView)sender).SelectedIndex>0)
+                else if (e.Key == Key.Up && ((ListView)sender).SelectedIndex > 0)
                     ((ListView)sender).SelectedIndex--;
-                else if(e.Key == Key.Enter)
+                else if (e.Key == Key.Enter)
                 {
-                    if (((ListView)sender).Name==PriestListName)
+                    if(((ListView)sender).Name==PriestListName)
                     {
-                    PriestTextBox.Text = ((ListView)sender).SelectedItem.ToString();
+                    PriestTextBox.Text = (( ListView)sender).SelectedItem.ToString();
                     ((ListView)sender).Visibility = Visibility.Collapsed;
                     }
-                    else if (((ListView)sender).Name==ChurchListName)
+                    else if (((ListView)sender).Name == ChurchListName)
                     {
-                        ChurchBox.Text = ((ListView)sender).SelectedItem.ToString();
-                        ((ListView)sender).Visibility = Visibility.Collapsed;
+                    ChurchBox.Text = ((ListView)sender).SelectedItem.ToString();
+                    ((ListView)sender).Visibility = Visibility.Collapsed;
                     }
-                    else if (((ListView)sender).Name==StreettListName)
+                    else if (((ListView)sender).Name == StreettListName)
                     {
-                        StreetTextBox.Text = ((ListView)sender).SelectedItem.ToString();
-                        ((ListView)sender).Visibility = Visibility.Collapsed;
+                    StreetTextBox.Text = ((ListView)sender).SelectedItem.ToString();
+                    ((ListView)sender).Visibility = Visibility.Collapsed;
                     }
-                }
+
+
+
+            }
 
             
 
@@ -674,7 +679,7 @@ namespace WPF.ComponentPages
 
         private void Listview_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-          
+
             if (((ListView)sender).Name == PriestListName)
             {
                 PriestTextBox.Text = ((ListView)sender).SelectedItem.ToString();
@@ -690,8 +695,8 @@ namespace WPF.ComponentPages
                 StreetTextBox.Text = ((ListView)sender).SelectedItem.ToString();
                 ((ListView)sender).Visibility = Visibility.Collapsed;
             }
-        }
 
+        }
 
 
 

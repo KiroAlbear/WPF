@@ -15,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF.ComponentPages.MessageBoxes;
+using WPF.classes;
+using System.Reflection;
 
 namespace WPF
 {
@@ -41,11 +43,10 @@ namespace WPF
             try
             {
                 new_row = row;
-                DataRowView dr = (DataRowView)row.Item;
-                PopNameBox.Text = dr.Row[0].ToString();
-                PopJobBox.Text = dr.Row[1].ToString();
-                ErrorMessageBox er = new ErrorMessageBox("any", dr.Row[3].ToString());
-                er.Show();
+               // DataRowView dr = (DataRowView)row.Item;
+             //   PopNameBox.Text = dr.Row[0].ToString();
+             //   PopJobBox.Text = dr.Row[1].ToString();
+               
             }
             catch(Exception e)
             {
@@ -116,6 +117,48 @@ namespace WPF
             ((TextBox)sender).Focus();
         }
 
+        private void PopSaveButtom_Click(object sender, RoutedEventArgs e)
+        {
+            familydetail fd = new familydetail();
+            fd.paxname = PopNameBox.Text;
+            fd.moahel = PopQualificationBox.Text;
+            fd.job = PopJobBox.Text;
+            fd.birthdate = PopAgeBox.Text;
+            
+            family_data_shared.new_family_member.Add(fd);
+           //  MessageBox.Show(family_data_shared.new_family_member.Count.ToString());
+            DataTable fdm = new DataTable();
+            fdm = ToDataTable<familydetail>(family_data_shared.new_family_member);
+            family_data_shared.my_datagrid.ItemsSource = fdm.DefaultView;
+            this.Visibility = Visibility.Collapsed;
+            
+        }
+        public DataTable ToDataTable<T>(List<T> items)
+        {
+            DataTable dataTable = new DataTable(typeof(T).Name);
+
+            //Get all the properties
+            PropertyInfo[] Props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            foreach (PropertyInfo prop in Props)
+            {
+                //Defining type of data column gives proper data table 
+                var type = (prop.PropertyType.IsGenericType && prop.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>) ? Nullable.GetUnderlyingType(prop.PropertyType) : prop.PropertyType);
+                //Setting column names as Property names
+                dataTable.Columns.Add(prop.Name, type);
+            }
+            foreach (T item in items)
+            {
+                var values = new object[Props.Length];
+                for (int i = 0; i < Props.Length; i++)
+                {
+                    //inserting property values to datatable rows
+                    values[i] = Props[i].GetValue(item, null);
+                }
+                dataTable.Rows.Add(values);
+            }
+            //put a breakpoint here and check datatable
+            return dataTable;
+        }
 
     }
 }
