@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using WPF.ComponentPages.MessageBoxes;
 using WPF.classes;
 using System.Reflection;
+using WPF.Functions;
 
 namespace WPF
 {
@@ -28,6 +29,37 @@ namespace WPF
         public DataGridRow new_row;
         string rr;
         string spaces = "                                                                                                      ";
+        private ListView ComfessionListView;
+        private ListView SocialCaseListView;
+        private ListView RelativeListView;
+        private ListView ShamosiaListView;
+        /// <summary>
+        /// /////////////////////////////////
+        /// </summary>
+        private bool ComfessionFirstTime=false;
+        private bool SocialCaseFirstTime = false;
+        private bool RelativeFirstTime = false;
+        private bool ShamosiaFirstTime = false;
+        /// <summary>
+        /// ///////////////////////////
+        /// </summary>
+        private bool ComfessionVisible = false;
+        private bool SocialCaseVisible = false;
+        private bool RelativeVisible = false;
+        private bool ShamosiaVisible = false;
+        private ListViewPrepare comfessionl;
+        private ListViewPrepare SocialCasl;
+        private ListViewPrepare relativel;
+        private ListViewPrepare shamosial;
+        /// <summary>
+        /// //////////////////////////////
+        /// </summary>
+        /// 
+        private string ComfessionListName= "ComfessionList";
+        private string SocialCaseListName= "SocialCaseLis";
+        private string RelativeListName= "RelativeList";
+        private string ShamosiaListName= "ShamosiaList";
+
         public Pop()
         {
             InitializeComponent();
@@ -159,6 +191,192 @@ namespace WPF
             //put a breakpoint here and check datatable
             return dataTable;
         }
+       
+        private void PopComfessionBox_Loaded(object sender, RoutedEventArgs e)
+        {
+           Style style= (Style)FindResource("StylishList");
+            ComfessionListView = new ListView();
 
+            DatabaseFamilyDataContext dd = new DatabaseFamilyDataContext();
+            var a = (from aa in new DatabaseFamilyDataContext().responsiblepriests
+                     where aa.responsiblepriestcode > 0
+                     select new responsiblepriests
+                     {
+                         responsiblepriestname = aa.responsiblepriestname
+                     }).ToList();
+            comfessionl = new ListViewPrepare(ComfessionListView,PopUpGrid,2,2,ComfessionListName,style);
+            ComfessionListView.ItemsSource = dd.responsiblepriests.Select(o => o.responsiblepriestname).ToList();
+
+            ComfessionListView.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(Listview_PreviewMouseLeftButtonUp);
+            ComfessionListView.KeyDown += new KeyEventHandler(Listview_PreviewKeyDown);
+ 
+
+        }
+
+        private void PopComfessionBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+           
+
+
+        }
+
+        private void PopComfessionBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+           // comfessionl.TextBoxMouseDownFunction();
+        }
+        private void PopComfessionBox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        { 
+           
+            comfessionl.TextBoxMouseDownFunction();
+          //  Keyboard.Focus(ComfessionListView);
+        }
+
+        private void PopSocialCaseBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PopSocialCaseBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            SocialCaseListView = new ListView();
+            Style style = (Style)FindResource("StylishList");
+          
+
+            DatabaseFamilyDataContext dd = new DatabaseFamilyDataContext();
+            var a = (from aa in new DatabaseFamilyDataContext().responsiblepriests
+                     where aa.responsiblepriestcode > 0
+                     select new responsiblepriests
+                     {
+                         responsiblepriestname = aa.responsiblepriestname
+                     }).ToList();
+            SocialCasl = new ListViewPrepare(SocialCaseListView, PopUpGrid, 2, 0, SocialCaseListName, style);
+            SocialCaseListView.ItemsSource = dd.responsiblepriests.Select(o => o.responsiblepriestname).ToList();
+
+            SocialCaseListView.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(Listview_PreviewMouseLeftButtonUp);
+            SocialCaseListView.PreviewKeyDown += new KeyEventHandler(Listview_PreviewKeyDown);
+        }
+
+        private void PopSocialCaseBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+          //  SocialCasl.TextBoxMouseDownFunction();
+        }
+
+        private void PopSocialCaseBox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            SocialCasl.TextBoxMouseDownFunction();
+        }
+
+
+        private void PopRelativeBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            Style style = (Style)FindResource("StylishList");
+            RelativeListView = new ListView();
+
+        
+
+
+            DatabaseFamilyDataContext dd = new DatabaseFamilyDataContext();
+            var a = (from aa in new DatabaseFamilyDataContext().responsiblepriests
+                     where aa.responsiblepriestcode > 0
+                     select new responsiblepriests
+                     {
+                         responsiblepriestname = aa.responsiblepriestname
+                     }).ToList();
+            
+            relativel = new ListViewPrepare(RelativeListView, PopUpGrid, 3, 0, RelativeListName, style);
+            RelativeListView.ItemsSource = dd.responsiblepriests.Select(o => o.responsiblepriestname).ToList();
+
+            RelativeListView.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(Listview_PreviewMouseLeftButtonUp);
+            RelativeListView.KeyDown += new KeyEventHandler(Listview_PreviewKeyDown);
+        }
+
+        private void PopRelativeBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            //relativel.TextBoxMouseDownFunction();
+        }
+
+        private void PopRelativeBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PopRelativeBox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            relativel.TextBoxMouseDownFunction();
+        }
+
+        private void PopShamosiaBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PopShamosiaBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            Style style = (Style)FindResource("StylishList");
+            ShamosiaListView = new ListView();
+            shamosial = new ListViewPrepare(ShamosiaListView, PopUpGrid, 4, 0, ShamosiaListName, style);
+
+            DatabaseFamilyDataContext dd = new DatabaseFamilyDataContext();
+            var a = (from aa in new DatabaseFamilyDataContext().responsiblepriests
+                     where aa.responsiblepriestcode > 0
+                     select new responsiblepriests
+                     {
+                         responsiblepriestname = aa.responsiblepriestname
+                     }).ToList();
+
+            ShamosiaListView.ItemsSource = dd.responsiblepriests.Select(o => o.responsiblepriestname).ToList();
+
+            ShamosiaListView.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(Listview_PreviewMouseLeftButtonUp);
+            ShamosiaListView.KeyDown += new KeyEventHandler(Listview_PreviewKeyDown);
+
+        }
+
+        private void PopShamosiaBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+          //  relativel.TextBoxMouseDownFunction();
+        }
+
+        private void PopShamosiaBox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            shamosial.TextBoxMouseDownFunction();
+        }
+
+        private void Listview_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            MessageBox.Show("Call");
+           
+            // if (((ListView)sender).Name == ComfessionListName)
+            comfessionl.ListViewKeyDownFunction(PopComfessionBox,e);
+
+            // if (((ListView)sender).Name == RelativeListName)
+            //    relativel.ListViewKeyDownFunction(PopRelativeBox, e);
+
+            //else if (((ListView)sender).Name == SocialCaseListName)
+            //    SocialCasl.ListViewKeyDownFunction(PopSocialCaseBox, e);
+
+            //else if (((ListView)sender).Name == ShamosiaListName)
+            //    shamosial.ListViewKeyDownFunction(PopShamosiaBox, e);
+            //shamosial.ListViewKeyDownFunction(((TextBox)sender),e);
+
+
+        }
+
+        private void Listview_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (((ListView)sender).Name == ComfessionListName)
+                comfessionl.ListViewMouseDown(PopComfessionBox);
+
+            else if(((ListView)sender).Name == RelativeListName)
+                relativel.ListViewMouseDown(PopRelativeBox);
+
+            else if(((ListView)sender).Name == SocialCaseListName)
+                SocialCasl.ListViewMouseDown(PopSocialCaseBox);
+
+            else if(((ListView)sender).Name == ShamosiaListName)
+                shamosial.ListViewMouseDown(PopShamosiaBox);
+            
+        }
+
+   
     }
 }

@@ -224,6 +224,7 @@ namespace WPF.ComponentPages
             listView.KeyDown += new KeyEventHandler(Listview_PreviewKeyDown);
             listView.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(Listview_PreviewMouseLeftButtonUp);
 
+            
             TableGrid.Children.Add(listView);
             listView.SelectedIndex = 0;
         }
@@ -522,7 +523,7 @@ namespace WPF.ComponentPages
 
         private void ChurchBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (churchlistvisible == true && firsttimechurch == false)
+           // if (churchlistvisible == true && firsttimechurch == false)
             {
                 ShowList(ChurchListView, false);
                 churchlistvisible = false;
@@ -568,7 +569,7 @@ namespace WPF.ComponentPages
 
         private void StreetTextBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (streetlistvisible == true && firsttimestreet == false)
+            //if (streetlistvisible == true && firsttimestreet == false)
             {
                 ShowList(StreetListView, false);
                 streetlistvisible = false;

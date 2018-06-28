@@ -143,19 +143,22 @@
 
             <TextBox x:Name="PopComfessionBox"
                      Grid.Row="2"
-                      GotFocus="GLOBALTextBox_GotFocus"
-                     Loaded="TextBox_Loaded"
-                     LostFocus="GlobalTextBox_Loaded"
+                     Loaded="PopComfessionBox_Loaded"
+                     GotFocus="PopComfessionBox_GotFocus"
+                     LostFocus="PopComfessionBox_LostFocus"
+                    
+                     PreviewMouseDown="PopComfessionBox_PreviewMouseDown"
                      Grid.Column="2"
-                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+                     Style="{StaticResource TextBoxComboStyle}"></TextBox>
 
             <TextBox x:Name="PopSocialCaseBox"
                      Grid.Row="2"
-                      GotFocus="GLOBALTextBox_GotFocus"
-                     Loaded="TextBox_Loaded"
-                     LostFocus="GlobalTextBox_Loaded"
+                     GotFocus="PopSocialCaseBox_GotFocus"
+                     Loaded="PopSocialCaseBox_Loaded"
+                     LostFocus="PopSocialCaseBox_LostFocus"
+                     PreviewMouseDown="PopSocialCaseBox_PreviewMouseDown"
                      Grid.Column="0"
-                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+                     Style="{StaticResource TextBoxComboStyle}"></TextBox>
 
             <TextBox x:Name="PopMobileBox"
                      Grid.Row="3"
@@ -167,11 +170,12 @@
 
             <TextBox x:Name="PopRelativeBox"
                      Grid.Row="3"
-                      GotFocus="GLOBALTextBox_GotFocus"
-                     Loaded="TextBox_Loaded"
-                     LostFocus="GlobalTextBox_Loaded"
+                      GotFocus="PopRelativeBox_GotFocus"
+                     Loaded="PopRelativeBox_Loaded"
+                     LostFocus="PopRelativeBox_LostFocus"
+                     PreviewMouseDown="PopRelativeBox_PreviewMouseDown"
                      Grid.Column="0"
-                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+                     Style="{StaticResource TextBoxComboStyle}"></TextBox>
 
             <TextBox x:Name="PopBirthDateBox"
                      Grid.Row="4"
@@ -183,11 +187,12 @@
 
             <TextBox x:Name="PopShamosiaBox"
                      Grid.Row="4"
-                      GotFocus="GLOBALTextBox_GotFocus"
-                     Loaded="TextBox_Loaded"
-                     LostFocus="GlobalTextBox_Loaded"
+                      GotFocus="PopShamosiaBox_GotFocus"
+                     Loaded="PopShamosiaBox_Loaded"
+                     LostFocus="PopShamosiaBox_LostFocus"
+                     PreviewMouseDown="PopShamosiaBox_PreviewMouseDown"
                      Grid.Column="0"
-                     Style="{StaticResource PopTextBoxGotFocus}"></TextBox>
+                     Style="{StaticResource TextBoxComboStyle}"></TextBox>
 
             <TextBox x:Name="PopBabtismBox"
                      Grid.Row="5"

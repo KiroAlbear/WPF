@@ -165,6 +165,7 @@
     <Compile Include="Functions\BitmapFunctions.cs" />
     <Compile Include="Functions\DataGridAccess.cs" />
     <Compile Include="Functions\ExpanderFunctions.cs" />
+    <Compile Include="Functions\ListViewPrepare.cs" />
     <Compile Include="Functions\ListViewTransportation.cs" />
     <Compile Include="Functions\TextBoxValidation.cs" />
     <Compile Include="PDF\PDFWriter.cs" />
