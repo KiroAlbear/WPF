@@ -151,12 +151,13 @@ namespace WPF
 
         private void PopSaveButtom_Click(object sender, RoutedEventArgs e)
         {
+            DatabaseFamilyDataContext dd = new DatabaseFamilyDataContext();
             familydetail fd = new familydetail();
             fd.paxname = PopNameBox.Text;
             fd.moahel = PopQualificationBox.Text;
             fd.job = PopJobBox.Text;
             fd.birthdate = PopAgeBox.Text;
-            
+            fd.confesspriestcode = dd.priests.Where(o => o.priestname == PopComfessionBox.Text).Select(f => f.priestcode).First();
             family_data_shared.new_family_member.Add(fd);
            //  MessageBox.Show(family_data_shared.new_family_member.Count.ToString());
             DataTable fdm = new DataTable();
@@ -205,7 +206,7 @@ namespace WPF
                          responsiblepriestname = aa.responsiblepriestname
                      }).ToList();
             comfessionl = new ListViewPrepare(ComfessionListView,PopUpGrid,2,2,ComfessionListName,style);
-            ComfessionListView.ItemsSource = dd.responsiblepriests.Select(o => o.responsiblepriestname).ToList();
+            ComfessionListView.ItemsSource = dd.priests.Select(o => o.priestname).ToList();
 
             ComfessionListView.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(Listview_PreviewMouseLeftButtonUp);
             ComfessionListView.KeyDown += new KeyEventHandler(Listview_PreviewKeyDown);
@@ -250,7 +251,7 @@ namespace WPF
                          responsiblepriestname = aa.responsiblepriestname
                      }).ToList();
             SocialCasl = new ListViewPrepare(SocialCaseListView, PopUpGrid, 2, 0, SocialCaseListName, style);
-            SocialCaseListView.ItemsSource = dd.responsiblepriests.Select(o => o.responsiblepriestname).ToList();
+            SocialCaseListView.ItemsSource = dd.maritalstatus.Select(o => o.maritalstatusname).ToList();
 
             SocialCaseListView.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(Listview_PreviewMouseLeftButtonUp);
             SocialCaseListView.PreviewKeyDown += new KeyEventHandler(Listview_PreviewKeyDown);
@@ -324,7 +325,7 @@ namespace WPF
                          responsiblepriestname = aa.responsiblepriestname
                      }).ToList();
 
-            ShamosiaListView.ItemsSource = dd.responsiblepriests.Select(o => o.responsiblepriestname).ToList();
+            ShamosiaListView.ItemsSource = dd.shmosias.Select(o => o.shmosianame).ToList();
 
             ShamosiaListView.PreviewMouseLeftButtonUp += new MouseButtonEventHandler(Listview_PreviewMouseLeftButtonUp);
             ShamosiaListView.KeyDown += new KeyEventHandler(Listview_PreviewKeyDown);

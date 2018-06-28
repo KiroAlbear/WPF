@@ -62,7 +62,7 @@ namespace WPF.ComponentPages
 
         private void PopSaVeButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(family_data_shared.new_family_head.familyname);
+            
         }
 
 

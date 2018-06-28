@@ -477,6 +477,7 @@ namespace WPF.ComponentPages
             {
                 f.comments = NotesTextbox.Text;
             }
+            family_data_shared.new_family_head = f;
 
         }
 
