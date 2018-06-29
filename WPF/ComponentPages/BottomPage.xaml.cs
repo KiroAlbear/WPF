@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -62,6 +63,7 @@ namespace WPF.ComponentPages
 
         private void PopSaVeButton_Click(object sender, RoutedEventArgs e)
         {
+            family_data_shared.add_to_database();
             
         }
 

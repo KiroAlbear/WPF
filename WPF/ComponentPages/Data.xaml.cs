@@ -412,8 +412,8 @@ namespace WPF.ComponentPages
         private void GlobalTextBox_LostFocus(object sender, RoutedEventArgs e)
         {
             family f = new family();
-            if (((TextBox)sender).Text == string.Empty || ((TextBox)sender).Text == spaces)
-                ((TextBox)sender).Text = spaces;
+            //if (((TextBox)sender).Text == string.Empty || ((TextBox)sender).Text == spaces)
+            //    ((TextBox)sender).Text = spaces;
            // family_data_shared.new_family_head = new family();
            // family_data_shared.new_family_head.familyname = PersonBox.Text;
             if(((TextBox)sender).Name==PriestTextBox.Name)
@@ -443,11 +443,25 @@ namespace WPF.ComponentPages
             }
             if (((TextBox)sender).Name == FloorTextBox.Name)
             {
-                f.floornumber = Convert.ToInt16( FloorTextBox.Text);
+                try
+                {
+                    string ss = FloorTextBox.Text;
+                    ss.Replace(" ",string.Empty);
+                     if ((ss.Length>0))
+                    f.floornumber = Convert.ToInt16(ss);
+                }
+                catch(Exception c)
+                {
+                    string ss = FloorTextBox.Text.Replace(" ", string.Empty);
+                    MessageBox.Show(c.ToString());
+                    MessageBox.Show(ss.Length.ToString());
+                }
             }
             if (((TextBox)sender).Name == ApartmentTextBox.Name)
             {
-                f.apparmentnumber =Convert.ToInt16( ApartmentTextBox.Text);
+                // if (!(ApartmentTextBox.Text == " "))
+                //  f.apparmentnumber =Convert.ToInt16( ApartmentTextBox.Text);
+                MessageBox.Show("!" + ApartmentTextBox.Text + "!");
             }
             if (((TextBox)sender).Name == RegionTextBox.Name)
             {
@@ -471,7 +485,7 @@ namespace WPF.ComponentPages
             }
             if (((TextBox)sender).Name == PersonsNumberTextBox.Name)
             {
-
+                MessageBox.Show("ssssssssssssssssss");
             }
             if (((TextBox)sender).Name == NotesTextbox.Name)
             {
